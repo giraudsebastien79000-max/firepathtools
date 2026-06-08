@@ -1,4 +1,11 @@
-﻿"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Latte Factor Calculator",
+  description: "See what your daily spending habits really cost over 30 years. Calculate the investment opportunity cost of small daily expenses.",
+};
+
+"use client";
 import { useState } from "react";
 
 export default function LatteFactor() {

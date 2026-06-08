@@ -1,4 +1,11 @@
-﻿"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Savings Rate Calculator",
+  description: "Calculate your savings rate and see how it impacts your path to FIRE. Your savings rate is your most powerful lever for financial independence.",
+};
+
+"use client";
 import { useState } from "react";
 
 export default function SavingsRate() {

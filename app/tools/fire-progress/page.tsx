@@ -1,4 +1,11 @@
-﻿"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FIRE Progress Tracker",
+  description: "Track exactly where you are on your FIRE journey. See your financial independence percentage and projected retirement date.",
+};
+
+"use client";
 import { useState } from "react";
 
 export default function FIREProgress() {

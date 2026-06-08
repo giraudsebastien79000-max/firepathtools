@@ -1,4 +1,11 @@
-﻿"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Roth IRA vs Traditional IRA Calculator",
+  description: "Find out which retirement account wins for your situation. Compare Roth vs Traditional IRA based on your tax bracket and timeline.",
+};
+
+"use client";
 import { useState } from "react";
 
 export default function RothVsTraditional() {

@@ -1,4 +1,11 @@
-﻿"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Budget Planner 50/30/20",
+  description: "Build your ideal budget in seconds using the 50/30/20 rule. See exactly how to split your income between needs, wants, and savings.",
+};
+
+"use client";
 import { useState } from "react";
 
 export default function BudgetPlanner() {

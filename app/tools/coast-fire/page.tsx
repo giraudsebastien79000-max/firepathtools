@@ -1,4 +1,11 @@
-﻿"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Coast FIRE Calculator",
+  description: "Find out if you can stop saving and coast to retirement. Calculate your Coast FIRE number based on your current savings and target retirement age.",
+};
+
+"use client";
 import { useState } from "react";
 
 export default function CoastFIRE() {

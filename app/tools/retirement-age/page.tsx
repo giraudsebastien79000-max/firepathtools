@@ -1,4 +1,11 @@
-﻿"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Retirement Age Calculator",
+  description: "Find out what age you can retire based on your current savings rate and investment returns. Plan your path to financial freedom.",
+};
+
+"use client";
 import { useState } from "react";
 
 export default function RetirementAge() {

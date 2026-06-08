@@ -1,4 +1,11 @@
-﻿"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Freelance Hourly Rate Calculator",
+  description: "Calculate the minimum hourly rate you need to charge to hit your financial goals. Includes taxes, expenses, and savings targets.",
+};
+
+"use client";
 import { useState } from "react";
 
 export default function FreelanceRate() {

@@ -1,4 +1,11 @@
-﻿"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Compound Interest Calculator",
+  description: "See how your money grows over time with compound interest. Calculate future investment value with different rates and contribution amounts.",
+};
+
+"use client";
 import { useState } from "react";
 
 export default function CompoundInterest() {
