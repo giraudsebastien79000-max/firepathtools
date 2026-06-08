@@ -3,11 +3,12 @@ import { useState } from "react";
 
 export default function BudgetPlanner() {
   const [income, setIncome] = useState("");
-  const [result, setResult] = useState<{needs:number;wants:number;savings:number;needsAlt:number;wantsAlt:number;savingsAlt:number} | null>(null);
+  const [result, setResult] = useState<any>(null);
 
   const calculate = () => {
     const i = parseFloat(income);
-    setResult({ needs: i*0.50, wants: i*0.30, savings: i*0.20, needsAlt: i*0.60, wantsAlt: i*0.20, savingsAlt: i*0.20 });
+    const r = { needs: i*0.50, wants: i*0.30, savings: i*0.20, needsAlt: i*0.60, wantsAlt: i*0.20, savingsAlt: i*0.20 };
+    setResult(r);
   };
 
   return (
