@@ -19,7 +19,7 @@ const tools = [
   { href: "/tools/freelance-rate", title: "Freelance Hourly Rate Calculator", desc: "The minimum rate you need to charge to hit your goals.", tag: "Freelance" },
 ];
 
-const tagColors = {
+const tagColors: Record<string, string> = {
   FIRE: "bg-orange-500/20 text-orange-400",
   Savings: "bg-blue-500/20 text-blue-400",
   Investing: "bg-green-500/20 text-green-400",
