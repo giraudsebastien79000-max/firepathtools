@@ -1,9 +1,18 @@
 ﻿"use client";
 import { useState } from "react";
 
+interface BudgetResult {
+  needs: number;
+  wants: number;
+  savings: number;
+  needsAlt: number;
+  wantsAlt: number;
+  savingsAlt: number;
+}
+
 export default function BudgetPlanner() {
   const [income, setIncome] = useState("");
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState<BudgetResult | null>(null);
 
   const calculate = () => {
     const i = parseFloat(income);
@@ -17,7 +26,7 @@ export default function BudgetPlanner() {
     });
   };
 
-  const Bar = ({ pct, color }) => (
+  const Bar = ({ pct, color }: { pct: number; color: string }) => (
     <div className="w-full bg-gray-700 rounded-full h-2 mt-1">
       <div className={`${color} h-2 rounded-full`} style={{width: pct + "%"}}></div>
     </div>
