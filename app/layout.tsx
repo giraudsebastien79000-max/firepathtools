@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     default: "FirePath Tools - Free FIRE and Financial Independence Calculators",
     template: "%s | FirePath Tools",
   },
-  description: "16 free calculators to plan your path to financial independence. FIRE number, compound interest, savings rate, budget planner and more. No signup required.",
+  description: "Free calculators to plan your path to financial independence. FIRE number, compound interest, savings rate, budget planner, Coast FIRE and more. No signup required.",
   keywords: ["FIRE calculator", "financial independence", "early retirement", "compound interest", "savings rate", "budget planner"],
 };
 
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={\\ \ h-full antialiased\}
     >
       <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9852461988676680" crossOrigin="anonymous"></script>
