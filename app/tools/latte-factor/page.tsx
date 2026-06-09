@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "Latte Factor Calculator",
   description: "See what your daily spending habits really cost over 30 years. Calculate the investment opportunity cost of small daily expenses.",
@@ -90,3 +88,6 @@ export default function LatteFactor() {
     </main>
   );
 }
+
+import type { Metadata } from "next";
+

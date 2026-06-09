@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "Inflation Calculator",
   description: "See how inflation erodes your purchasing power over time. Calculate the real value of money across different time periods.",
@@ -77,3 +75,6 @@ export default function InflationCalculator() {
     </main>
   );
 }
+
+import type { Metadata } from "next";
+

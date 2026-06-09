@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "Investment Fee Calculator",
   description: "See how fees silently destroy your wealth over time. Calculate the true long-term cost of high expense ratios.",
@@ -89,3 +87,6 @@ export default function InvestmentFees() {
     </main>
   );
 }
+
+import type { Metadata } from "next";
+

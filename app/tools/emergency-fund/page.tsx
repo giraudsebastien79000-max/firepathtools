@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "Emergency Fund Calculator",
   description: "Calculate how much you need in your emergency fund before you start investing. Based on your monthly expenses and risk tolerance.",
@@ -80,3 +78,6 @@ export default function EmergencyFund() {
     </main>
   );
 }
+
+import type { Metadata } from "next";
+
