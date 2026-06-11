@@ -1,40 +1,37 @@
-﻿import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+﻿import type { Metadata } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
+import './globals.css'
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+})
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
   title: {
-    default: "FirePath Tools - Free FIRE and Financial Independence Calculators",
-    template: "%s | FirePath Tools",
+    default: 'FirePath Tools - Free FIRE and Financial Independence Calculators',
+    template: '%s | FirePath Tools',
   },
-  description: "Free calculators to plan your path to financial independence. FIRE number, compound interest, savings rate, budget planner, Coast FIRE and more. No signup required.",
-  keywords: ["FIRE calculator", "financial independence", "early retirement", "compound interest", "savings rate", "budget planner"],
-};
+  description: 'Free calculators to plan your path to financial independence. FIRE number, compound interest, savings rate, budget planner, Coast FIRE and more. No signup required.',
+  keywords: ['FIRE calculator', 'financial independence', 'early retirement', 'compound interest', 'savings rate', 'budget planner'],
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      className={\\ \ h-full antialiased\}
-    >
+    <html lang="en" className={${geistSans.variable}  h-full antialiased}>
       <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9852461988676680" crossOrigin="anonymous"></script>
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
-  );
+  )
 }
