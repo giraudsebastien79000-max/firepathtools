@@ -18,7 +18,7 @@ export default function Page() {
       <p>Marcus is 33. Annual expenses: $44,000/year. FIRE number: $1,100,000. Current savings: $32,800.</p>
       <h2>The Real Value of Knowing Your Number</h2>
       <p>For years, I spent without thinking about tomorrow. Until I saw people around me still grinding in their 60s and 70s with no way out. That is when it hit me.</p>
-      <p><a href="/tools/fire-number-calculator">Calculate your FIRE number</a></p>
+      <p><a href="/tools/fire-number">Calculate your FIRE number</a></p>
       <hr />
       <p><em>Written by the FirePath Team. Not financial advisors - just regular people who got tired of working without a plan.</em></p>
       <p><small>The 4% Rule originates from the Trinity Study (1998). It is a guideline, not a guarantee.</small></p>
