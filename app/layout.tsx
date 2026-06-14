@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   },
   description: 'Free calculators to plan your path to financial independence. FIRE number, compound interest, savings rate, budget planner, Coast FIRE and more. No signup required.',
   keywords: ['FIRE calculator', 'financial independence', 'early retirement', 'compound interest', 'savings rate', 'budget planner'],
+  other: {
+    'impact-site-verification': '5696e88d-d92b-43f5-811a-0343750eb985',
+  },
 }
 
 export default function RootLayout({
