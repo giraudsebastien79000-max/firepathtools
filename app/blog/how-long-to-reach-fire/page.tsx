@@ -137,7 +137,7 @@ export default function HowLongToReachFire() {
 
         <p className="mt-4 text-sm text-gray-500 italic">
           Numbers are illustrative — use our{' '}
-          <Link href="/calculators/fire-number" className="text-orange-400 underline underline-offset-2">
+          <Link href="/tools/fire-number" className="text-orange-400 underline underline-offset-2">
             FIRE calculator
           </Link>{' '}
           for your specific situation.
@@ -299,13 +299,13 @@ export default function HowLongToReachFire() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="/calculators/fire-number"
+              href="/tools/fire-number"
               className="inline-block bg-orange-500 hover:bg-orange-400 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
             >
               Calculate My FIRE Number
             </Link>
             <Link
-              href="/calculators/savings-rate"
+              href="/tools/savings-rate"
               className="inline-block bg-gray-800 hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
             >
               Calculate My Savings Rate

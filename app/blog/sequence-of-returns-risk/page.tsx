@@ -273,13 +273,13 @@ export default function SequenceOfReturnsRisk() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="/calculators/safe-withdrawal-rate"
+              href="/tools/safe-withdrawal-rate"
               className="inline-block bg-orange-500 hover:bg-orange-400 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
             >
               Safe Withdrawal Rate Calculator
             </Link>
             <Link
-              href="/calculators/fire-number"
+              href="/tools/fire-number"
               className="inline-block bg-gray-800 hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
             >
               Calculate My FIRE Number

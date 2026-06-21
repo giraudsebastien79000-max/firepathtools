@@ -351,13 +351,13 @@ export default function HowToStartFireByAge() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="/calculators/fire-number"
+              href="/tools/fire-number"
               className="inline-block bg-orange-500 hover:bg-orange-400 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
             >
               Calculate My FIRE Number
             </Link>
             <Link
-              href="/calculators/savings-rate"
+              href="/tools/savings-rate"
               className="inline-block bg-gray-800 hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
             >
               Calculate My Savings Rate
