@@ -1,8 +1,8 @@
-import { MetadataRoute } from 'next'
+﻿import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.firepathtools.com'
-  
+
   const tools = [
     'fire-number',
     'coast-fire',
@@ -22,6 +22,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'budget-planner',
   ]
 
+  const blogs = [
+    'what-is-a-fire-number',
+    'what-is-the-4-percent-rule',
+    'what-is-savings-rate',
+    'what-is-coast-fire',
+    'what-is-compound-interest',
+    'what-is-a-safe-withdrawal-rate',
+    'what-is-the-25x-rule',
+    'what-is-barista-fire',
+    'what-is-an-index-fund',
+    'what-is-the-fire-movement',
+    'what-is-lean-fire',
+    'what-is-fat-fire',
+    'fire-number-billionaires',
+    'how-long-to-reach-fire',
+    'sequence-of-returns-risk',
+    'one-number-that-matters-more-than-fire-number',
+  ]
+
   return [
     {
       url: baseUrl,
@@ -34,6 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    })),
+    ...blogs.map((slug) => ({
+      url: `${baseUrl}/blog/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
     })),
   ]
 }
