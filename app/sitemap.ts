@@ -39,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'how-long-to-reach-fire',
     'sequence-of-returns-risk',
     'one-number-that-matters-more-than-fire-number',
+    'how-to-start-fire-by-age',
   ]
 
   return [
