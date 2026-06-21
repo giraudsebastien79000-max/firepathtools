@@ -34,7 +34,7 @@ export default function RootLayout({
       <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9852461988676680" crossOrigin="anonymous"></script>
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-gray-950 text-gray-100">
         {children}
         <footer className="mt-auto py-6 text-center text-sm text-gray-500 border-t border-gray-200">
           <p>© {new Date().getFullYear()} FirePath Tools. For informational purposes only. Not financial advice.</p>
