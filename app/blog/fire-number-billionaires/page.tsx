@@ -1,22 +1,29 @@
 ﻿import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "We Calculated the FIRE Number of 20 Billionaires — The Results Are Insane | FirePathTools",
-  description: "What would Elon Musk, Taylor Swift, or LeBron James need to retire early? We applied the 25x rule to the world's biggest earners. The numbers will blow your mind.",
+  title: "We Calculated the FIRE Number of 20 Billionaires and Celebrities (2026) — The Results Are Insane | FirePathTools",
+  description: "Elon Musk needs $1.4 trillion to retire. A US teacher needs $1.6 million. We applied the 25x rule to the world's biggest earners — the results will blow your mind.",
 };
 
 export default function FireNumberBillionaires() {
   return (
     <article className="prose prose-lg max-w-3xl mx-auto px-4 py-10">
-      <h1>We Calculated the FIRE Number of 20 Billionaires and Celebrities — The Results Are Insane</h1>
-      <p>The FIRE movement is built on one simple idea: multiply your annual expenses by 25. That's your number. Hit it, and you're financially free.</p>
-      <p>We decided to apply that same formula to the world's biggest earners. The results are... something else.</p>
+      <h1>We Calculated the FIRE Number of 20 Billionaires and Celebrities (2026) — The Results Are Insane</h1>
+
+      <p><strong>Elon Musk would need more money invested than the entire GDP of Australia just to retire. Let that sink in.</strong></p>
+
+      <p>The FIRE movement is built on one simple idea: multiply your annual expenses by 25. That's your number. Hit it, and you're financially free forever.</p>
+
+      <p>We decided to apply that same formula to the world's biggest earners. What you're about to see will completely change how you think about wealth — and your own FIRE number.</p>
+
+      <h2>The Wildest Part? The Math Is the Same for Everyone.</h2>
+      <p>A US teacher earning $65,000/year needs <strong>$1,625,000</strong> to retire early. Elon Musk needs <strong>$1.4 trillion</strong>. Different numbers, same formula: 25x your spending. The math doesn't care who you are — and that's the whole point of FIRE.</p>
 
       <h2>What Is a FIRE Number?</h2>
       <p>Your FIRE number is the total portfolio size you need to retire and never work again — assuming a 4% safe withdrawal rate. If you spend $50,000/year, your FIRE number is $1,250,000. Simple math, wild implications.</p>
 
       <h2>The Billionaire FIRE Table</h2>
-      <p>We used publicly estimated annual income figures and applied the 25x rule. These are not net worth figures — they're what each person would need invested to sustain their current lifestyle forever.</p>
+      <p>We used publicly estimated annual income figures and applied the 25x rule. These are <strong>not</strong> net worth figures — they're what each person would need <em>invested</em> to sustain their current lifestyle forever.</p>
 
       <div className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
@@ -44,21 +51,22 @@ export default function FireNumberBillionaires() {
             <tr><td className="border px-4 py-2">Lionel Messi</td><td className="border px-4 py-2">$130M</td><td className="border px-4 py-2">$3.25 Billion</td></tr>
             <tr><td className="border px-4 py-2">Serena Williams</td><td className="border px-4 py-2">$45M</td><td className="border px-4 py-2">$1.125 Billion</td></tr>
             <tr><td className="border px-4 py-2">Larry Fink (BlackRock)</td><td className="border px-4 py-2">$36M</td><td className="border px-4 py-2">$900 Million</td></tr>
-            <tr><td className="border px-4 py-2">Average US Teacher</td><td className="border px-4 py-2">$65,000</td><td className="border px-4 py-2">$1,625,000</td></tr>
-            <tr><td className="border px-4 py-2">Average US Nurse</td><td className="border px-4 py-2">$80,000</td><td className="border px-4 py-2">$2,000,000</td></tr>
-            <tr><td className="border px-4 py-2">Average US Software Engineer</td><td className="border px-4 py-2">$130,000</td><td className="border px-4 py-2">$3,250,000</td></tr>
-            <tr><td className="border px-4 py-2">Average American</td><td className="border px-4 py-2">$56,000</td><td className="border px-4 py-2">$1,400,000</td></tr>
+            <tr className="bg-blue-50"><td className="border px-4 py-2 font-semibold">Average US Teacher</td><td className="border px-4 py-2">$65,000</td><td className="border px-4 py-2 font-semibold">$1,625,000</td></tr>
+            <tr className="bg-blue-50"><td className="border px-4 py-2 font-semibold">Average US Nurse</td><td className="border px-4 py-2">$80,000</td><td className="border px-4 py-2 font-semibold">$2,000,000</td></tr>
+            <tr className="bg-blue-50"><td className="border px-4 py-2 font-semibold">Average US Software Engineer</td><td className="border px-4 py-2">$130,000</td><td className="border px-4 py-2 font-semibold">$3,250,000</td></tr>
+            <tr className="bg-blue-50"><td className="border px-4 py-2 font-semibold">Average American</td><td className="border px-4 py-2">$56,000</td><td className="border px-4 py-2 font-semibold">$1,400,000</td></tr>
           </tbody>
         </table>
       </div>
 
       <h2>What This Actually Means</h2>
       <p>Elon Musk would need <strong>$1.4 trillion invested</strong> to sustain his lifestyle without ever working again. For context, that's more than the GDP of Australia.</p>
+      <p>Jeff Bezos? <strong>$200 billion</strong>. Taylor Swift? <strong>$3.75 billion</strong>. These numbers are so large they've essentially lost meaning.</p>
       <p>Meanwhile, the average American needs $1.4 million — achievable in 20-25 years of disciplined saving and investing.</p>
-      <p>The crazy part? A US teacher and Elon Musk technically need the same FIRE number in terms of multiples — 25x their spending. The math doesn't care who you are.</p>
+      <p><strong>The uncomfortable truth:</strong> Elon Musk is not closer to financial freedom than you are. He's infinitely further away — because his lifestyle costs infinitely more to sustain. FIRE is not about how much you earn. It's about the gap between what you earn and what you spend.</p>
 
       <h2>What's Your FIRE Number?</h2>
-      <p>You don't need billions. You need a number, a savings rate, and a plan.</p>
+      <p>You don't need billions. You need a number, a savings rate, and a plan. The average American can realistically hit FIRE in 20-25 years. Some do it in 10.</p>
       <p><a href="/tools/fire-number">Calculate your personal FIRE number here</a> — it takes 30 seconds.</p>
 
       <hr />
