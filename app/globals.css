@@ -1,2 +1,23 @@
 ﻿@import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+body {
+  background-color: #030712;
+  color: #f3f4f6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+p, li, td, th, span, label {
+  color: #e5e7eb;
+}
+
+a {
+  color: #fb923c;
+}
+
+a:hover {
+  color: #f97316;
+}
