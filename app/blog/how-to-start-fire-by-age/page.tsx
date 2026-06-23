@@ -70,10 +70,7 @@ export default function HowToStartFireByAge() {
               { label: 'Starting in your 30s', href: '#thirties' },
               { label: 'Starting in your 40s', href: '#forties' },
               { label: 'Starting in your 50s', href: '#fifties' },
-            ].map((item, i) => (
-              
-                key={i}
-                href={item.href}
+            ].map((item, i) => (<a key={i} href={item.href}
                 className="flex-1 text-center bg-gray-800 hover:bg-orange-500/20 border border-gray-700 hover:border-orange-500/50 text-white text-sm font-semibold px-4 py-3 rounded-xl transition-colors"
               >
                 {item.label}
@@ -393,3 +390,4 @@ export default function HowToStartFireByAge() {
     </main>
   )
 }
+
