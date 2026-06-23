@@ -321,9 +321,9 @@ export default function OneNumberThatMatters() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
             { title: 'How Long Does It Actually Take to Reach FIRE?', href: '/blog/how-long-to-reach-fire', desc: 'The full savings rate timeline table — from 5% to 75%.' },
-            { title: 'What Is the FIRE Number?', href: '/blog/fire-number', desc: 'How to calculate the portfolio size you need to retire early.' },
-            { title: 'What Is the 4% Rule?', href: '/blog/4-percent-rule', desc: 'The research behind the most cited number in early retirement.' },
-            { title: 'Lean FIRE vs Fat FIRE', href: '/blog/lean-fire', desc: 'How your lifestyle target shapes your savings rate requirements.' },
+            { title: 'What Is the FIRE Number?', href: '/blog/what-is-a-fire-number', desc: 'How to calculate the portfolio size you need to retire early.' },
+            { title: 'What Is the 4% Rule?', href: '/blog/what-is-the-4-percent-rule', desc: 'The research behind the most cited number in early retirement.' },
+            { title: 'Lean FIRE vs Fat FIRE', href: '/blog/what-is-lean-fire', desc: 'How your lifestyle target shapes your savings rate requirements.' },
           ].map((article, i) => (
             <Link
               key={i}
@@ -342,3 +342,4 @@ export default function OneNumberThatMatters() {
     </main>
   )
 }
+
