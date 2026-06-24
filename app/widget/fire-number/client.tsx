@@ -82,9 +82,7 @@ export default function FireNumberWidgetClient() {
         
           href="https://firepathtools.com"
           target="_blank"
-          rel="noopener noreferrer"
-          style={{ fontSize: "12px", color: "#f97316", textDecoration: "none" }}
-        >
+          rel="noopener noreferrer" style={{ fontSize: "12px", color: "#f97316", textDecoration: "none" }}>
           More free FIRE calculators at firepathtools.com
         </a>
       </div>
