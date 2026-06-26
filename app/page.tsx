@@ -1,6 +1,7 @@
 ﻿import Link from "next/link";
 
 const tools = [
+  { href: "/tools/time-to-fire", title: "Time to FIRE Calculator", desc: "How many years until you reach financial independence?", tag: "FIRE" },
   { href: "/tools/fire-number", title: "FIRE Number Calculator", desc: "How much do you need to retire early?", tag: "FIRE" },
   { href: "/tools/coast-fire", title: "Coast FIRE Calculator", desc: "Can you stop saving and coast to retirement?", tag: "FIRE" },
   { href: "/tools/fire-progress", title: "FIRE Progress Tracker", desc: "Track exactly where you are on your FIRE journey.", tag: "FIRE" },
