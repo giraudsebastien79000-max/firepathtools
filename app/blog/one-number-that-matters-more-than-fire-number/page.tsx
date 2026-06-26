@@ -301,7 +301,7 @@ export default function OneNumberThatMatters() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/tools/savings-rate"
-              className="inline-block bg-orange-500 hover:bg-orange-400 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
+              className="inline-block bg-orange-500 hover:bg-orange-400 font-bold px-8 py-3 rounded-xl transition-colors" style={{color:"white"}}
             >
               Calculate My Savings Rate
             </Link>
