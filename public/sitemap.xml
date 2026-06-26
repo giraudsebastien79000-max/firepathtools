@@ -3,21 +3,23 @@
 
   <url><loc>https://www.firepathtools.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
 
-  <url><loc>https://www.firepathtools.com/tools/fire-number-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.firepathtools.com/tools/coast-fire-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.firepathtools.com/tools/lean-fire-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.firepathtools.com/tools/fat-fire-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.firepathtools.com/tools/savings-rate-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.firepathtools.com/tools/safe-withdrawal-rate-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.firepathtools.com/tools/barista-fire-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.firepathtools.com/tools/fire-timeline-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.firepathtools.com/tools/investment-fees</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.firepathtools.com/tools/latte-factor</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.firepathtools.com/tools/net-worth</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.firepathtools.com/tools/retirement-age</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.firepathtools.com/tools/roth-vs-traditional</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.firepathtools.com/tools/safe-withdrawal-rate</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/fire-number</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/coast-fire</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/fire-progress</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/four-percent-rule</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.firepathtools.com/tools/savings-rate</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/compound-interest</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/investment-fees</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/roth-vs-traditional</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/retirement-age</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/net-worth</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/emergency-fund</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/debt-payoff</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/budget-planner</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/inflation</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/latte-factor</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/freelance-rate</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.firepathtools.com/tools/safe-withdrawal-rate</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.firepathtools.com/retire-at-40-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.firepathtools.com/retire-at-45-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.firepathtools.com/retire-at-50-calculator</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
