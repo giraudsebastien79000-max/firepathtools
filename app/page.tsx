@@ -18,6 +18,7 @@ const tools = [
   { href: "/tools/inflation", title: "Inflation Calculator", desc: "See how inflation erodes your purchasing power.", tag: "Investing" },
   { href: "/tools/latte-factor", title: "Latte Factor Calculator", desc: "What do your daily habits really cost over 30 years?", tag: "Budgeting" },
   { href: "/tools/freelance-rate", title: "Freelance Hourly Rate Calculator", desc: "The minimum rate you need to charge to hit your goals.", tag: "Freelance" },
+  { href: "/tools/safe-withdrawal-rate", title: "Safe Withdrawal Rate Calculator", desc: "Find your ideal withdrawal rate for early retirement.", tag: "FIRE" },
 ];
 
 const tagColors: Record<string, string> = {
@@ -38,7 +39,7 @@ export default function Home() {
         <div className="text-center mb-16">
           <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">FirePath Tools</span>
           <h1 className="text-5xl font-bold mt-3 mb-4">Free Financial Independence Tools</h1>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">17 free calculators to plan your path to FIRE. No signup. No ads. Just tools that work.</p>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">18 free calculators to plan your path to FIRE. No signup. No ads. Just tools that work.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {tools.map((tool) => (
