@@ -38,7 +38,7 @@ export default function TimeToFireClient() {
   const fmt = (n: number) =>
     n >= 1000000
       ? "$" + (n / 1000000).toFixed(2) + "M"
-      : "$" + n.toLocaleString()
+      : "$" + n.toLocaleString("en-US")
 
   return (
     <div className="max-w-2xl mx-auto px-6 py-10">
