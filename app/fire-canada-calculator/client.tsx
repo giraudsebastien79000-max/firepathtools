@@ -70,11 +70,11 @@ export default function FireCanadaClient() {
                   <p className="text-sm text-red-100 mt-1">Based on 4% Safe Withdrawal Rate</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-gray-100 rounded-xl p-4 text-center">
+                  <div className="bg-gray-900 rounded-xl p-4 text-center border border-gray-700">
                     <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide mb-1">Gap to FIRE</p>
                     <p className="text-2xl font-bold text-gray-900">{result.gap <= 0 ? "Done!" : fmt(result.gap)}</p>
                   </div>
-                  <div className="bg-gray-100 rounded-xl p-4 text-center">
+                  <div className="bg-gray-900 rounded-xl p-4 text-center border border-gray-700">
                     <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide mb-1">Time to FIRE</p>
                     <p className="text-2xl font-bold text-gray-900">{result.gap <= 0 ? "Now!" : result.yearsToFire === 999 ? "Add contributions" : result.yearsToFire + "y " + result.monthsExtra + "m"}</p>
                   </div>
