@@ -40,7 +40,7 @@ export default function Home() {
         <div className="text-center mb-16">
           <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">FirePath Tools</span>
           <h1 className="text-5xl font-bold mt-3 mb-4">Free Financial Independence Tools</h1>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">19 free calculators to plan your path to FIRE. No signup. No ads. Just tools that work.</p>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">21 free calculators to plan your path to FIRE. No signup. No ads. Just tools that work.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {tools.map((tool) => (
