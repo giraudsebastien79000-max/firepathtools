@@ -83,7 +83,7 @@ export default function FireByCountryClient() {
             <div className="space-y-5">
               <div>
                 <label className="block text-sm font-bold mb-1" style={{color:"#111827"}}>Annual Expenses in {selected.name} ({selected.symbol})</label>
-                <p className="text-xs text-gray-500 mb-2">Default: {selected.symbol}{(selected.monthlyCost * 12).toLocaleString()}/yr — adjust to your lifestyle</p>
+                <p className="text-xs mb-2" style={{color:"#374151"}}>Default: {selected.symbol}{(selected.monthlyCost * 12).toLocaleString()}/yr — adjust to your lifestyle</p>
                 <input type="number" value={customExpenses} onChange={(e) => setCustomExpenses(e.target.value)}
                   placeholder={"e.g. " + (selected.monthlyCost * 12)} className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500" />
               </div>
