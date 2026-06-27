@@ -7,7 +7,7 @@ export default function CoastFireAgeClient() {
   const [fireNumber, setFireNumber] = useState("");
   const [annualReturn, setAnnualReturn] = useState("7");
   const [retirementAge, setRetirementAge] = useState("65");
-  const [result, setResult] = useState<null | { coastAge: number; coastNumber: number; yearsToCoast: number }>(null);
+  const [result, setResult] = useState<null | { coastAge: number; coastNumber: number; yearsToCoast: number; alreadyCoasted: boolean }>(null);
 
   const calculate = () => {
     const age = parseFloat(currentAge);
@@ -16,23 +16,24 @@ export default function CoastFireAgeClient() {
     const r = parseFloat(annualReturn) / 100;
     const retire = parseFloat(retirementAge);
     if (!age || !savings || !fire || !r || !retire) return;
-    if (savings >= fire) {
-      setResult({ coastAge: age, coastNumber: fire, yearsToCoast: 0 });
-      return;
-    }
+
     const yearsNeeded = Math.log(fire / savings) / Math.log(1 + r);
     const coastAge = retire - yearsNeeded;
     const yearsToCoast = Math.max(0, coastAge - age);
-    const coastNumber = fire / Math.pow(1 + r, retire - Math.max(coastAge, age));
+    const coastNumberToday = fire / Math.pow(1 + r, retire - age);
+    const alreadyCoasted = savings >= coastNumberToday;
+
     setResult({
       coastAge: Math.round(coastAge * 10) / 10,
-      coastNumber: Math.round(coastNumber),
+      coastNumber: Math.round(coastNumberToday),
       yearsToCoast: Math.round(yearsToCoast * 10) / 10,
+      alreadyCoasted,
     });
   };
 
   const fmt = (n: number) =>
     n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+
   return (
     <main className="min-h-screen bg-gray-950 text-gray-100 py-12 px-4">
       <div className="max-w-2xl mx-auto">
@@ -72,7 +73,7 @@ export default function CoastFireAgeClient() {
         {result && (
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-6 space-y-4">
             <h2 className="text-xl font-bold text-white mb-4">Your Results</h2>
-            {result.yearsToCoast === 0 ? (
+            {result.alreadyCoasted ? (
               <div className="bg-green-950 border border-green-700 rounded-xl p-4 text-center">
                 <p className="text-green-300 text-lg font-semibold">You have already reached Coast FIRE!</p>
                 <p className="text-gray-300 text-sm mt-1">Your savings will grow to your FIRE number by retirement without additional contributions.</p>
@@ -85,7 +86,7 @@ export default function CoastFireAgeClient() {
                   <p className="text-gray-300 text-sm mt-1">That is in {result.yearsToCoast} years</p>
                 </div>
                 <div className="bg-gray-900 border border-slate-600 rounded-xl p-4 text-center">
-                  <p className="text-gray-300 text-sm mb-1">Coast FIRE number today</p>
+                  <p className="text-gray-300 text-sm mb-1">Coast FIRE number needed today</p>
                   <p className="text-2xl font-bold text-white">{fmt(result.coastNumber)}</p>
                   <p className="text-gray-400 text-sm mt-1">Once you hit this, you can stop contributing</p>
                 </div>
