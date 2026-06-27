@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 
 export default function NetWorthClient() {
@@ -21,7 +21,7 @@ export default function NetWorthClient() {
     setResult({ assets, liabilities, netWorth });
   };
 
-  const inputClass = "w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400";
+  const inputClass = "w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400";
 
   return (
     <main className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center px-4 py-16">
@@ -29,7 +29,7 @@ export default function NetWorthClient() {
         <div className="text-center mb-10">
           <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">FirePath Tools</span>
           <h1 className="text-4xl font-bold mt-2 mb-3">Net Worth Calculator</h1>
-          <p className="text-gray-400 text-base">Your net worth is your real financial score. Calculate it in 60 seconds.</p>
+          <p className="text-gray-300 text-base">Your net worth is your real financial score. Calculate it in 60 seconds.</p>
         </div>
         <div className="bg-gray-900 rounded-2xl p-8 space-y-6 border border-gray-800">
           <div>
@@ -55,17 +55,17 @@ export default function NetWorthClient() {
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate My Net Worth</button>
           {result !== null && (
             <div className="space-y-4">
-              <div className={`rounded-xl p-6 text-center border ${result.netWorth >= 0 ? "bg-gray-800 border-orange-400/30" : "bg-red-900/20 border-red-400/30"}`}>
-                <p className="text-gray-400 text-sm mb-1">Your Net Worth</p>
+              <div className={`rounded-xl p-6 text-center border ${result.netWorth >= 0 ? "bg-slate-800 border-orange-400/30" : "bg-red-900/20 border-red-400/30"}`}>
+                <p className="text-gray-300 text-sm mb-1">Your Net Worth</p>
                 <p className={`text-5xl font-bold ${result.netWorth >= 0 ? "text-orange-400" : "text-red-400"}`}>${result.netWorth.toLocaleString("en-US", { maximumFractionDigits: 0 })}</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-800 rounded-xl p-4 border border-gray-700 text-center">
-                  <p className="text-gray-400 text-xs mb-1">Total Assets</p>
+                <div className="bg-slate-800 rounded-xl p-4 border border-slate-600 text-center">
+                  <p className="text-gray-300 text-xs mb-1">Total Assets</p>
                   <p className="text-xl font-bold text-green-400">${result.assets.toLocaleString("en-US", { maximumFractionDigits: 0 })}</p>
                 </div>
-                <div className="bg-gray-800 rounded-xl p-4 border border-gray-700 text-center">
-                  <p className="text-gray-400 text-xs mb-1">Total Liabilities</p>
+                <div className="bg-slate-800 rounded-xl p-4 border border-slate-600 text-center">
+                  <p className="text-gray-300 text-xs mb-1">Total Liabilities</p>
                   <p className="text-xl font-bold text-red-400">${result.liabilities.toLocaleString("en-US", { maximumFractionDigits: 0 })}</p>
                 </div>
               </div>

@@ -27,7 +27,7 @@ export default function OneNumberThatMatters() {
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white mb-6">
           The One Number That Matters More Than Your FIRE Number
         </h1>
-        <p className="text-xl text-gray-400 leading-relaxed">
+        <p className="text-xl text-gray-300 leading-relaxed">
           Most people in the FIRE community know their number — $800k, $1.2M, $2M.
           They track it obsessively. But that number is just a destination.
           There's a different metric that actually controls how fast you arrive.
@@ -144,7 +144,7 @@ export default function OneNumberThatMatters() {
         <h2 className="text-2xl font-bold text-white mb-2">
           Same income, different outcomes
         </h2>
-        <p className="text-gray-400 mb-6 text-base">
+        <p className="text-gray-300 mb-6 text-base">
           Two people earning $70,000/year. Same investment returns (7% real). Completely
           different timelines — determined entirely by savings rate.
         </p>
@@ -152,7 +152,7 @@ export default function OneNumberThatMatters() {
         <div className="overflow-x-auto rounded-xl border border-gray-800">
           <table className="w-full text-sm md:text-base">
             <thead>
-              <tr className="bg-gray-900 text-gray-400 text-left">
+              <tr className="bg-gray-900 text-gray-300 text-left">
                 <th className="px-5 py-4 font-semibold">Savings Rate</th>
                 <th className="px-5 py-4 font-semibold">Annual Spend</th>
                 <th className="px-5 py-4 font-semibold">FIRE Number</th>
@@ -220,7 +220,7 @@ export default function OneNumberThatMatters() {
             "Your FIRE number tells you where you're going. Your savings rate tells you how fast
             you're actually moving."
           </p>
-          <p className="text-gray-400 text-base">
+          <p className="text-gray-300 text-base">
             One is a destination. The other is the engine. If you only track one of them,
             track the engine.
           </p>
@@ -253,7 +253,7 @@ export default function OneNumberThatMatters() {
           ].map((item, i) => (
             <div key={i} className="border-l-2 border-orange-500 pl-5">
               <p className="text-white font-semibold mb-1">{item.label}</p>
-              <p className="text-gray-400">{item.body}</p>
+              <p className="text-gray-300">{item.body}</p>
             </div>
           ))}
         </div>
@@ -294,7 +294,7 @@ export default function OneNumberThatMatters() {
           <h3 className="text-2xl font-bold text-white mb-3">
             Calculate your savings rate
           </h3>
-          <p className="text-gray-400 mb-6 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-6 max-w-lg mx-auto">
             Find out exactly where you stand — and how many years each percentage point
             of improvement saves you.
           </p>
@@ -307,7 +307,7 @@ export default function OneNumberThatMatters() {
             </Link>
             <Link
               href="/tools/fire-number"
-              className="inline-block bg-gray-800 hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
+              className="inline-block bg-slate-800 hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
             >
               Calculate My FIRE Number
             </Link>
@@ -328,12 +328,12 @@ export default function OneNumberThatMatters() {
             <Link
               key={i}
               href={article.href}
-              className="block bg-gray-900 hover:bg-gray-800 border border-gray-800 rounded-xl p-5 transition-colors group"
+              className="block bg-gray-900 hover:bg-slate-800 border border-gray-800 rounded-xl p-5 transition-colors group"
             >
               <p className="text-white font-semibold group-hover:text-orange-400 transition-colors mb-1">
                 {article.title}
               </p>
-              <p className="text-gray-400 text-sm">{article.desc}</p>
+              <p className="text-gray-300 text-sm">{article.desc}</p>
             </Link>
           ))}
         </div>

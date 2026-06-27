@@ -27,7 +27,7 @@ export default function HowLongToReachFire() {
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white mb-6">
           How Long Does It <em>Actually</em> Take to Reach FIRE?
         </h1>
-        <p className="text-xl text-gray-400 leading-relaxed">
+        <p className="text-xl text-gray-300 leading-relaxed">
           Most people think salary determines how fast they reach financial independence.
           It doesn't. Your <strong className="text-white">savings rate</strong> does —
           and the math behind it is both simple and shocking.
@@ -92,7 +92,7 @@ export default function HowLongToReachFire() {
         <h2 className="text-2xl font-bold text-white mb-2">
           Years to FIRE by savings rate
         </h2>
-        <p className="text-gray-400 mb-6 text-base">
+        <p className="text-gray-300 mb-6 text-base">
           Assumes a 7% real annual return on investments and starting from $0. Based on
           the 4% rule (25x annual expenses as your FIRE number).
         </p>
@@ -100,7 +100,7 @@ export default function HowLongToReachFire() {
         <div className="overflow-x-auto rounded-xl border border-gray-800">
           <table className="w-full text-sm md:text-base">
             <thead>
-              <tr className="bg-gray-900 text-gray-400 text-left">
+              <tr className="bg-gray-900 text-gray-300 text-left">
                 <th className="px-5 py-4 font-semibold">Savings Rate</th>
                 <th className="px-5 py-4 font-semibold">Years to FIRE</th>
                 <th className="px-5 py-4 font-semibold hidden md:table-cell">What that means</th>
@@ -128,7 +128,7 @@ export default function HowLongToReachFire() {
                 >
                   <td className="px-5 py-4 font-bold text-orange-400">{row.rate}</td>
                   <td className="px-5 py-4 font-semibold">{row.years}</td>
-                  <td className="px-5 py-4 text-gray-400 hidden md:table-cell">{row.note}</td>
+                  <td className="px-5 py-4 text-gray-300 hidden md:table-cell">{row.note}</td>
                 </tr>
               ))}
             </tbody>
@@ -174,7 +174,7 @@ export default function HowLongToReachFire() {
             "A person saving 50% of their income will reach financial independence in 17 years —
             whether they earn $30,000 or $300,000."
           </p>
-          <p className="text-gray-400 text-base">
+          <p className="text-gray-300 text-base">
             FIRE is a ratio problem, not an income problem. The finish line scales with your
             expenses, not your salary. This is why high earners can be decades away from
             financial independence, while modest earners living below their means can get
@@ -194,7 +194,7 @@ export default function HowLongToReachFire() {
         <div className="space-y-4">
           <div className="border-l-2 border-orange-500 pl-5">
             <p className="text-white font-semibold">Investment returns</p>
-            <p className="text-gray-400">
+            <p className="text-gray-300">
               At 5% real returns instead of 7%, add roughly 3-5 years to every timeline.
               At 9%, subtract 2-3 years. The difference between aggressive and conservative
               return assumptions is real but smaller than most people expect.
@@ -202,7 +202,7 @@ export default function HowLongToReachFire() {
           </div>
           <div className="border-l-2 border-orange-500 pl-5">
             <p className="text-white font-semibold">Starting balance</p>
-            <p className="text-gray-400">
+            <p className="text-gray-300">
               If you already have 2-3 years of expenses invested, you can shave 2-4 years off
               your timeline. The earlier you start, the more compounding does the heavy lifting
               in the final stretch.
@@ -210,7 +210,7 @@ export default function HowLongToReachFire() {
           </div>
           <div className="border-l-2 border-orange-500 pl-5">
             <p className="text-white font-semibold">Withdrawal rate</p>
-            <p className="text-gray-400">
+            <p className="text-gray-300">
               Using a 3.5% withdrawal rate instead of 4% means you need 28.5x your expenses
               instead of 25x. That adds roughly 1-3 years depending on your savings rate.
               Many early retirees choose this more conservative number for longer retirements.
@@ -218,7 +218,7 @@ export default function HowLongToReachFire() {
           </div>
           <div className="border-l-2 border-orange-500 pl-5">
             <p className="text-white font-semibold">Inflation</p>
-            <p className="text-gray-400">
+            <p className="text-gray-300">
               All numbers in this article use real (inflation-adjusted) returns, meaning
               the timelines already account for inflation eating into your portfolio's purchasing
               power over time.
@@ -292,7 +292,7 @@ export default function HowLongToReachFire() {
           <h3 className="text-2xl font-bold text-white mb-3">
             Find your own timeline
           </h3>
-          <p className="text-gray-400 mb-6 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-6 max-w-lg mx-auto">
             The table above shows the general picture. Our free FIRE calculator lets you
             plug in your actual numbers — savings, expenses, existing investments — and
             see exactly when you could reach financial independence.
@@ -306,7 +306,7 @@ export default function HowLongToReachFire() {
             </Link>
             <Link
               href="/tools/savings-rate"
-              className="inline-block bg-gray-800 hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
+              className="inline-block bg-slate-800 hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
             >
               Calculate My Savings Rate
             </Link>
@@ -327,12 +327,12 @@ export default function HowLongToReachFire() {
             <Link
               key={i}
               href={article.href}
-              className="block bg-gray-900 hover:bg-gray-800 border border-gray-800 rounded-xl p-5 transition-colors group"
+              className="block bg-gray-900 hover:bg-slate-800 border border-gray-800 rounded-xl p-5 transition-colors group"
             >
               <p className="text-white font-semibold group-hover:text-orange-400 transition-colors mb-1">
                 {article.title}
               </p>
-              <p className="text-gray-400 text-sm">{article.desc}</p>
+              <p className="text-gray-300 text-sm">{article.desc}</p>
             </Link>
           ))}
         </div>

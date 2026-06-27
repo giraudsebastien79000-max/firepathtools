@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 
 export default function FourPercentRuleClient() {
@@ -23,31 +23,31 @@ export default function FourPercentRuleClient() {
         <div className="text-center mb-10">
           <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">FirePath Tools</span>
           <h1 className="text-4xl font-bold mt-2 mb-3">4% Rule Calculator</h1>
-          <p className="text-gray-400 text-base">The 4% rule is the gold standard of retirement planning. Find out how much your portfolio can safely generate.</p>
+          <p className="text-gray-300 text-base">The 4% rule is the gold standard of retirement planning. Find out how much your portfolio can safely generate.</p>
         </div>
         <div className="bg-gray-900 rounded-2xl p-8 space-y-6 border border-gray-800">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Portfolio Value ($)</label>
-            <input type="number" value={portfolio} onChange={(e) => setPortfolio(e.target.value)} placeholder="e.g. 1000000" className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={portfolio} onChange={(e) => setPortfolio(e.target.value)} placeholder="e.g. 1000000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Withdrawal Rate (%)</label>
-            <input type="number" value={customRate} onChange={(e) => setCustomRate(e.target.value)} placeholder="4" className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={customRate} onChange={(e) => setCustomRate(e.target.value)} placeholder="4" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             <p className="text-xs text-gray-500 mt-1">The Trinity Study found 4% safe over 30 years. Many FIRE followers use 3-3.5% for longer horizons.</p>
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate Safe Withdrawal</button>
           {result !== null && (
             <div className="space-y-4">
-              <div className="bg-gray-800 rounded-xl p-6 text-center border border-orange-400/30">
-                <p className="text-gray-400 text-sm mb-1">Annual Withdrawal at {result.rate}%</p>
+              <div className="bg-slate-800 rounded-xl p-6 text-center border border-orange-400/30">
+                <p className="text-gray-300 text-sm mb-1">Annual Withdrawal at {result.rate}%</p>
                 <p className="text-5xl font-bold text-orange-400">${result.annual.toLocaleString("en-US", { maximumFractionDigits: 0 })}</p>
-                <p className="text-gray-400 text-sm mt-2">${result.monthly.toLocaleString("en-US", { maximumFractionDigits: 0 })} per month</p>
+                <p className="text-gray-300 text-sm mt-2">${result.monthly.toLocaleString("en-US", { maximumFractionDigits: 0 })} per month</p>
               </div>
-              <div className="bg-gray-800 rounded-xl p-4 border border-gray-700">
-                <p className="text-gray-400 text-xs mb-3 uppercase tracking-widest">Withdrawal Rate Comparison</p>
+              <div className="bg-slate-800 rounded-xl p-4 border border-slate-600">
+                <p className="text-gray-300 text-xs mb-3 uppercase tracking-widest">Withdrawal Rate Comparison</p>
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-400 text-sm">3% (Ultra-conservative)</span>
+                    <span className="text-gray-300 text-sm">3% (Ultra-conservative)</span>
                     <span className="text-white font-bold">${result.at3.toLocaleString("en-US", { maximumFractionDigits: 0 })}/yr</span>
                   </div>
                   <div className="flex justify-between items-center">
@@ -55,7 +55,7 @@ export default function FourPercentRuleClient() {
                     <span className="text-orange-400 font-bold">${result.at4.toLocaleString("en-US", { maximumFractionDigits: 0 })}/yr</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-400 text-sm">5% (Aggressive)</span>
+                    <span className="text-gray-300 text-sm">5% (Aggressive)</span>
                     <span className="text-white font-bold">${result.at5.toLocaleString("en-US", { maximumFractionDigits: 0 })}/yr</span>
                   </div>
                 </div>

@@ -27,7 +27,7 @@ export default function HowToStartFireByAge() {
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white mb-6">
           How to Start FIRE in Your 30s, 40s, and 50s
         </h1>
-        <p className="text-xl text-gray-400 leading-relaxed">
+        <p className="text-xl text-gray-300 leading-relaxed">
           Most FIRE content assumes you started at 22. You didn't — and that's fine.
           Financial independence is still achievable in your 30s, 40s, and even your 50s.
           The strategy just looks different depending on where you are.
@@ -64,14 +64,14 @@ export default function HowToStartFireByAge() {
       {/* Nav anchors */}
       <section className="max-w-3xl mx-auto px-6 pb-10">
         <div className="bg-gray-900 rounded-2xl p-6 border border-gray-800">
-          <p className="text-gray-400 text-sm font-semibold uppercase tracking-widest mb-4">Jump to your situation</p>
+          <p className="text-gray-300 text-sm font-semibold uppercase tracking-widest mb-4">Jump to your situation</p>
           <div className="flex flex-col sm:flex-row gap-3">
             {[
               { label: 'Starting in your 30s', href: '#thirties' },
               { label: 'Starting in your 40s', href: '#forties' },
               { label: 'Starting in your 50s', href: '#fifties' },
             ].map((item, i) => (<a key={i} href={item.href}
-                className="flex-1 text-center bg-gray-800 hover:bg-orange-500/20 border border-gray-700 hover:border-orange-500/50 text-white text-sm font-semibold px-4 py-3 rounded-xl transition-colors"
+                className="flex-1 text-center bg-slate-800 hover:bg-orange-500/20 border border-slate-600 hover:border-orange-500/50 text-white text-sm font-semibold px-4 py-3 rounded-xl transition-colors"
               >
                 {item.label}
               </a>
@@ -126,7 +126,7 @@ export default function HowToStartFireByAge() {
             ].map((item, i) => (
               <div key={i} className="border-l-2 border-orange-500 pl-5">
                 <p className="text-white font-semibold mb-1">{item.title}</p>
-                <p className="text-gray-400">{item.body}</p>
+                <p className="text-gray-300">{item.body}</p>
               </div>
             ))}
           </div>
@@ -135,12 +135,12 @@ export default function HowToStartFireByAge() {
             <p className="text-orange-400 text-sm font-semibold uppercase tracking-widest mb-2">Realistic timeline — Starting at 30</p>
             <div className="grid grid-cols-3 gap-4 text-center mt-4">
               {[
-                { rate: '20% savings', result: 'FI at ~67', color: 'text-gray-400' },
+                { rate: '20% savings', result: 'FI at ~67', color: 'text-gray-300' },
                 { rate: '35% savings', result: 'FI at ~55', color: 'text-yellow-400' },
                 { rate: '50% savings', result: 'FI at ~47', color: 'text-orange-400' },
               ].map((item, i) => (
-                <div key={i} className="bg-gray-800 rounded-xl p-4">
-                  <p className="text-gray-400 text-sm mb-2">{item.rate}</p>
+                <div key={i} className="bg-slate-800 rounded-xl p-4">
+                  <p className="text-gray-300 text-sm mb-2">{item.rate}</p>
                   <p className={`font-bold text-lg ${item.color}`}>{item.result}</p>
                 </div>
               ))}
@@ -201,7 +201,7 @@ export default function HowToStartFireByAge() {
             ].map((item, i) => (
               <div key={i} className="border-l-2 border-blue-500 pl-5">
                 <p className="text-white font-semibold mb-1">{item.title}</p>
-                <p className="text-gray-400">{item.body}</p>
+                <p className="text-gray-300">{item.body}</p>
               </div>
             ))}
           </div>
@@ -210,12 +210,12 @@ export default function HowToStartFireByAge() {
             <p className="text-blue-400 text-sm font-semibold uppercase tracking-widest mb-2">Realistic timeline — Starting at 40</p>
             <div className="grid grid-cols-3 gap-4 text-center mt-4">
               {[
-                { rate: '20% savings', result: 'FI at ~77', color: 'text-gray-400' },
+                { rate: '20% savings', result: 'FI at ~77', color: 'text-gray-300' },
                 { rate: '35% savings', result: 'FI at ~63', color: 'text-yellow-400' },
                 { rate: '50% savings', result: 'FI at ~57', color: 'text-blue-400' },
               ].map((item, i) => (
-                <div key={i} className="bg-gray-800 rounded-xl p-4">
-                  <p className="text-gray-400 text-sm mb-2">{item.rate}</p>
+                <div key={i} className="bg-slate-800 rounded-xl p-4">
+                  <p className="text-gray-300 text-sm mb-2">{item.rate}</p>
                   <p className={`font-bold text-lg ${item.color}`}>{item.result}</p>
                 </div>
               ))}
@@ -271,7 +271,7 @@ export default function HowToStartFireByAge() {
             ].map((item, i) => (
               <div key={i} className="border-l-2 border-green-500 pl-5">
                 <p className="text-white font-semibold mb-1">{item.title}</p>
-                <p className="text-gray-400">{item.body}</p>
+                <p className="text-gray-300">{item.body}</p>
               </div>
             ))}
           </div>
@@ -280,12 +280,12 @@ export default function HowToStartFireByAge() {
             <p className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-2">Realistic timeline — Starting at 50</p>
             <div className="grid grid-cols-3 gap-4 text-center mt-4">
               {[
-                { rate: '20% savings', result: 'FI at ~87', color: 'text-gray-400' },
+                { rate: '20% savings', result: 'FI at ~87', color: 'text-gray-300' },
                 { rate: '35% savings', result: 'FI at ~72', color: 'text-yellow-400' },
                 { rate: '50% savings', result: 'FI at ~65', color: 'text-green-400' },
               ].map((item, i) => (
-                <div key={i} className="bg-gray-800 rounded-xl p-4">
-                  <p className="text-gray-400 text-sm mb-2">{item.rate}</p>
+                <div key={i} className="bg-slate-800 rounded-xl p-4">
+                  <p className="text-gray-300 text-sm mb-2">{item.rate}</p>
                   <p className={`font-bold text-lg ${item.color}`}>{item.result}</p>
                 </div>
               ))}
@@ -304,7 +304,7 @@ export default function HowToStartFireByAge() {
           <p className="text-white text-xl font-semibold leading-snug mb-4">
             "The best time to start was 10 years ago. The second best time is today."
           </p>
-          <p className="text-gray-400 text-base">
+          <p className="text-gray-300 text-base">
             Every month you wait costs more than the month before — not because of
             punishment, but because of compounding. A dollar invested today has more
             time to grow than a dollar invested next year. Starting imperfectly now
@@ -342,7 +342,7 @@ export default function HowToStartFireByAge() {
           <h3 className="text-2xl font-bold text-white mb-3">
             Find your personal FIRE timeline
           </h3>
-          <p className="text-gray-400 mb-6 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-6 max-w-lg mx-auto">
             The timelines above assume starting from zero. Plug in your actual savings,
             income, and expenses to see your real numbers.
           </p>
@@ -355,7 +355,7 @@ export default function HowToStartFireByAge() {
             </Link>
             <Link
               href="/tools/savings-rate"
-              className="inline-block bg-gray-800 hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
+              className="inline-block bg-slate-800 hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
             >
               Calculate My Savings Rate
             </Link>
@@ -376,12 +376,12 @@ export default function HowToStartFireByAge() {
             <Link
               key={i}
               href={article.href}
-              className="block bg-gray-900 hover:bg-gray-800 border border-gray-800 rounded-xl p-5 transition-colors group"
+              className="block bg-gray-900 hover:bg-slate-800 border border-gray-800 rounded-xl p-5 transition-colors group"
             >
               <p className="text-white font-semibold group-hover:text-orange-400 transition-colors mb-1">
                 {article.title}
               </p>
-              <p className="text-gray-400 text-sm">{article.desc}</p>
+              <p className="text-gray-300 text-sm">{article.desc}</p>
             </Link>
           ))}
         </div>

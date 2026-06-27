@@ -41,18 +41,18 @@ export default function SavingsRateClient() {
       <div className="max-w-xl w-full">
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold mb-3">Savings Rate Calculator</h1>
-          <p className="text-gray-400">Find out what percentage of your income you are saving — and how it affects your path to FIRE.</p>
+          <p className="text-gray-300">Find out what percentage of your income you are saving — and how it affects your path to FIRE.</p>
         </div>
         <div className="bg-gray-900 rounded-2xl p-8 space-y-5">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Monthly Income ($)</label>
             <input type="number" value={income} onChange={e => setIncome(e.target.value)} placeholder="e.g. 5000"
-              className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Monthly Expenses ($)</label>
             <input type="number" value={expenses} onChange={e => setExpenses(e.target.value)} placeholder="e.g. 3500"
-              className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           {error && <p className="text-red-400 text-sm">{error}</p>}
           <button onClick={calculate}
@@ -61,8 +61,8 @@ export default function SavingsRateClient() {
           </button>
           {result !== null && (
             <div className="space-y-4">
-              <div className="bg-gray-800 rounded-xl p-6 text-center border border-orange-400/30">
-                <p className="text-gray-400 text-sm mb-1">Your Savings Rate</p>
+              <div className="bg-slate-800 rounded-xl p-6 text-center border border-orange-400/30">
+                <p className="text-gray-300 text-sm mb-1">Your Savings Rate</p>
                 <p className="text-6xl font-bold text-orange-400">{result.rate}%</p>
                 {parseFloat(result.rate) > 0 && (
                   <p className={`text-sm mt-3 ${getMessage(parseFloat(result.rate)).color}`}>
@@ -71,12 +71,12 @@ export default function SavingsRateClient() {
                 )}
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-800 rounded-xl p-4 border border-gray-700 text-center">
-                  <p className="text-gray-400 text-xs mb-1">Monthly Savings</p>
+                <div className="bg-slate-800 rounded-xl p-4 border border-slate-600 text-center">
+                  <p className="text-gray-300 text-xs mb-1">Monthly Savings</p>
                   <p className="text-2xl font-bold text-white">${result.savings.toLocaleString("en-US", { maximumFractionDigits: 0 })}</p>
                 </div>
-                <div className="bg-gray-800 rounded-xl p-4 border border-gray-700 text-center">
-                  <p className="text-gray-400 text-xs mb-1">Years to FIRE</p>
+                <div className="bg-slate-800 rounded-xl p-4 border border-slate-600 text-center">
+                  <p className="text-gray-300 text-xs mb-1">Years to FIRE</p>
                   <p className="text-2xl font-bold text-white">{result.years ? result.years : "--"}</p>
                 </div>
               </div>

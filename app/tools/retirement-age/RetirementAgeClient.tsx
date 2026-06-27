@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 
 export default function RetirementAgeClient() {
@@ -33,46 +33,46 @@ export default function RetirementAgeClient() {
         <div className="text-center mb-10">
           <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">FirePath Tools</span>
           <h1 className="text-4xl font-bold mt-2 mb-3">Retirement Age Calculator</h1>
-          <p className="text-gray-400 text-base">Find out exactly what age you can retire based on your savings and contributions.</p>
+          <p className="text-gray-300 text-base">Find out exactly what age you can retire based on your savings and contributions.</p>
         </div>
         <div className="bg-gray-900 rounded-2xl p-8 space-y-6 border border-gray-800">
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Current Age</label>
-              <input type="number" value={currentAge} onChange={(e) => setCurrentAge(e.target.value)} placeholder="e.g. 30" className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={currentAge} onChange={(e) => setCurrentAge(e.target.value)} placeholder="e.g. 30" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Current Savings ($)</label>
-              <input type="number" value={currentSavings} onChange={(e) => setCurrentSavings(e.target.value)} placeholder="e.g. 50000" className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={currentSavings} onChange={(e) => setCurrentSavings(e.target.value)} placeholder="e.g. 50000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Monthly Contribution ($)</label>
-            <input type="number" value={monthlyContribution} onChange={(e) => setMonthlyContribution(e.target.value)} placeholder="e.g. 1000" className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={monthlyContribution} onChange={(e) => setMonthlyContribution(e.target.value)} placeholder="e.g. 1000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Target FIRE Number ($)</label>
-            <input type="number" value={targetAmount} onChange={(e) => setTargetAmount(e.target.value)} placeholder="e.g. 1000000" className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={targetAmount} onChange={(e) => setTargetAmount(e.target.value)} placeholder="e.g. 1000000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Expected Annual Return (%)</label>
-            <input type="number" value={rate} onChange={(e) => setRate(e.target.value)} placeholder="7" className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={rate} onChange={(e) => setRate(e.target.value)} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate My Retirement Age</button>
           {result !== null && (
             <div className="space-y-4">
-              <div className="bg-gray-800 rounded-xl p-6 text-center border border-orange-400/30">
-                <p className="text-gray-400 text-sm mb-1">You can retire at age</p>
+              <div className="bg-slate-800 rounded-xl p-6 text-center border border-orange-400/30">
+                <p className="text-gray-300 text-sm mb-1">You can retire at age</p>
                 <p className="text-6xl font-bold text-orange-400">{result.retirementAge}</p>
-                <p className="text-gray-400 text-sm mt-2">That is in {result.years} years</p>
+                <p className="text-gray-300 text-sm mt-2">That is in {result.years} years</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-800 rounded-xl p-4 border border-gray-700 text-center">
-                  <p className="text-gray-400 text-xs mb-1">Total Contributed</p>
+                <div className="bg-slate-800 rounded-xl p-4 border border-slate-600 text-center">
+                  <p className="text-gray-300 text-xs mb-1">Total Contributed</p>
                   <p className="text-xl font-bold text-white">${result.totalContributed.toLocaleString("en-US", { maximumFractionDigits: 0 })}</p>
                 </div>
-                <div className="bg-gray-800 rounded-xl p-4 border border-gray-700 text-center">
-                  <p className="text-gray-400 text-xs mb-1">Growth from Returns</p>
+                <div className="bg-slate-800 rounded-xl p-4 border border-slate-600 text-center">
+                  <p className="text-gray-300 text-xs mb-1">Growth from Returns</p>
                   <p className="text-xl font-bold text-green-400">${result.interestEarned.toLocaleString("en-US", { maximumFractionDigits: 0 })}</p>
                 </div>
               </div>

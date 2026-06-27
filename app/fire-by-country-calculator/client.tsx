@@ -110,12 +110,12 @@ export default function FireByCountryClient() {
                   <p className="text-sm text-orange-100 mt-1">≈ {fmt(result.fireNumberUSD, "$")} USD · {selected.swr}% SWR</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-gray-900 rounded-xl p-4 text-center border border-gray-700">
-                    <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-2">Gap to FIRE</p>
+                  <div className="bg-gray-900 rounded-xl p-4 text-center border border-slate-600">
+                    <p className="text-xs text-gray-300 font-semibold uppercase tracking-wide mb-2">Gap to FIRE</p>
                     <p className="text-2xl font-bold text-white">{result.gap <= 0 ? "You are there!" : fmt(result.gap, "$")}</p>
                   </div>
-                  <div className="bg-gray-900 rounded-xl p-4 text-center border border-gray-700">
-                    <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-2">Time to FIRE</p>
+                  <div className="bg-gray-900 rounded-xl p-4 text-center border border-slate-600">
+                    <p className="text-xs text-gray-300 font-semibold uppercase tracking-wide mb-2">Time to FIRE</p>
                     <p className="text-2xl font-bold text-white">{result.gap <= 0 ? "Now!" : result.yearsToFire + "y " + result.monthsExtra + "m"}</p>
                   </div>
                 </div>

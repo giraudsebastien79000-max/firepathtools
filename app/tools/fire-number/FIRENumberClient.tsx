@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 
 const FIRE_TYPES = [
@@ -107,7 +107,7 @@ export default function FIRENumberClient() {
             FirePath Tools
           </span>
           <h1 className="text-4xl font-bold mt-2 mb-3">FIRE Number Calculator</h1>
-          <p className="text-gray-400 text-base">
+          <p className="text-gray-300 text-base">
             Find your exact number for Lean, Regular, Fat, and Barista FIRE.
             See your timeline, inflation-adjusted target, and retirement age.
           </p>
@@ -124,7 +124,7 @@ export default function FIRENumberClient() {
                 value={annualExpenses}
                 onChange={(e) => setAnnualExpenses(e.target.value)}
                 placeholder="e.g. 50000"
-                className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
+                className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
               />
               <p className="text-xs text-gray-500 mt-1">
                 How much do you plan to spend per year in retirement?
@@ -141,7 +141,7 @@ export default function FIRENumberClient() {
                   value={currentSavings}
                   onChange={(e) => setCurrentSavings(e.target.value)}
                   placeholder="e.g. 50000"
-                  className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
                 />
               </div>
               <div>
@@ -153,7 +153,7 @@ export default function FIRENumberClient() {
                   value={monthlyContribution}
                   onChange={(e) => setMonthlyContribution(e.target.value)}
                   placeholder="e.g. 1500"
-                  className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
                 />
               </div>
             </div>
@@ -168,7 +168,7 @@ export default function FIRENumberClient() {
                   value={currentAge}
                   onChange={(e) => setCurrentAge(e.target.value)}
                   placeholder="30"
-                  className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
                 />
               </div>
               <div>
@@ -180,7 +180,7 @@ export default function FIRENumberClient() {
                   value={returnRate}
                   onChange={(e) => setReturnRate(e.target.value)}
                   placeholder="7"
-                  className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
                 />
               </div>
               <div>
@@ -192,7 +192,7 @@ export default function FIRENumberClient() {
                   value={inflationRate}
                   onChange={(e) => setInflationRate(e.target.value)}
                   placeholder="3"
-                  className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
                 />
               </div>
             </div>
@@ -208,7 +208,7 @@ export default function FIRENumberClient() {
 
         {result !== null && (
           <div className="space-y-4">
-            <p className="text-gray-400 text-xs uppercase tracking-widest text-center mb-6">
+            <p className="text-gray-300 text-xs uppercase tracking-widest text-center mb-6">
               Your FIRE Numbers — 4 Scenarios
             </p>
 
@@ -222,14 +222,14 @@ export default function FIRENumberClient() {
                     <p className={`text-lg font-bold ${type.color}`}>
                       {type.label}
                     </p>
-                    <p className="text-gray-400 text-xs mt-1">{type.desc}</p>
+                    <p className="text-gray-300 text-xs mt-1">{type.desc}</p>
                   </div>
                   {type.reached ? (
                     <span className="text-green-400 text-xs font-bold bg-green-900/30 px-3 py-1 rounded-full">
                       REACHED
                     </span>
                   ) : (
-                    <span className={`text-xs font-bold px-3 py-1 rounded-full bg-gray-800 ${type.color}`}>
+                    <span className={`text-xs font-bold px-3 py-1 rounded-full bg-slate-800 ${type.color}`}>
                       Age {type.retirementAge}
                     </span>
                   )}
@@ -258,12 +258,12 @@ export default function FIRENumberClient() {
 
                 <div className="space-y-2">
                   <div className="flex justify-between text-xs">
-                    <span className="text-gray-400">Progress toward 4% target</span>
+                    <span className="text-gray-300">Progress toward 4% target</span>
                     <span className={`font-bold ${type.color}`}>
                       {type.progress}%
                     </span>
                   </div>
-                  <div className="w-full bg-gray-800 rounded-full h-2">
+                  <div className="w-full bg-slate-800 rounded-full h-2">
                     <div
                       className={`h-2 rounded-full transition-all ${
                         type.key === "lean"
@@ -288,10 +288,10 @@ export default function FIRENumberClient() {
             ))}
 
             <div className="bg-gray-900 rounded-2xl p-5 border border-gray-800 mt-6">
-              <p className="text-gray-400 text-xs uppercase tracking-widest mb-3">
+              <p className="text-gray-300 text-xs uppercase tracking-widest mb-3">
                 How to read these numbers
               </p>
-              <div className="space-y-2 text-xs text-gray-400">
+              <div className="space-y-2 text-xs text-gray-300">
                 <p>
                   <span className="text-white font-semibold">3% rule</span> —
                   Ultra-conservative. Your portfolio lasts 40+ years.

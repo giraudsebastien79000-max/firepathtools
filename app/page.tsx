@@ -40,16 +40,16 @@ export default function Home() {
         <div className="text-center mb-16">
           <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">FirePath Tools</span>
           <h1 className="text-5xl font-bold mt-3 mb-4">Free Financial Independence Tools</h1>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">21 free calculators to plan your path to FIRE. No signup. No ads. Just tools that work.</p>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">21 free calculators to plan your path to FIRE. No signup. No ads. Just tools that work.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {tools.map((tool) => (
-            <Link key={tool.href} href={tool.href} className="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-orange-400/50 hover:bg-gray-800 transition-all group">
+            <Link key={tool.href} href={tool.href} className="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-orange-400/50 hover:bg-slate-800 transition-all group">
               <div className="flex items-start justify-between mb-2">
                 <h2 className="text-white font-semibold text-lg group-hover:text-orange-400 transition-colors">{tool.title}</h2>
                 <span className={`text-xs font-semibold px-2 py-1 rounded-full ml-2 shrink-0 ${tagColors[tool.tag]}`}>{tool.tag}</span>
               </div>
-              <p className="text-gray-400 text-sm">{tool.desc}</p>
+              <p className="text-gray-300 text-sm">{tool.desc}</p>
             </Link>
           ))}
         </div>

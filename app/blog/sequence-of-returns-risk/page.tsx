@@ -27,7 +27,7 @@ export default function SequenceOfReturnsRisk() {
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white mb-6">
           What Happens to Your FIRE Plan When the Market Crashes the Day You Retire?
         </h1>
-        <p className="text-xl text-gray-400 leading-relaxed">
+        <p className="text-xl text-gray-300 leading-relaxed">
           You saved for 20 years. You hit your number. You quit your job.
           Then the market drops 40%. This scenario has a name — and it's the risk
           most FIRE calculators quietly sweep under the rug.
@@ -92,7 +92,7 @@ export default function SequenceOfReturnsRisk() {
         <h2 className="text-2xl font-bold text-white mb-2">
           Same returns, different order — radically different outcomes
         </h2>
-        <p className="text-gray-400 mb-6 text-base">
+        <p className="text-gray-300 mb-6 text-base">
           Two retirees. Both start with $1,000,000. Both withdraw $40,000/year.
           Both average 6% annual returns over 30 years. The only difference is timing.
         </p>
@@ -100,7 +100,7 @@ export default function SequenceOfReturnsRisk() {
         <div className="overflow-x-auto rounded-xl border border-gray-800">
           <table className="w-full text-sm md:text-base">
             <thead>
-              <tr className="bg-gray-900 text-gray-400 text-left">
+              <tr className="bg-gray-900 text-gray-300 text-left">
                 <th className="px-5 py-4 font-semibold">Years</th>
                 <th className="px-5 py-4 font-semibold text-red-400">Bad Luck Retiree</th>
                 <th className="px-5 py-4 font-semibold text-green-400">Good Luck Retiree</th>
@@ -165,7 +165,7 @@ export default function SequenceOfReturnsRisk() {
             "Most FIRE calculators show you average returns. Markets don't deliver average returns —
             they deliver a specific sequence of good years and bad years, and the order matters enormously."
           </p>
-          <p className="text-gray-400 text-base">
+          <p className="text-gray-300 text-base">
             This is why the FIRE community increasingly talks about 3.5% or 3.25% withdrawal rates
             for early retirees — to build in a buffer against a bad sequence at the start.
           </p>
@@ -184,7 +184,7 @@ export default function SequenceOfReturnsRisk() {
         <div className="space-y-6 mt-4">
           <div className="border-l-2 border-orange-500 pl-5">
             <p className="text-white font-semibold text-lg mb-2">1. Use a lower withdrawal rate</p>
-            <p className="text-gray-400">
+            <p className="text-gray-300">
               Dropping from 4% to 3.5% withdrawal rate increases your required portfolio by
               roughly $125,000 per $10,000 of annual spending — but dramatically improves
               survival rates over 40-50 year retirements. Many early retirees target 3.25-3.5%
@@ -194,7 +194,7 @@ export default function SequenceOfReturnsRisk() {
 
           <div className="border-l-2 border-orange-500 pl-5">
             <p className="text-white font-semibold text-lg mb-2">2. Build a cash buffer</p>
-            <p className="text-gray-400">
+            <p className="text-gray-300">
               Holding 1-3 years of living expenses in cash or short-term bonds means you don't
               have to sell equities during a crash. You live off the buffer while the market
               recovers, avoiding the forced selling that makes sequence risk so destructive.
@@ -204,7 +204,7 @@ export default function SequenceOfReturnsRisk() {
 
           <div className="border-l-2 border-orange-500 pl-5">
             <p className="text-white font-semibold text-lg mb-2">3. Flexible spending</p>
-            <p className="text-gray-400">
+            <p className="text-gray-300">
               The 4% rule assumes you withdraw a fixed inflation-adjusted amount every year
               regardless of market conditions. In practice, early retirees who can reduce
               spending by 10-20% during a down market significantly improve their portfolio
@@ -215,7 +215,7 @@ export default function SequenceOfReturnsRisk() {
 
           <div className="border-l-2 border-orange-500 pl-5">
             <p className="text-white font-semibold text-lg mb-2">4. Keep some earned income</p>
-            <p className="text-gray-400">
+            <p className="text-gray-300">
               Barista FIRE, part-time consulting, or any small income stream during the first
               5-10 years of retirement can dramatically reduce sequence risk exposure. Even
               covering 20-30% of expenses with earned income in the early years takes enormous
@@ -225,7 +225,7 @@ export default function SequenceOfReturnsRisk() {
 
           <div className="border-l-2 border-orange-500 pl-5">
             <p className="text-white font-semibold text-lg mb-2">5. One more year</p>
-            <p className="text-gray-400">
+            <p className="text-gray-300">
               Counterintuitively, working one or two extra years beyond your FIRE number does
               more than just add to the portfolio. It reduces the withdrawal period, gives you
               more buffer above the minimum, and means a crash immediately post-retirement
@@ -267,7 +267,7 @@ export default function SequenceOfReturnsRisk() {
           <h3 className="text-2xl font-bold text-white mb-3">
             Check your withdrawal rate
           </h3>
-          <p className="text-gray-400 mb-6 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-6 max-w-lg mx-auto">
             Use our safe withdrawal rate calculator to model different scenarios —
             including what happens if the market drops in your first years of retirement.
           </p>
@@ -280,7 +280,7 @@ export default function SequenceOfReturnsRisk() {
             </Link>
             <Link
               href="/tools/fire-number"
-              className="inline-block bg-gray-800 hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
+              className="inline-block bg-slate-800 hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
             >
               Calculate My FIRE Number
             </Link>
@@ -301,12 +301,12 @@ export default function SequenceOfReturnsRisk() {
             <Link
               key={i}
               href={article.href}
-              className="block bg-gray-900 hover:bg-gray-800 border border-gray-800 rounded-xl p-5 transition-colors group"
+              className="block bg-gray-900 hover:bg-slate-800 border border-gray-800 rounded-xl p-5 transition-colors group"
             >
               <p className="text-white font-semibold group-hover:text-orange-400 transition-colors mb-1">
                 {article.title}
               </p>
-              <p className="text-gray-400 text-sm">{article.desc}</p>
+              <p className="text-gray-300 text-sm">{article.desc}</p>
             </Link>
           ))}
         </div>

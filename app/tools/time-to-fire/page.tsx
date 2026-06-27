@@ -22,7 +22,7 @@ export default function TimeToFirePage() {
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white mb-6">
           Time to FIRE Calculator
         </h1>
-        <p className="text-xl text-gray-400 leading-relaxed">
+        <p className="text-xl text-gray-300 leading-relaxed">
           How many years until you reach financial independence? Enter your numbers and find out exactly when you can retire early.
         </p>
       </section>
