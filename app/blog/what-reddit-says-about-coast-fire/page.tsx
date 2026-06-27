@@ -96,7 +96,7 @@ export default function WhatRedditSaysAboutCoastFire() {
         <section id="calculator" className="mb-10">
           <h2 className="text-2xl font-bold text-white mb-4">Find your Coast FIRE age</h2>
           <p className="text-gray-300 mb-4">Plug in your current savings, your FIRE number, a 6-7% return, and your target retirement age. The calculator tells you the age at which you hit Coast FIRE and how far you are from it today.</p>
-          <a href="/tools/coast-fire-age" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-xl transition-colors">
+          <a href="/tools/coast-fire-age" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-xl transition-colors" style={{color: "white"}}>
             Use the Coast FIRE Age Calculator
           </a>
         </section>
