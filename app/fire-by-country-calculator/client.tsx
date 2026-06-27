@@ -64,7 +64,7 @@ export default function FireByCountryClient() {
             {countries.map((c) => (
               <button key={c.name} onClick={() => { setSelected(c); setResult(null) }}
                 className={"rounded-xl p-3 text-center border-2 transition-all " + (selected.name === c.name ? "border-orange-500 bg-orange-50" : "border-gray-200 bg-white hover:border-orange-300")}>
-                <div className="text-2xl mb-1">{c.flag}</div>
+                <div className="text-xs font-bold text-orange-500 mb-1">{c.name.substring(0,2).toUpperCase()}</div>
                 <div className="text-sm font-semibold" style={{color:"#111827"}}>{c.name}</div>
                 <div className="text-xs" style={{color:"#6B7280"}}>{c.symbol}{c.monthlyCost.toLocaleString()}/mo</div>
               </button>

@@ -1,0 +1,3 @@
+﻿$c = Get-Content "C:\Users\Utilisateur\Desktop\firepathtools\app\fire-by-country-calculator\client.tsx" -Raw
+$c = $c.Replace('<div className="text-2xl mb-1">{c.flag}</div>', '<div className="text-xs font-bold text-orange-500 mb-1">{c.name.substring(0,2).toUpperCase()}</div>')
+[System.IO.File]::WriteAllText("C:\Users\Utilisateur\Desktop\firepathtools\app\fire-by-country-calculator\client.tsx", $c, [System.Text.Encoding]::UTF8)
