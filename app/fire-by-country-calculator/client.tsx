@@ -147,8 +147,8 @@ export default function FireByCountryClient() {
                   return (
                     <tr key={c.name} className={"border-b border-gray-100 " + (selected.name === c.name ? "bg-orange-50" : "")}>
                       <td className="py-3 font-medium" style={{color:"#111827"}}>{c.flag} {c.name}</td>
-                      <td className="py-3 text-right text-gray-600">{c.symbol}{c.monthlyCost.toLocaleString()}</td>
-                      <td className="py-3 text-right text-gray-600">{c.swr}%</td>
+                      <td className="py-3 text-right" style={{color:"#374151"}}>{c.symbol}{c.monthlyCost.toLocaleString()}</td>
+                      <td className="py-3 text-right" style={{color:"#374151"}}>{c.swr}%</td>
                       <td className="py-3 text-right font-semibold" style={{color:"#111827"}}></td>
                     </tr>
                   )
@@ -165,15 +165,15 @@ export default function FireByCountryClient() {
           <div className="space-y-6">
             <div>
               <h3 className="font-semibold mb-2" style={{color:"#111827"}}>Why is the FIRE number different by country?</h3>
-              <p className="text-gray-600 text-sm">Your FIRE number depends on your annual spending. Living in Thailand at ,200/month requires a much smaller portfolio than living in France at ,500/month. The safe withdrawal rate also varies — we use 3.5% for higher-cost countries and 4% for lower-cost ones.</p>
+              <p className="text-sm" style={{color:"#374151"}}>Your FIRE number depends on your annual spending. Living in Thailand at ,200/month requires a much smaller portfolio than living in France at ,500/month. The safe withdrawal rate also varies — we use 3.5% for higher-cost countries and 4% for lower-cost ones.</p>
             </div>
             <div>
               <h3 className="font-semibold mb-2" style={{color:"#111827"}}>Should I keep my investments in USD?</h3>
-              <p className="text-gray-600 text-sm">Most FIRE expats keep their portfolio in USD or EUR and convert as needed. This protects against local currency devaluation. The FIRE number shown in local currency is for reference — your actual portfolio will likely remain in your home currency.</p>
+              <p className="text-sm" style={{color:"#374151"}}>Most FIRE expats keep their portfolio in USD or EUR and convert as needed. This protects against local currency devaluation. The FIRE number shown in local currency is for reference — your actual portfolio will likely remain in your home currency.</p>
             </div>
             <div>
               <h3 className="font-semibold mb-2" style={{color:"#111827"}}>What about healthcare abroad?</h3>
-              <p className="text-gray-600 text-sm">EU countries offer public healthcare access for residents. In Thailand, private insurance runs -200/month. Always factor in healthcare costs when calculating your budget abroad.</p>
+              <p className="text-sm" style={{color:"#374151"}}>EU countries offer public healthcare access for residents. In Thailand, private insurance runs -200/month. Always factor in healthcare costs when calculating your budget abroad.</p>
             </div>
           </div>
         </div>
