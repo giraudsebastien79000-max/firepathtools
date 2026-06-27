@@ -66,7 +66,7 @@ export default function FireByCountryClient() {
                 className={"rounded-xl p-3 text-center border-2 transition-all " + (selected.name === c.name ? "border-orange-500 bg-orange-50" : "border-gray-200 bg-white hover:border-orange-300")}>
                 <div className="text-2xl mb-1">{c.flag}</div>
                 <div className="text-sm font-semibold" style={{color:"#111827"}}>{c.name}</div>
-                <div className="text-xs text-gray-500">{c.symbol}{c.monthlyCost.toLocaleString()}/mo</div>
+                <div className="text-xs" style={{color:"#6B7280"}}>{c.symbol}{c.monthlyCost.toLocaleString()}/mo</div>
               </button>
             ))}
           </div>
@@ -76,7 +76,7 @@ export default function FireByCountryClient() {
               <span className="text-3xl">{selected.flag}</span>
               <div>
                 <h2 className="text-xl font-bold" style={{color:"#111827"}}>Retire in {selected.name}</h2>
-                <p className="text-sm text-gray-500">{selected.highlight}</p>
+                <p className="text-sm" style={{color:"#6B7280"}}>{selected.highlight}</p>
               </div>
             </div>
 
