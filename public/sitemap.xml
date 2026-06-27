@@ -52,6 +52,12 @@
   <url><loc>https://www.firepathtools.com/blog/fat-fire-vs-lean-fire</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.firepathtools.com/blog/middle-class-fire</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.firepathtools.com/blog/fire-after-40</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://www.firepathtools.com/fire-by-country-calculator</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
 
 
