@@ -1,4 +1,5 @@
-﻿"use client"
+﻿$part1 = @"
+"use client"
 
 import { useState } from "react"
 import Link from "next/link"
@@ -99,3 +100,5 @@ export default function FireCanadaClient() {
     </main>
   )
 }
+"@
+[System.IO.File]::WriteAllText("C:\Users\Utilisateur\Desktop\firepathtools\app\fire-canada-calculator\client.tsx", $part1, [System.Text.Encoding]::UTF8)
