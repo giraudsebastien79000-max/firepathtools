@@ -45,19 +45,19 @@ export default function FireCanadaClient() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Your FIRE Numbers</h2>
             <div className="space-y-5">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Annual Expenses (CAD)</label>
+                <label className="block text-sm font-semibold text-gray-900 mb-1">Annual Expenses (CAD)</label>
                 <input type="number" value={annualExpenses} onChange={(e) => setAnnualExpenses(e.target.value)} placeholder="e.g. 48000" className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Current Savings (CAD)</label>
+                <label className="block text-sm font-semibold text-gray-900 mb-1">Current Savings (CAD)</label>
                 <input type="number" value={currentSavings} onChange={(e) => setCurrentSavings(e.target.value)} placeholder="e.g. 85000" className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Monthly Contribution (CAD)</label>
+                <label className="block text-sm font-semibold text-gray-900 mb-1">Monthly Contribution (CAD)</label>
                 <input type="number" value={monthlyContribution} onChange={(e) => setMonthlyContribution(e.target.value)} placeholder="e.g. 2000" className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Annual Return: <span className="text-red-600 font-semibold">{annualReturn}%</span></label>
+                <label className="block text-sm font-semibold text-gray-900 mb-1">Annual Return: <span className="text-red-600 font-semibold">{annualReturn}%</span></label>
                 <input type="range" min="3" max="12" step="0.5" value={annualReturn} onChange={(e) => setAnnualReturn(e.target.value)} className="w-full accent-red-600" />
               </div>
               <button onClick={calculate} className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">Calculate My FIRE Number</button>
