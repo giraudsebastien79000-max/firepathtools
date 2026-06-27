@@ -73,7 +73,7 @@ export default function FireByCountryClient() {
 
           <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-8 mb-8">
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-sm font-bold text-orange-500 bg-orange-100 px-2 py-1 rounded">{selected.name.substring(0,2).toUpperCase()}</span>
+              <span className="text-base font-bold text-white bg-orange-500 px-3 py-2 rounded-lg">{selected.name.substring(0,2).toUpperCase()}</span>
               <div>
                 <h2 className="text-xl font-bold" style={{color:"#111827"}}>Retire in {selected.name}</h2>
                 <p className="text-sm" style={{color:"#6B7280"}}>{selected.highlight}</p>
