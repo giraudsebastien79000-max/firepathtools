@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-gray">
+    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-invert">
       <h1>What Is a Safe Withdrawal Rate? The Key to Making Your Money Last</h1>
 
       <p><strong>A safe withdrawal rate is the percentage of your portfolio you can withdraw each year in retirement without running out of money over a 30-year period.</strong></p>

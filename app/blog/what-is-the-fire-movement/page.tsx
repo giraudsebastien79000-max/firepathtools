@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-gray">
+    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-invert">
       <h1>What Is the FIRE Movement? Financial Independence Explained</h1>
 
       <p><strong>FIRE stands for Financial Independence Retire Early. The idea is simple — save and invest aggressively enough that your portfolio generates enough income to cover your expenses forever. At that point, work becomes optional.</strong></p>

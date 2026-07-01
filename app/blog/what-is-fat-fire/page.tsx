@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-gray">
+    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-invert">
       <h1>What Is Fat FIRE? The Complete Guide to Retiring Early in Style</h1>
       <p><strong>Fat FIRE is retiring early while maintaining a comfortable, generous lifestyle -- no budget spreadsheets, no lifestyle sacrifices, no moving somewhere cheap to make the numbers work.</strong></p>
       <p>Most people who discover the FIRE movement start with a simple question: what if I did not have to work until 65? But then a second question follows pretty quickly -- what kind of life do I actually want in retirement?</p>

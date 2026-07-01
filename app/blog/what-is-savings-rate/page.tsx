@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-gray">
+    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-invert">
       <h1>What Is a Savings Rate — And Why It Matters More Than Your Salary</h1>
       <p><strong>Your savings rate is the percentage of your income you keep instead of spend.</strong></p>
       <p>If you earn $4,000 a month and save $800, your savings rate is 20%. That is probably the single most important number in your financial life — more than your salary, more than your investment returns, more than anything else.</p>

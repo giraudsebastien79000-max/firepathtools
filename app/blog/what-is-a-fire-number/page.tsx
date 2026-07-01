@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-gray">
+    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-invert">
       <h1>What Is a FIRE Number? A Beginner Guide to Financial Independence</h1>
       <p><strong>Your FIRE number is the amount of money you need invested to never work again.</strong></p>
       <p>It sounds almost too easy to be true. But yeah - that is really it.</p>

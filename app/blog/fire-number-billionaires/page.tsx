@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function FireNumberBillionaires() {
   return (
-    <article className="prose prose-lg max-w-3xl mx-auto px-4 py-10">
+    <article className="prose prose-invert prose-lg max-w-3xl mx-auto px-4 py-10">
       <h1>We Calculated the FIRE Number of 20 Billionaires and Celebrities (2026) — The Results Are Insane</h1>
 
       <p><strong>Elon Musk would need more money invested than the entire GDP of Australia just to retire. Let that sink in.</strong></p>

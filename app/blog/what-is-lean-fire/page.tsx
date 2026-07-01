@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-gray">
+    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-invert">
       <h1>What Is Lean FIRE? How to Retire Early on a Lean Budget</h1>
       <p><strong>Lean FIRE is retiring early on a minimal budget — typically under $40,000 per year — by keeping your lifestyle simple and your expenses low.</strong></p>
       <p>It is the most aggressive form of early retirement. You are not waiting to accumulate a large portfolio. You are cutting your spending down far enough that a smaller number gets you there faster.</p>

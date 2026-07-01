@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-gray">
+    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-invert">
       <h1>What Is Compound Interest? The Force Behind Every FIRE Journey</h1>
 
       <p><strong>Compound interest is earning interest on your interest — and over time, it turns small amounts of money into life-changing wealth.</strong></p>

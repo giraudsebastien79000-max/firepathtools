@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-gray">
+    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-invert">
       <h1>What Is Barista FIRE? Work Less, Retire Earlier</h1>
 
       <p><strong>Barista FIRE is when your investments cover most of your expenses, and a small part-time job covers the rest. You stop the full-time grind before your portfolio is completely funded.</strong></p>

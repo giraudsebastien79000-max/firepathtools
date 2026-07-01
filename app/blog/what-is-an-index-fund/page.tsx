@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-gray">
+    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-invert">
       <h1>What Is an Index Fund? The Investment Behind Most FIRE Portfolios</h1>
 
       <p><strong>An index fund is a fund that tracks a market index — like the S&P 500 or the global stock market — instead of trying to pick winning stocks.</strong></p>

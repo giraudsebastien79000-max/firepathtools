@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-gray">
+    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-invert">
       <h1>What Is the 4% Rule? The Simple Math Behind Early Retirement</h1>
       <p><strong>The 4% Rule says you can withdraw 4% of your investments every year and never run out of money.</strong></p>
       <p>It sounds almost too good to be true. But this is not a theory someone made up — it comes from decades of real market data.</p>

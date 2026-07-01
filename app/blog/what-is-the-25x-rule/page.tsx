@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-gray">
+    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-invert">
       <h1>What Is the 25x Rule? The Simplest Way to Find Your FIRE Number</h1>
 
       <p><strong>Take your annual spending. Multiply by 25. That is how much you need to retire.</strong></p>

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-gray">
+    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-invert">
       <h1>What Is Coast FIRE? How to Stop Saving and Let Your Money Do the Work</h1>
       <p><strong>Coast FIRE is the point where you have saved enough that compound interest alone will grow your portfolio to your full retirement number — without you ever contributing another dollar.</strong></p>
       <p>You are still working — but here is the thing: your retirement is already taken care of.</p>
