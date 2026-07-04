@@ -65,7 +65,7 @@ export default function FIRENumberClient() {
       if (type.partTime) adjExpenses = Math.max(0, adjExpenses - type.partTime);
 
       const fireAt3 = adjExpenses / 0.03;
-      const fireAt35 = adjExpenses / 0.035;
+      const fireAt5 = adjExpenses / 0.05;
       const fireAt4 = adjExpenses / 0.04;
 
       let monthsTo4 = 0;
@@ -82,7 +82,7 @@ export default function FIRENumberClient() {
         ...type,
         adjExpenses,
         fireAt3,
-        fireAt35,
+        fireAt5,
         fireAt4,
         yearsTo4,
         retirementAge,
@@ -251,7 +251,7 @@ export default function FIRENumberClient() {
                   <div className="bg-gray-900/50 rounded-xl p-3 text-center">
                     <p className="text-gray-500 text-xs mb-1">5% rule</p>
                     <p className="text-white font-bold text-sm">
-                      {fmt(type.fireAt35)}
+                      {fmt(type.fireAt5)}
                     </p>
                   </div>
                 </div>

@@ -16,7 +16,7 @@ export default function RothVsTraditionalClient() {
     const r = parseFloat(returnRate) / 100;
     const tNow = parseFloat(taxNow) / 100;
     const tRet = parseFloat(taxRetirement) / 100;
-    const growth = Math.pow(1 + r, years);
+    const growth = r > 0 ? (Math.pow(1 + r, years) - 1) / r : years;
     const rothValue = c * growth;
     const rothAfterTax = rothValue;
     const tradContrib = c / (1 - tNow);

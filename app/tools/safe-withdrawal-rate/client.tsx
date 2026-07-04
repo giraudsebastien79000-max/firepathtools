@@ -14,7 +14,7 @@ export default function SafeWithdrawalRateClient() {
   if (realReturn <= 0) {
     years = portfolio / annualSpend;
   } else {
-    years = Math.log(annualSpend / (annualSpend - portfolio * realReturn)) / Math.log(1 + realReturn);
+    years = annualSpend <= portfolio * realReturn ? Infinity : Math.log(annualSpend / (annualSpend - portfolio * realReturn)) / Math.log(1 + realReturn);
   }
 
   const isSafe = withdrawalRate <= 4;

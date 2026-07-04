@@ -41,17 +41,17 @@ export default function BudgetPlannerClient() {
               <div className="bg-slate-800 rounded-xl p-5 border border-orange-400/30">
                 <p className="text-orange-400 text-xs font-semibold uppercase tracking-widest mb-4">50/30/20 Rule</p>
                 <div className="space-y-3">
-                  <div className="flex justify-between"><span className="text-gray-300 text-sm">50% Needs</span><span className="text-white font-bold">{needs.toLocaleString("en-US",{maximumFractionDigits:0})}</span></div>
-                  <div className="flex justify-between"><span className="text-gray-300 text-sm">30% Wants</span><span className="text-white font-bold">{wants.toLocaleString("en-US",{maximumFractionDigits:0})}</span></div>
-                  <div className="flex justify-between"><span className="text-gray-300 text-sm">20% Savings</span><span className="text-orange-400 font-bold">{savings.toLocaleString("en-US",{maximumFractionDigits:0})}</span></div>
+                  <div className="flex justify-between"><span className="text-gray-300 text-sm">50% Needs</span><span className="text-white font-bold">${needs.toLocaleString("en-US",{maximumFractionDigits:0})}</span></div>
+                  <div className="flex justify-between"><span className="text-gray-300 text-sm">30% Wants</span><span className="text-white font-bold">${wants.toLocaleString("en-US",{maximumFractionDigits:0})}</span></div>
+                  <div className="flex justify-between"><span className="text-gray-300 text-sm">20% Savings</span><span className="text-orange-400 font-bold">${savings.toLocaleString("en-US",{maximumFractionDigits:0})}</span></div>
                 </div>
               </div>
               <div className="bg-slate-800 rounded-xl p-5 border border-slate-600">
                 <p className="text-gray-300 text-xs font-semibold uppercase tracking-widest mb-4">60/20/20 FIRE Aggressive</p>
                 <div className="space-y-3">
-                  <div className="flex justify-between"><span className="text-gray-300 text-sm">60% Needs</span><span className="text-white font-bold">{needsAlt.toLocaleString("en-US",{maximumFractionDigits:0})}</span></div>
-                  <div className="flex justify-between"><span className="text-gray-300 text-sm">20% Wants</span><span className="text-white font-bold">{wantsAlt.toLocaleString("en-US",{maximumFractionDigits:0})}</span></div>
-                  <div className="flex justify-between"><span className="text-gray-300 text-sm">20% Savings</span><span className="text-orange-400 font-bold">{savingsAlt.toLocaleString("en-US",{maximumFractionDigits:0})}</span></div>
+                  <div className="flex justify-between"><span className="text-gray-300 text-sm">60% Needs</span><span className="text-white font-bold">${needsAlt.toLocaleString("en-US",{maximumFractionDigits:0})}</span></div>
+                  <div className="flex justify-between"><span className="text-gray-300 text-sm">20% Wants</span><span className="text-white font-bold">${wantsAlt.toLocaleString("en-US",{maximumFractionDigits:0})}</span></div>
+                  <div className="flex justify-between"><span className="text-gray-300 text-sm">20% Savings</span><span className="text-orange-400 font-bold">${savingsAlt.toLocaleString("en-US",{maximumFractionDigits:0})}</span></div>
                 </div>
               </div>
             </div>

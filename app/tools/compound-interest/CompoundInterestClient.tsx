@@ -13,7 +13,7 @@ export default function CompoundInterestClient() {
     const m = parseFloat(monthly) || 0;
     const r = parseFloat(rate) / 100 / 12;
     const n = parseFloat(years) * 12;
-    const futureValue = p * Math.pow(1 + r, n) + m * ((Math.pow(1 + r, n) - 1) / r);
+    const futureValue = r !== 0 ? p * Math.pow(1 + r, n) + m * ((Math.pow(1 + r, n) - 1) / r) : p + m * n;
     const totalContributions = p + m * n;
     const totalInterest = futureValue - totalContributions;
     setResult({ futureValue, totalContributions, totalInterest });

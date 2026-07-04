@@ -25,7 +25,7 @@ export default function CanIRetireEarlyClient() {
     const expenses = parseFloat(annualExpenses);
     const r = parseFloat(annualReturn) / 100;
     const swrRate = parseFloat(swr) / 100;
-    if (!age || !target || !savings || !annual || !expenses || !r || !swrRate) return;
+    if (!age || !target || isNaN(savings) || isNaN(annual) || !expenses || isNaN(r) || !swrRate) return;
 
     const fireNumber = expenses / swrRate;
     const years = target - age;

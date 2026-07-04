@@ -23,8 +23,15 @@ export default function SavingsRateClient() {
     const savings = inc - exp
     const rate = (savings / inc) * 100
     let years: number | null = null
-    if (rate > 0) {
-      years = Math.round(Math.log(25) / Math.log(1 + (savings / exp)))
+    if (rate > 0 && exp > 0) {
+      // Time to FIRE: save until portfolio = 25x annual expenses,
+      // assuming 5% real (inflation-adjusted) returns, starting from $0.
+      // Matches the classic "shockingly simple math" table.
+      const r = 0.05
+      const annualSavings = savings * 12
+      const annualExpenses = exp * 12
+      const fireNumber = 25 * annualExpenses
+      years = Math.round(Math.log(1 + (fireNumber * r) / annualSavings) / Math.log(1 + r))
     }
     setResult({ rate: rate.toFixed(1), savings, years })
   }
@@ -80,6 +87,11 @@ export default function SavingsRateClient() {
                   <p className="text-2xl font-bold text-white">{result.years ? result.years : "--"}</p>
                 </div>
               </div>
+              {result.years && (
+                <p className="text-gray-500 text-xs text-center">
+                  Assumes 5% real returns, a 25x expenses target, and starting from $0. Matches the classic savings rate table.
+                </p>
+              )}
             </div>
           )}
         </div>

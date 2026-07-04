@@ -13,7 +13,7 @@ export default function LatteFactorClient() {
     const r = parseFloat(returnRate) / 100 / 12;
     const n = y * 12;
     const monthly = d * 30;
-    const invested = monthly * ((Math.pow(1 + r, n) - 1) / r);
+    const invested = r !== 0 ? monthly * ((Math.pow(1 + r, n) - 1) / r) : monthly * n;
     const totalSpent = monthly * n;
     setResult({ monthly, invested, totalSpent, daily: d });
   };

@@ -16,7 +16,7 @@ export default function FreelanceRateClient() {
     const billableHours = w * h;
     const baseRate = s / billableHours;
     const finalRate = baseRate * (1 + b);
-    const daily = finalRate * h;
+    const daily = finalRate * 8;
     const monthly = (s * (1 + b)) / 12;
     setResult({ baseRate, finalRate, daily, monthly, billableHours });
   };

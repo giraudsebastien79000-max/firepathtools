@@ -16,8 +16,8 @@ export default function InvestmentFeesClient() {
     const r = parseFloat(returnRate) / 100 / 12;
     const f = (parseFloat(returnRate) - parseFloat(feeRate)) / 100 / 12;
     const n = y * 12;
-    const withoutFees = p * Math.pow(1+r,n) + m * ((Math.pow(1+r,n)-1)/r);
-    const withFees = p * Math.pow(1+f,n) + m * ((Math.pow(1+f,n)-1)/f);
+    const withoutFees = r !== 0 ? p * Math.pow(1+r,n) + m * ((Math.pow(1+r,n)-1)/r) : p + m * n;
+    const withFees = f !== 0 ? p * Math.pow(1+f,n) + m * ((Math.pow(1+f,n)-1)/f) : p + m * n;
     const feeCost = withoutFees - withFees;
     const feePct = (feeCost / withoutFees) * 100;
     setResult({ withoutFees, withFees, feeCost, feePct });
