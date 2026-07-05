@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   keywords: ['FIRE calculator', 'financial independence', 'early retirement', 'compound interest', 'savings rate', 'budget planner'],
   other: {
     'impact-site-verification': '5696e88d-d92b-43f5-811a-0343750eb985',
+    'p:domain_verify': '6f2cdaa406a2f426df20b0a6d08da9c3',
   },
 }
 
@@ -37,7 +38,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-gray-950 text-gray-100">
         {children}
         <footer className="mt-auto py-6 text-center text-sm text-gray-500 border-t border-gray-200">
-          <p>© {new Date().getFullYear()} FirePath Tools. For informational purposes only. Not financial advice.</p>
+          <p>� {new Date().getFullYear()} FirePath Tools. For informational purposes only. Not financial advice.</p>
           <p className="mt-2">
             <a href="/disclaimer" className="underline hover:text-gray-700">Disclaimer &amp; Affiliate Disclosure</a>
           </p>
@@ -46,3 +47,4 @@ export default function RootLayout({
     </html>
   )
 }
+
