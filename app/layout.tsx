@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+ï»¿import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 
@@ -38,7 +38,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-gray-950 text-gray-100">
         {children}
         <footer className="mt-auto py-6 text-center text-sm text-gray-500 border-t border-gray-200">
-          <p>© {new Date().getFullYear()} FirePath Tools. For informational purposes only. Not financial advice.</p>
+          <p>ï¿½ {new Date().getFullYear()} FirePath Tools. For informational purposes only. Not financial advice.</p>
           <p className="mt-2">
             <a href="/disclaimer" className="underline hover:text-gray-700">Disclaimer &amp; Affiliate Disclosure</a>
           </p>
