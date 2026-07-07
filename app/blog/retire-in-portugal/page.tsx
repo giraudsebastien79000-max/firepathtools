@@ -173,7 +173,7 @@ export default function RetireInPortugal() {
  <div className="flex flex-col sm:flex-row gap-4">
  <Link
  href="/fire-by-country-calculator"
- className="inline-block bg-orange-500 hover:bg-orange-400 text-gray-950 font-bold px-6 py-3 rounded-lg transition-colors text-center"
+ className="inline-block bg-orange-500 hover:bg-orange-400 font-bold px-6 py-3 rounded-lg transition-colors text-center" style={{ color: "#ffffff" }}
  >
  FIRE by Country Calculator
  </Link>

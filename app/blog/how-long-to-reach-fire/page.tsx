@@ -300,7 +300,7 @@ export default function HowLongToReachFire() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/tools/fire-number"
-              className="inline-block bg-orange-500 hover:bg-orange-400 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
+              className="inline-block bg-orange-500 hover:bg-orange-400 font-semibold px-8 py-3 rounded-xl transition-colors" style={{ color: "#ffffff" }}
             >
               Calculate My FIRE Number
             </Link>
