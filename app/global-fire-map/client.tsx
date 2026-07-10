@@ -302,7 +302,7 @@ export default function GlobalFireMapClient() {
             More than 5 years
           </span>
           <span className="flex items-center gap-2">
-            <span className="inline-block w-4 h-4 rounded" style={{ background: "#475569" }}></span>
+            <span className="inline-block w-4 h-4 rounded border border-slate-400" style={{ background: "#1e293b" }}></span>
             Tracked country (run your numbers)
           </span>
         </div>
@@ -496,9 +496,10 @@ export default function GlobalFireMapClient() {
 
       {/* Table */}
       <section className="max-w-3xl mx-auto px-6 pb-16">
-        <h2 className="text-2xl font-bold text-white mb-4">All {countries.length} countries, sortable</h2>
-        <div className="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
-          <table className="w-full text-left text-sm">
+        <h2 className="text-2xl font-bold text-white mb-2">All {countries.length} countries, sortable</h2>
+        <p className="text-xs text-gray-500 mb-3 md:hidden">Swipe the table sideways to see all columns.</p>
+        <div className="bg-gray-900 border border-gray-800 rounded-xl overflow-x-auto">
+          <table className="w-full text-left text-sm min-w-[560px]">
             <thead>
               <tr className="border-b border-gray-800">
                 <th className="p-3">
