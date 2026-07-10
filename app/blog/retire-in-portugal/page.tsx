@@ -369,7 +369,9 @@ export default function RetireInPortugal() {
  <h3 className="text-xl font-bold text-white mb-6">Related articles</h3>
  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
  {[
- { title: 'How Long Does It Actually Take to Reach FIRE?', href: '/blog/how-long-to-reach-fire', desc: 'The full savings rate timeline table - from 5% to 75%.' },
+ { title: 'Retire in Thailand: The Complete FIRE Guide', href: '/blog/retire-in-thailand', desc: 'Visa routes by age, real budgets, and the new remittance tax rules.' },
+              { title: 'Retire in Spain: The Complete FIRE Guide', href: '/blog/retire-in-spain', desc: 'The non-lucrative visa, wealth tax by region, and budgets city by city.' },
+              { title: 'How Long Does It Actually Take to Reach FIRE?', href: '/blog/how-long-to-reach-fire', desc: 'The full savings rate timeline table - from 5% to 75%.' },
  { title: 'What Is the FIRE Number?', href: '/blog/what-is-a-fire-number', desc: 'How to calculate the portfolio size you need to retire early.' },
  { title: 'What Is the 4% Rule?', href: '/blog/what-is-the-4-percent-rule', desc: 'The research behind the most cited number in early retirement.' },
  { title: 'Lean FIRE vs Fat FIRE', href: '/blog/what-is-lean-fire', desc: 'How your lifestyle target shapes your savings rate requirements.' },
