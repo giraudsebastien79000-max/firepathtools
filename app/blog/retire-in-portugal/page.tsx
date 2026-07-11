@@ -371,6 +371,7 @@ export default function RetireInPortugal() {
  {[
  { title: 'Retire in Thailand: The Complete FIRE Guide', href: '/blog/retire-in-thailand', desc: 'Visa routes by age, real budgets, and the new remittance tax rules.' },
               { title: 'Retire in Spain: The Complete FIRE Guide', href: '/blog/retire-in-spain', desc: 'The non-lucrative visa, wealth tax by region, and budgets city by city.' },
+            { title: 'Retire in France: The Complete FIRE Guide', href: '/blog/retire-in-france', desc: 'The visitor visa, the US-France tax treaty advantage, and budgets city by city.' },
               { title: 'How Long Does It Actually Take to Reach FIRE?', href: '/blog/how-long-to-reach-fire', desc: 'The full savings rate timeline table - from 5% to 75%.' },
  { title: 'What Is the FIRE Number?', href: '/blog/what-is-a-fire-number', desc: 'How to calculate the portfolio size you need to retire early.' },
  { title: 'What Is the 4% Rule?', href: '/blog/what-is-the-4-percent-rule', desc: 'The research behind the most cited number in early retirement.' },

@@ -99,7 +99,7 @@ export default function RetireInFrancePage() {
         <p className="text-gray-300 leading-relaxed mb-4">
           France rarely tops retire-abroad lists, and that is a math error. The
           headline reputation - high taxes, Paris prices - hides a visa bar that is
-          almost half of Spain's, world-class healthcare in every mid-size city,
+          nearly 40% below Spain's, world-class healthcare in every mid-size city,
           high-speed rail across the country, and a 1994 tax treaty that quietly
           makes France one of the most tax-friendly destinations in Western Europe
           for American retirees.

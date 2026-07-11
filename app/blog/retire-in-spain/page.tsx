@@ -294,7 +294,15 @@ export default function RetireInSpainPage() {
               Visa routes by age, real budgets, and the new remittance tax rules.
             </p>
           </Link>
-          <Link href="/blog/what-is-a-fire-number" className="block bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-gray-600">
+          <Link href="/blog/retire-in-france" className="block bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-gray-600">
+              <h3 className="text-lg font-bold text-white mb-1">
+                Retire in France: The Complete FIRE Guide
+              </h3>
+              <p className="text-gray-400 text-sm">
+                The visitor visa, the US-France tax treaty advantage, and budgets city by city.
+              </p>
+            </Link>
+            <Link href="/blog/what-is-a-fire-number" className="block bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-gray-600">
             <h3 className="text-lg font-bold text-white mb-1">
               What Is a FIRE Number?
             </h3>
