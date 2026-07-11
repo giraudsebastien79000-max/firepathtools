@@ -40,6 +40,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'sequence-of-returns-risk',
     'one-number-that-matters-more-than-fire-number',
     'how-to-start-fire-by-age',
+    'retire-in-portugal',
+    'retire-in-thailand',
+    'retire-in-spain',
+    'retire-in-france',
   ]
 
   return [
@@ -48,6 +52,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
+    },
+    {
+      url: baseUrl + '/global-fire-map',
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
     },
     ...tools.map((tool) => ({
       url: `${baseUrl}/tools/${tool}`,
