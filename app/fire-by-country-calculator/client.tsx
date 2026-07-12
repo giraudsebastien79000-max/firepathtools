@@ -6,12 +6,12 @@ import Link from "next/link"
 const countries = [
   { name: "Portugal", flag: "🇵🇹", currency: "EUR", symbol: "€", monthlyCost: 1800, swr: 3.5, highlight: "NHR tax regime, warm climate, EU healthcare", color: "green" },
   { name: "Spain", flag: "🇪🇸", currency: "EUR", symbol: "€", monthlyCost: 2000, swr: 3.5, highlight: "Beckham Law for expats, great weather, high quality of life", color: "red" },
-  { name: "Thailand", flag: "🇹🇭", currency: "THB", symbol: "฿", monthlyCost: 1200, swr: 4.0, highlight: "Very low cost of living, excellent healthcare, warm year-round", color: "blue" },
+  { name: "Thailand", flag: "🇹🇭", currency: "THB", symbol: "฿", monthlyCost: 43000, swr: 4.0, highlight: "Very low cost of living, excellent healthcare, warm year-round", color: "blue" },
   { name: "France", flag: "🇫🇷", currency: "EUR", symbol: "€", monthlyCost: 2500, swr: 3.5, highlight: "World-class healthcare, culture, but higher taxes", color: "indigo" },
-  { name: "Mexico", flag: "🇲🇽", currency: "MXN", symbol: "MX" + String.fromCharCode(36), monthlyCost: 1500, swr: 4.0, highlight: "Low cost, close to US, growing expat communities", color: "orange" },
+  { name: "Mexico", flag: "🇲🇽", currency: "MXN", symbol: "MX" + String.fromCharCode(36), monthlyCost: 26000, swr: 4.0, highlight: "Low cost, close to US, growing expat communities", color: "orange" },
   { name: "Italy", flag: "🇮🇹", currency: "EUR", symbol: "€", monthlyCost: 2200, swr: 3.5, highlight: "7% flat tax for foreign retirees in southern regions", color: "green" },
-  { name: "Colombia", flag: "🇨🇴", currency: "COP", symbol: "COP", monthlyCost: 1100, swr: 4.0, highlight: "Ultra low cost, eternal spring climate in Medellin", color: "yellow" },
-  { name: "Japan", flag: "🇯🇵", currency: "JPY", symbol: "¥", monthlyCost: 2000, swr: 3.5, highlight: "Safe, unique culture, excellent public transport", color: "red" },
+  { name: "Colombia", flag: "🇨🇴", currency: "COP", symbol: "COP", monthlyCost: 4400000, swr: 4.0, highlight: "Ultra low cost, eternal spring climate in Medellin", color: "yellow" },
+  { name: "Japan", flag: "🇯🇵", currency: "JPY", symbol: "¥", monthlyCost: 300000, swr: 3.5, highlight: "Safe, unique culture, excellent public transport", color: "red" },
 ]
 
 const usdRates: Record<string, number> = {
@@ -30,7 +30,9 @@ export default function FireByCountryClient() {
     const savings = parseFloat(currentSavings) || 0
     const monthly = parseFloat(monthlyContribution) || 0
     const fireNumber = expenses / (selected.swr / 100)
-    const gap = fireNumber - savings
+    const usdRate = usdRates[selected.currency] || 1
+    const fireNumberUSD = selected.currency === "USD" ? fireNumber : fireNumber * usdRate
+    const gap = fireNumberUSD - savings
     const rate = 0.07 / 12
     let yearsToFire = 0
     let monthsExtra = 0
@@ -39,8 +41,6 @@ export default function FireByCountryClient() {
       yearsToFire = Math.floor(months / 12)
       monthsExtra = Math.round(months % 12)
     }
-    const usdRate = usdRates[selected.currency] || 1
-    const fireNumberUSD = selected.currency === "USD" ? fireNumber : fireNumber * usdRate
     setResult({ fireNumber, fireNumberUSD, gap: Math.max(0, gap), yearsToFire, monthsExtra })
   }
 
@@ -149,7 +149,7 @@ export default function FireByCountryClient() {
                       <td className="py-3 font-medium" style={{color:"#111827"}}>{c.flag} {c.name}</td>
                       <td className="py-3 text-right" style={{color:"#374151"}}>{c.symbol}{c.monthlyCost.toLocaleString()}</td>
                       <td className="py-3 text-right" style={{color:"#374151"}}>{c.swr}%</td>
-                      <td className="py-3 text-right font-semibold" style={{color:"#111827"}}></td>
+                      <td className="py-3 text-right font-semibold" style={{color:"#111827"}}>{fmt(fireUSD, "$")}</td>
                     </tr>
                   )
                 })}
@@ -165,7 +165,7 @@ export default function FireByCountryClient() {
           <div className="space-y-6">
             <div>
               <h3 className="font-semibold mb-2" style={{color:"#111827"}}>Why is the FIRE number different by country?</h3>
-              <p className="text-sm" style={{color:"#374151"}}>Your FIRE number depends on your annual spending. Living in Thailand at ,200/month requires a much smaller portfolio than living in France at ,500/month. The safe withdrawal rate also varies — we use 3.5% for higher-cost countries and 4% for lower-cost ones.</p>
+              <p className="text-sm" style={{color:"#374151"}}>Your FIRE number depends on your annual spending. Living in Thailand at 43,000 THB per month requires a much smaller portfolio than living in France at 2,500 EUR per month. The safe withdrawal rate also varies — we use 3.5% for higher-cost countries and 4% for lower-cost ones.</p>
             </div>
             <div>
               <h3 className="font-semibold mb-2" style={{color:"#111827"}}>Should I keep my investments in USD?</h3>
@@ -173,7 +173,7 @@ export default function FireByCountryClient() {
             </div>
             <div>
               <h3 className="font-semibold mb-2" style={{color:"#111827"}}>What about healthcare abroad?</h3>
-              <p className="text-sm" style={{color:"#374151"}}>EU countries offer public healthcare access for residents. In Thailand, private insurance runs -200/month. Always factor in healthcare costs when calculating your budget abroad.</p>
+              <p className="text-sm" style={{color:"#374151"}}>EU countries offer public healthcare access for residents. In Thailand, private insurance runs 100-200 USD per month. Always factor in healthcare costs when calculating your budget abroad.</p>
             </div>
           </div>
         </div>
