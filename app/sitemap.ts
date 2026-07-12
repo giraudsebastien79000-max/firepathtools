@@ -1,4 +1,4 @@
-﻿import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.firepathtools.com'
@@ -20,6 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'latte-factor',
     'fire-progress',
     'budget-planner',
+    'safe-withdrawal-rate',
+    'sequence-of-returns',
+    'can-i-retire-early',
+    'coast-fire-age',
+    'drawdown-calculator',
+    'fire-gap',
+    'freedom-date',
+    'time-to-fire',
   ]
 
   const blogs = [
@@ -44,6 +52,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'retire-in-thailand',
     'retire-in-spain',
     'retire-in-france',
+    'coast-fire-vs-barista-fire',
+    'cost-of-waiting-one-year-to-invest',
+    'fat-fire-vs-lean-fire',
+    'fire-after-40',
+    'middle-class-fire',
+    'what-delays-fire-the-most',
+    'what-reddit-says-about-coast-fire',
+    'what-reddit-says-about-lean-fire',
+  ]
+
+
+  const calculators = [
+    'fire-by-country-calculator',
+    'fire-canada-calculator',
+    'fire-uk-calculator',
+    'retire-at-40-calculator',
+    'retire-at-45-calculator',
+    'retire-at-50-calculator',
   ]
 
   return [
@@ -58,6 +84,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.9,
+    },
+    ...calculators.map((slug) => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    })),
+    {
+      url: baseUrl + '/disclaimer',
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
     },
     ...tools.map((tool) => ({
       url: `${baseUrl}/tools/${tool}`,
