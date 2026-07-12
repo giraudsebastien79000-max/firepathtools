@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -132,6 +132,7 @@ export default function CostOfWaitingPage() {
           <p className="text-gray-300 leading-relaxed">Open the account. Buy the index fund. Automate the contribution. Do it today, not when conditions are right — because conditions will never be perfectly right, and every month you wait has a specific dollar cost attached to it.</p>
 
           <div className="mt-12 space-y-4">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does waiting one year to invest actually cost?","acceptedAnswer":{"@type":"Answer","text":"For someone investing $500/month at 7% annual return over 40 years, a one-year delay costs approximately $93,000 in final portfolio value. The exact amount depends on your contribution size, return rate, and time horizon - but the cost is always much larger than just the missed contributions."}},{"@type":"Question","name":"Should I pay off debt before investing?","acceptedAnswer":{"@type":"Answer","text":"It depends on the interest rate. High-interest debt (credit cards at 18-25%) should be paid off first - the guaranteed return of eliminating that debt exceeds typical investment returns. Low-interest debt (student loans at 3-5%, mortgages) should often be invested alongside rather than paid off first, since the compounding cost of delay can exceed the interest saved."}},{"@type":"Question","name":"Is it too late to start investing at 40?","acceptedAnswer":{"@type":"Answer","text":"No - starting at 40 still gives you 20-25 years of compounding before traditional retirement age. $1,000/month at 7% from age 40 to 65 produces approximately $810,000. It is less than starting at 25, but far better than not starting at all. The best time to start was yesterday; the second best time is today."}},{"@type":"Question","name":"What if the market crashes right after I start?","acceptedAnswer":{"@type":"Answer","text":"A market crash early in your investing career is actually less damaging than one near retirement - you have decades to recover, and your monthly contributions buy more shares at lower prices (dollar-cost averaging). Historical data shows that investors who stayed invested through every major crash since 1929 consistently outperformed those who tried to time the market."}}]}`}} />
             <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
             <div className="space-y-4">
               <div className="bg-gray-900 rounded-xl p-6">

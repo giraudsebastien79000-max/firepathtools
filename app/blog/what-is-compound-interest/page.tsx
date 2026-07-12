@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'What Is Compound Interest? The Force Behind Every FIRE Journey | FirePath Tools',
@@ -83,6 +83,7 @@ export default function Page() {
 
       <p>This is why paying off high-interest debt is always the first step before investing. You cannot out-compound a 20% interest rate.</p>
 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between APY and APR?","acceptedAnswer":{"@type":"Answer","text":"APR is the annual interest rate without compounding. APY includes the effect of compounding. When comparing savings accounts or investments, always compare APY - it reflects your actual return."}},{"@type":"Question","name":"How does compound interest help with FIRE?","acceptedAnswer":{"@type":"Answer","text":"Compound interest means your portfolio grows faster the longer you leave it alone. In the FIRE framework, it means you can reach financial independence without saving every single dollar yourself - your existing investments do increasing amounts of work over time."}},{"@type":"Question","name":"Is compound interest the same as compound growth?","acceptedAnswer":{"@type":"Answer","text":"Essentially yes. In investing, compound growth refers to the same principle - your returns generate their own returns. Index funds do not pay traditional interest but grow through price appreciation and dividend reinvestment, which functions identically to compound interest."}},{"@type":"Question","name":"What is the best account for compound interest?","acceptedAnswer":{"@type":"Answer","text":"For long-term wealth building, broad market index funds in tax-advantaged accounts (401k, IRA, ISA, super) give you compound growth with the lowest fees and best tax efficiency. High-yield savings accounts compound interest but at much lower rates - best used for emergency funds, not long-term wealth."}}]}`}} />
       <h2>Frequently Asked Questions</h2>
 
       <h3>What is the difference between APY and APR?</h3>

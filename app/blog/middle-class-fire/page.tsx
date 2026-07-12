@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -142,6 +142,7 @@ export default function MiddleClassFirePage() {
           <p className="text-gray-300 leading-relaxed">The gap between "I will never be able to retire early" and "I can retire 10-15 years early" is often just a 10-15% increase in savings rate maintained consistently. Use the calculators below to see exactly what your timeline looks like.</p>
 
           <div className="mt-12 space-y-4">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can you reach FIRE on a $70,000 salary?","acceptedAnswer":{"@type":"Answer","text":"Yes, but the timeline is longer. At a 30% savings rate ($21,000/year) and 7% returns, you reach $1,000,000 in approximately 24 years. Starting at 25, that means FIRE at 49. Increasing to a 40% savings rate brings it to approximately 19 years - FIRE at 44. The key is starting early and maintaining the savings rate consistently."}},{"@type":"Question","name":"Is FIRE realistic with a mortgage and kids?","acceptedAnswer":{"@type":"Answer","text":"Yes, but the timeline adjusts. Children add expenses during the accumulation phase and may increase your FIRE number. A realistic target for a middle-class family with two children and a mortgage might be FIRE at 52-58 rather than 45-50. That is still a decade or more before traditional retirement - and a dramatically different quality of life."}},{"@type":"Question","name":"What savings rate do I need for Middle-Class FIRE?","acceptedAnswer":{"@type":"Answer","text":"A 25-35% savings rate is the typical Middle-Class FIRE target. Below 20%, the timeline extends beyond 30 years. Above 40%, you start approaching early-retirement territory (45-50). The exact rate depends on your income, expenses, and target retirement age."}},{"@type":"Question","name":"Should middle-class FIRE savers prioritize paying off the mortgage or investing?","acceptedAnswer":{"@type":"Answer","text":"Generally, if your mortgage rate is below 5-6%, investing in index funds is mathematically superior. If your mortgage rate is above 6-7%, paying it down provides a guaranteed return that competes with historical market returns. Many people split the difference - investing enough to get the full 401(k) match, then paying down the mortgage, then investing the rest."}}]}`}} />
             <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
             <div className="space-y-4">
               <div className="bg-gray-900 rounded-xl p-6">

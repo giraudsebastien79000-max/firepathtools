@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState } from "react"
 import Link from "next/link"
@@ -161,6 +161,7 @@ export default function FireByCountryClient() {
 
       <section className="py-12 px-4">
         <div className="max-w-3xl mx-auto">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is the FIRE number different by country?","acceptedAnswer":{"@type":"Answer","text":"Your FIRE number depends on your annual spending. Living in Thailand at 43,000 THB per month requires a much smaller portfolio than living in France at 2,500 EUR per month. The safe withdrawal rate also varies - we use 3.5% for higher-cost countries and 4% for lower-cost ones."}},{"@type":"Question","name":"Should I keep my investments in USD?","acceptedAnswer":{"@type":"Answer","text":"Most FIRE expats keep their portfolio in USD or EUR and convert as needed. This protects against local currency devaluation. The FIRE number shown in local currency is for reference - your actual portfolio will likely remain in your home currency."}},{"@type":"Question","name":"What about healthcare abroad?","acceptedAnswer":{"@type":"Answer","text":"EU countries offer public healthcare access for residents. In Thailand, private insurance runs 100-200 USD per month. Always factor in healthcare costs when calculating your budget abroad."}}]}`}} />
           <h2 className="text-2xl font-bold mb-8" style={{color:"#111827"}}>Frequently Asked Questions</h2>
           <div className="space-y-6">
             <div>

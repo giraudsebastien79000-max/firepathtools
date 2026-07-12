@@ -1,0 +1,656 @@
+########## app\blog\coast-fire-vs-barista-fire\page.tsx ##########
+            <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Is Coast FIRE the same as semi-retirement?</h4>
+                <p className="text-gray-300 text-sm">Not exactly. Semi-retirement usually means reducing work hours while still saving. Coast FIRE specifically means you have stopped mandatory saving — your portfolio will reach your FIRE number through compounding alone. You still work, but only to cover current expenses.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">How much do I need for Coast FIRE?</h4>
+                <p className="text-gray-300 text-sm">It depends on your FIRE number and how many years until traditional retirement. Use our Coast FIRE calculator to find your exact number based on your age, target retirement age, and expected return rate.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Does Barista FIRE mean working at a coffee shop?</h4>
+                <p className="text-gray-300 text-sm">Not literally — the name comes from Starbucks being one of the first major companies known for offering benefits to part-time workers. Barista FIRE means any part-time work that covers income gaps and/or provides benefits. Many Barista FIRE practitioners work in retail, consulting, freelancing, or passion projects.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Which has a higher portfolio requirement — Coast or Barista FIRE?</h4>
+                <p className="text-gray-300 text-sm">Barista FIRE typically requires a much larger portfolio because you are partially drawing it down to cover expenses. Coast FIRE can be achieved with a much smaller portfolio because you are not touching it — just letting it compound over decades.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">What is the difference between Barista FIRE and Lean FIRE?</h4>
+                <p className="text-gray-300 text-sm">Lean FIRE means fully retiring on a very small portfolio by keeping expenses extremely low (typically under $25,000/year). Barista FIRE means partially retiring with a larger portfolio supplemented by part-time income. Lean FIRE is full retirement; Barista FIRE involves continued work.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gray-900 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold mb-4">Calculate Your Numbers</h3>
+            <div className="grid grid-cols-1 gap-3">
+              <Link href="/tools/coast-fire" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Coast FIRE Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/fire-number" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Number Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/savings-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Savings Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/safe-withdrawal-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Safe Withdrawal Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/retire-at-40-calculator" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Retire at 40 Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  )
+}
+
+########## app\blog\cost-of-waiting-one-year-to-invest\page.tsx ##########
+            <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">How much does waiting one year to invest actually cost?</h4>
+                <p className="text-gray-300 text-sm">For someone investing $500/month at 7% annual return over 40 years, a one-year delay costs approximately $93,000 in final portfolio value. The exact amount depends on your contribution size, return rate, and time horizon — but the cost is always much larger than just the missed contributions.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Should I pay off debt before investing?</h4>
+                <p className="text-gray-300 text-sm">It depends on the interest rate. High-interest debt (credit cards at 18-25%) should be paid off first — the guaranteed return of eliminating that debt exceeds typical investment returns. Low-interest debt (student loans at 3-5%, mortgages) should often be invested alongside rather than paid off first, since the compounding cost of delay can exceed the interest saved.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Is it too late to start investing at 40?</h4>
+                <p className="text-gray-300 text-sm">No — starting at 40 still gives you 20-25 years of compounding before traditional retirement age. $1,000/month at 7% from age 40 to 65 produces approximately $810,000. It is less than starting at 25, but far better than not starting at all. The best time to start was yesterday; the second best time is today.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">What if the market crashes right after I start?</h4>
+                <p className="text-gray-300 text-sm">A market crash early in your investing career is actually less damaging than one near retirement — you have decades to recover, and your monthly contributions buy more shares at lower prices (dollar-cost averaging). Historical data shows that investors who stayed invested through every major crash since 1929 consistently outperformed those who tried to time the market.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gray-900 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold mb-4">Calculate Your Own Numbers</h3>
+            <div className="grid grid-cols-1 gap-3">
+              <Link href="/tools/fire-gap" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Gap Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/compound-interest" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Compound Interest Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/time-to-fire" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Time to FIRE Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/savings-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Savings Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/fire-number" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Number Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  )
+}
+
+########## app\blog\fat-fire-vs-lean-fire\page.tsx ##########
+            <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">How much do you need for Lean FIRE?</h4>
+                <p className="text-gray-300 text-sm">Lean FIRE typically requires $500,000-$1,000,000 depending on your annual spending. At the 4% rule, $750,000 supports $30,000/year and $1,000,000 supports $40,000/year. Many Lean FIRE practitioners also plan for some part-time income to reduce portfolio stress.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">How much do you need for Fat FIRE?</h4>
+                <p className="text-gray-300 text-sm">Fat FIRE generally requires $2,500,000-$5,000,000 or more depending on your lifestyle. At the 4% rule, $2,500,000 supports $100,000/year and $5,000,000 supports $200,000/year. Many Fat FIRE practitioners use a more conservative 3% withdrawal rate for extra security.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Is Lean FIRE too risky?</h4>
+                <p className="text-gray-300 text-sm">It carries more risk than higher FIRE numbers, but it is not inherently too risky. The key risk factors are healthcare costs (especially in the US), sequence of returns risk in early retirement, and lifestyle creep. Many Lean FIRE practitioners mitigate these by maintaining some part-time income, living in low-cost areas, or keeping a flexible spending approach.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">What is the difference between Lean FIRE and Barista FIRE?</h4>
+                <p className="text-gray-300 text-sm">Lean FIRE means fully retired on a minimal budget with no earned income. Barista FIRE means semi-retired with a small portfolio supplemented by part-time work — often specifically for healthcare benefits. Some Lean FIRE practitioners effectively become Barista FIRE practitioners during market downturns.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Can I start with Lean FIRE and upgrade to Fat FIRE later?</h4>
+                <p className="text-gray-300 text-sm">Yes — this is actually a common progression. Some people reach Lean FIRE early, retire or semi-retire, and then continue building their portfolio through part-time work or passive income until they reach Fat FIRE numbers. Others use Lean FIRE as a bridge to give themselves more time and freedom while their portfolio grows.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gray-900 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold mb-4">Calculate Your FIRE Number</h3>
+            <div className="grid grid-cols-1 gap-3">
+              <Link href="/tools/fire-number" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Number Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/fire-gap" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Gap Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/savings-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Savings Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/safe-withdrawal-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Safe Withdrawal Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/coast-fire" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Coast FIRE Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/blog/coast-fire-vs-barista-fire" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Coast FIRE vs Barista FIRE</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  )
+}
+
+########## app\blog\fire-after-40\page.tsx ##########
+            <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Is it too late to retire early if I start at 45?</h4>
+                <p className="text-gray-300 text-sm">No. Starting at 45 with aggressive saving ($3,000-$4,000/month) can still get you to financial independence by 58-62 — years before the traditional retirement age of 65. The timeline shifts but the goal is still achievable, especially with the Rule of 55 and catch-up contributions available after 50.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">How much do I need to save per month starting at 40?</h4>
+                <p className="text-gray-300 text-sm">It depends on your target retirement age and FIRE number. A general guideline: to reach $1,000,000 by age 55 starting from zero at 40, you need approximately $3,500/month at 7% returns. Use our FIRE Gap Calculator to get a personalized number based on your actual savings and target.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">What is the Rule of 55 and how does it help late starters?</h4>
+                <p className="text-gray-300 text-sm">The Rule of 55 allows you to withdraw from your current employer's 401(k) without the 10% early withdrawal penalty if you leave your job in or after the year you turn 55. This makes 55 a highly tax-efficient FIRE target for late starters — you can access your largest retirement account years before the standard 59½ age.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Should I prioritize paying off my mortgage or investing if I start FIRE at 40?</h4>
+                <p className="text-gray-300 text-sm">For late starters, time is scarce and every dollar of compounding matters. If your mortgage rate is below 5-6%, investing typically wins mathematically. However, many late starters target a FIRE date that aligns with mortgage payoff — at that point, your monthly expenses drop significantly, reducing your FIRE number and making the math work even better.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gray-900 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold mb-4">Calculate Your Late-Start FIRE Timeline</h3>
+            <div className="grid grid-cols-1 gap-3">
+              <Link href="/tools/fire-gap" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Gap Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/retire-at-50-calculator" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Retire at 50 Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/retire-at-45-calculator" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Retire at 45 Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/coast-fire" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Coast FIRE Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/savings-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Savings Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/blog/middle-class-fire" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Middle-Class FIRE Guide</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  )
+}
+
+########## app\blog\middle-class-fire\page.tsx ##########
+            <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Can you reach FIRE on a $70,000 salary?</h4>
+                <p className="text-gray-300 text-sm">Yes, but the timeline is longer. At a 30% savings rate ($21,000/year) and 7% returns, you reach $1,000,000 in approximately 24 years. Starting at 25, that means FIRE at 49. Increasing to a 40% savings rate brings it to approximately 19 years — FIRE at 44. The key is starting early and maintaining the savings rate consistently.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Is FIRE realistic with a mortgage and kids?</h4>
+                <p className="text-gray-300 text-sm">Yes, but the timeline adjusts. Children add expenses during the accumulation phase and may increase your FIRE number. A realistic target for a middle-class family with two children and a mortgage might be FIRE at 52-58 rather than 45-50. That is still a decade or more before traditional retirement — and a dramatically different quality of life.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">What savings rate do I need for Middle-Class FIRE?</h4>
+                <p className="text-gray-300 text-sm">A 25-35% savings rate is the typical Middle-Class FIRE target. Below 20%, the timeline extends beyond 30 years. Above 40%, you start approaching early-retirement territory (45-50). The exact rate depends on your income, expenses, and target retirement age.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Should middle-class FIRE savers prioritize paying off the mortgage or investing?</h4>
+                <p className="text-gray-300 text-sm">Generally, if your mortgage rate is below 5-6%, investing in index funds is mathematically superior. If your mortgage rate is above 6-7%, paying it down provides a guaranteed return that competes with historical market returns. Many people split the difference — investing enough to get the full 401(k) match, then paying down the mortgage, then investing the rest.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gray-900 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold mb-4">Calculate Your Middle-Class FIRE Timeline</h3>
+            <div className="grid grid-cols-1 gap-3">
+              <Link href="/tools/fire-number" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Number Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/fire-gap" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Gap Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/savings-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Savings Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/coast-fire" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Coast FIRE Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/time-to-fire" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Time to FIRE Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/retire-at-50-calculator" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Retire at 50 Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  )
+}
+
+########## app\blog\what-delays-fire-the-most\page.tsx ##########
+            <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">What is the number one reason people don't reach FIRE?</h4>
+                <p className="text-gray-300 text-sm">A savings rate that is too low — typically because expenses rise with income (lifestyle inflation). People earning $150,000/year with a 10% savings rate will take longer to reach FIRE than someone earning $60,000 with a 40% savings rate. Income matters less than the gap between income and spending.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">How much does starting 5 years late cost in FIRE terms?</h4>
+                <p className="text-gray-300 text-sm">It depends on your savings amount, but a 5-year delay in starting typically costs 5-8 additional years on your FIRE timeline — not just 5 — due to lost compounding. $500/month invested from age 25 instead of 30 can mean $200,000-$300,000 more at retirement age.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Do investment fees really matter that much?</h4>
+                <p className="text-gray-300 text-sm">Yes — more than most people realize. A 1% annual fee on a growing portfolio can cost hundreds of thousands of dollars over a 20-30 year FIRE timeline. Switching from a 1% fee fund to a 0.05% index fund is one of the highest-return actions you can take with no additional savings required.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Can lifestyle inflation be avoided?</h4>
+                <p className="text-gray-300 text-sm">Partially. The goal is not to freeze your lifestyle forever, but to ensure your savings rate rises faster than your spending. A practical rule: when you get a raise, save at least half of it before increasing spending. Over time, this keeps the savings rate trending up rather than flat.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gray-900 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold mb-4">Calculate Your Own Delays</h3>
+            <div className="grid grid-cols-1 gap-3">
+              <Link href="/tools/fire-gap" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Gap Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/savings-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Savings Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/investment-fees" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Investment Fee Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/time-to-fire" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Time to FIRE Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/fire-number" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Number Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  )
+}
+
+########## app\blog\what-is-compound-interest\page.tsx ##########
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>What is the difference between APY and APR?</h3>
+      <p>APR is the annual interest rate without compounding. APY includes the effect of compounding. When comparing savings accounts or investments, always compare APY — it reflects your actual return.</p>
+
+      <h3>How does compound interest help with FIRE?</h3>
+      <p>Compound interest means your portfolio grows faster the longer you leave it alone. In the FIRE framework, it means you can reach financial independence without saving every single dollar yourself — your existing investments do increasing amounts of work over time.</p>
+
+      <h3>Is compound interest the same as compound growth?</h3>
+      <p>Essentially yes. In investing, compound growth refers to the same principle — your returns generate their own returns. Index funds do not pay traditional interest but grow through price appreciation and dividend reinvestment, which functions identically to compound interest.</p>
+
+      <h3>What is the best account for compound interest?</h3>
+      <p>For long-term wealth building, broad market index funds in tax-advantaged accounts (401k, IRA, ISA, super) give you compound growth with the lowest fees and best tax efficiency. High-yield savings accounts compound interest but at much lower rates — best used for emergency funds, not long-term wealth.</p>
+
+      <hr />
+
+      <p><a href="/tools/compound-interest">Use our free Compound Interest Calculator to see exactly how your money grows over time.</a></p>
+
+      <p><a href="/blog/what-is-a-fire-number">Learn how compound interest connects to your FIRE number.</a></p>
+
+      <p><a href="/blog/what-is-the-4-percent-rule">Understand the 4% rule and how compound growth makes it work.</a></p>
+
+      <hr />
+
+      <p><em>Written by the FirePath Team. Not financial advisors — just regular people who got tired of working without a plan.</em></p>
+      <p><small>All calculations use a 7% annual return as a historical approximation of broad market index fund returns. Past performance does not guarantee future results.</small></p>
+    </article>
+  )
+}
+
+########## app\fire-by-country-calculator\client.tsx ##########
+          <h2 className="text-2xl font-bold mb-8" style={{color:"#111827"}}>Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-semibold mb-2" style={{color:"#111827"}}>Why is the FIRE number different by country?</h3>
+              <p className="text-sm" style={{color:"#374151"}}>Your FIRE number depends on your annual spending. Living in Thailand at 43,000 THB per month requires a much smaller portfolio than living in France at 2,500 EUR per month. The safe withdrawal rate also varies — we use 3.5% for higher-cost countries and 4% for lower-cost ones.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2" style={{color:"#111827"}}>Should I keep my investments in USD?</h3>
+              <p className="text-sm" style={{color:"#374151"}}>Most FIRE expats keep their portfolio in USD or EUR and convert as needed. This protects against local currency devaluation. The FIRE number shown in local currency is for reference — your actual portfolio will likely remain in your home currency.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2" style={{color:"#111827"}}>What about healthcare abroad?</h3>
+              <p className="text-sm" style={{color:"#374151"}}>EU countries offer public healthcare access for residents. In Thailand, private insurance runs 100-200 USD per month. Always factor in healthcare costs when calculating your budget abroad.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-4 bg-orange-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl font-bold mb-6" style={{color:"#111827"}}>More FIRE Calculators</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <Link href="/tools/fire-number" className="bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-orange-600 hover:bg-orange-500 hover:text-white transition-colors text-center">FIRE Number</Link>
+            <Link href="/fire-canada-calculator" className="bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-orange-600 hover:bg-orange-500 hover:text-white transition-colors text-center">FIRE Canada</Link>
+            <Link href="/fire-uk-calculator" className="bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-orange-600 hover:bg-orange-500 hover:text-white transition-colors text-center">FIRE UK</Link>
+            <Link href="/tools/safe-withdrawal-rate" className="bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-orange-600 hover:bg-orange-500 hover:text-white transition-colors text-center">Safe Withdrawal Rate</Link>
+            <Link href="/tools/coast-fire" className="bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-orange-600 hover:bg-orange-500 hover:text-white transition-colors text-center">Coast FIRE</Link>
+            <Link href="/tools/time-to-fire" className="bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-orange-600 hover:bg-orange-500 hover:text-white transition-colors text-center">Time to FIRE</Link>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
+
+########## app\fire-uk-calculator\client.tsx ##########
+            <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">What is the FIRE movement in the UK?</h4>
+                <p className="text-gray-300 text-sm">FIRE stands for Financial Independence, Retire Early. In the UK, it typically involves saving 40-60% of your income, investing in low-cost index funds inside ISAs and SIPPs, and building a portfolio large enough to live off indefinitely. The UK has an active FIRE community on Reddit (r/FIREUK) and multiple dedicated blogs and podcasts.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">How much money do I need to retire early in the UK?</h4>
+                <p className="text-gray-300 text-sm">Using a 3.5% withdrawal rate, you need approximately 28.6x your annual expenses. For £25,000/year spending, that is around £714,000. For £35,000/year, around £1,000,000. Use the calculator above to get your personalised number.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Should I use a 4% or 3.5% withdrawal rate in the UK?</h4>
+                <p className="text-gray-300 text-sm">Most UK FIRE practitioners use 3.5% as a more conservative baseline, given that UK market returns have historically been slightly lower than US returns, and early retirement means a longer drawdown period. If you plan to include State Pension income later, or have other income sources, 4% may be appropriate for your situation.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">What is the best investment account for FIRE in the UK?</h4>
+                <p className="text-gray-300 text-sm">The Stocks and Shares ISA is the first choice for most UK FIRE investors — tax-free growth and withdrawals with no minimum age. Once your ISA allowance is used (£20,000/year), a SIPP gives additional tax relief on contributions. Global index funds like Vanguard LifeStrategy or FTSE All-World trackers are the most commonly recommended investments.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Does the State Pension count towards my FIRE number?</h4>
+                <p className="text-gray-300 text-sm">It can reduce how much you need. If you retire at 50 and will receive £11,502/year State Pension from age 67, you only need your portfolio to cover the gap of 17 years at full spending, then a reduced amount after. Many FIRE calculators ignore State Pension for conservatism, but it is a meaningful benefit for UK early retirees.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gray-900 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold mb-4">Related Calculators</h3>
+            <div className="grid grid-cols-1 gap-3">
+              <Link href="/tools/fire-number" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Number Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/retire-at-40-calculator" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Retire at 40 Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/retire-at-45-calculator" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Retire at 45 Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/coast-fire" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Coast FIRE Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/safe-withdrawal-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Safe Withdrawal Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  )
+}
+
+########## app\retire-at-40-calculator\client.tsx ##########
+            <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
+
+            <div className="space-y-4">
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Can you retire at 40 with $1 million?</h4>
+                <p className="text-gray-300 text-sm">Yes, if your annual expenses are $40,000 or less. The 4% rule allows you to withdraw $40,000 per year from a $1,000,000 portfolio. However, given the length of a potential 50-year retirement, many advisors suggest targeting $1.25M-$1.5M for extra safety margin.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">How much do I need to save per month to retire at 40?</h4>
+                <p className="text-gray-300 text-sm">It depends on your starting age and expenses. A 25-year-old starting from zero targeting $1,000,000 at 40 needs to save approximately $3,500/month at 7% annual returns. Use the calculator above to get your personalized number.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">What investments should I use to retire at 40?</h4>
+                <p className="text-gray-300 text-sm">Most FIRE practitioners use low-cost index funds: VTSAX or VTI for US stocks, VXUS for international diversification, and BND for bonds as retirement approaches. The goal is maximum diversification at minimum cost — expense ratios below 0.1%.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">What happens to healthcare if I retire at 40?</h4>
+                <p className="text-gray-300 text-sm">Healthcare is one of the biggest challenges for early retirees in the US. Options include ACA marketplace plans (often subsidized at low income levels), a health-sharing ministry, or part-time work with benefits. Budget $500-$1,500/month for a family depending on your situation.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Is the 4% rule safe for a 50-year retirement?</h4>
+                <p className="text-gray-300 text-sm">Historical data suggests yes, but with less certainty than for 30 years. Many early retirees use a 3.5% or 3.25% withdrawal rate for longer horizons, or plan to earn some income in early retirement to reduce portfolio pressure.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gray-900 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold mb-4">Related Calculators</h3>
+            <div className="grid grid-cols-1 gap-3">
+              <Link href="/retire-at-45-calculator" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Retire at 45 Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/retire-at-50-calculator" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Retire at 50 Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/fire-number" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Number Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/coast-fire" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Coast FIRE Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/savings-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Savings Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/safe-withdrawal-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Safe Withdrawal Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  )
+}
+
+########## app\retire-at-45-calculator\client.tsx ##########
+            <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">How much do I need to retire at 45?</h4>
+                <p className="text-gray-300 text-sm">Using the 4% rule, you need 25x your annual expenses. If you spend $50,000/year, your target is $1,250,000. For a longer retirement horizon, many people target 28x expenses ($1,400,000 for $50k/year spending) as a safety buffer.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Can I retire at 45 with $2 million?</h4>
+                <p className="text-gray-300 text-sm">Yes — $2,000,000 supports $80,000/year in spending at the 4% rule. This is a comfortable retirement in most US cities and an excellent income in lower cost-of-living areas or abroad. With a 3.5% withdrawal rate for safety, $2M supports $70,000/year.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">What is the best investment strategy to retire at 45?</h4>
+                <p className="text-gray-300 text-sm">The FIRE community consensus is simple: maximize contributions to tax-advantaged accounts (401k, Roth IRA, HSA), then invest the rest in a taxable brokerage. Use low-cost index funds — total market (VTI/VTSAX) and international (VXUS) — with expense ratios under 0.1%. Avoid market timing and stay invested through downturns.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Is retiring at 45 too early?</h4>
+                <p className="text-gray-300 text-sm">Not financially — the math works if you hit your number. The bigger question is purpose and identity. Many people who retire at 45 find that they want structure, social connection, or a sense of contribution. Barista FIRE (part-time meaningful work) or passion projects solve this while also reducing portfolio withdrawal pressure.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">How does Social Security factor in when retiring at 45?</h4>
+                <p className="text-gray-300 text-sm">If you retire at 45 with minimal additional earned income, your Social Security benefit will be reduced compared to working until 62 or 67. However, many early retirees plan conservatively and treat any Social Security income as a bonus. Check your Social Security statement at ssa.gov to see your projected benefit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gray-900 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold mb-4">Related Calculators</h3>
+            <div className="grid grid-cols-1 gap-3">
+              <Link href="/retire-at-40-calculator" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Retire at 40 Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/retire-at-50-calculator" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Retire at 50 Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/fire-number" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Number Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/coast-fire" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Coast FIRE Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/savings-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Savings Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/safe-withdrawal-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Safe Withdrawal Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  )
+}
+
+########## app\retire-at-50-calculator\client.tsx ##########
+            <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">How much money do I need to retire at 50?</h4>
+                <p className="text-gray-300 text-sm">Using the 4% rule, you need 25x your annual expenses. For $50,000/year spending, that is $1,250,000. For $60,000/year, you need $1,500,000. Many people planning a 40-year retirement target 28x expenses for extra safety, meaning $1,400,000 for $50k spending.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Can I retire at 50 with $1 million?</h4>
+                <p className="text-gray-300 text-sm">Yes, if your annual spending is $40,000 or less. At the 4% rule, $1,000,000 supports $40,000/year. This is very comfortable in low cost-of-living areas and many countries outside the US. If you spend more, you need a larger portfolio or plan to earn some income in early retirement.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">What is the difference between retiring at 50 vs 65?</h4>
+                <p className="text-gray-300 text-sm">Retiring at 50 gives you 15 extra years of freedom — potentially the best years of your health and energy. The tradeoff is a larger required portfolio (40-year vs 25-year retirement), no access to Medicare until 65, no Social Security until 62 at earliest, and more years of investment risk to manage.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">Is 50 too old to start planning for early retirement?</h4>
+                <p className="text-gray-300 text-sm">If you are already 45-49, retiring at 50 may be very tight unless you have significant savings. However, even aggressive saving in your late 40s can dramatically improve your retirement timeline. Use our calculator to see your realistic target date based on your current situation.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl p-6">
+                <h4 className="font-semibold mb-2">How does retiring at 50 affect Social Security?</h4>
+                <p className="text-gray-300 text-sm">Retiring at 50 with no further earned income means your Social Security benefit will be lower than if you worked until 62 or 67. However, you can still claim at 62 (reduced benefit) or 67 (full benefit) or 70 (maximum benefit). Most FIRE planners treat Social Security as a bonus and do not rely on it in their core calculations.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gray-900 rounded-2xl p-8">
+            <h3 className="text-xl font-semibold mb-4">Related Calculators</h3>
+            <div className="grid grid-cols-1 gap-3">
+              <Link href="/retire-at-40-calculator" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Retire at 40 Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/retire-at-45-calculator" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Retire at 45 Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/fire-number" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">FIRE Number Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/coast-fire" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Coast FIRE Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/savings-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Savings Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+              <Link href="/tools/safe-withdrawal-rate" className="flex items-center justify-between bg-slate-800 rounded-xl p-4 hover:bg-gray-700 transition-colors">
+                <span className="text-white">Safe Withdrawal Rate Calculator</span>
+                <span className="text-orange-400">?</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  )
+}
+
