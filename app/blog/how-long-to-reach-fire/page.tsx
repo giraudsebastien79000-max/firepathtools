@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -234,7 +234,7 @@ export default function HowLongToReachFire() {
         </h2>
         <p>
           One of the most underrated concepts in the FIRE world is{' '}
-          <Link href="/blog/coast-fire" className="text-orange-400 underline underline-offset-2">
+          <Link href="/blog/what-is-coast-fire" className="text-orange-400 underline underline-offset-2">
             Coast FIRE
           </Link>
           : the point where you've saved enough that — even if you stop contributing entirely —
