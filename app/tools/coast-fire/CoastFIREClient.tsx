@@ -6,6 +6,7 @@ export default function CoastFIREClient() {
   const [currentAge, setCurrentAge] = useState("");
   const [retirementAge, setRetirementAge] = useState("65");
   const [returnRate, setReturnRate] = useState("7");
+  const [inflationRate, setInflationRate] = useState("3");
   const [monthlyExpenses, setMonthlyExpenses] = useState("");
   const [withdrawalRate, setWithdrawalRate] = useState("4");
   const [result, setResult] = useState(null);
@@ -15,12 +16,14 @@ export default function CoastFIREClient() {
     const age = parseFloat(currentAge);
     const retAge = parseFloat(retirementAge);
     const rate = parseFloat(returnRate) / 100;
+    const inf = parseFloat(inflationRate) / 100;
+    const realRate = (1 + rate) / (1 + inf) - 1;
     const expenses = parseFloat(monthlyExpenses) * 12;
     const wr = parseFloat(withdrawalRate) / 100;
     const yearsToGrow = retAge - age;
     const fireNumber = expenses / wr;
-    const coastNumber = fireNumber / Math.pow(1 + rate, yearsToGrow);
-    const projectedValue = savings * Math.pow(1 + rate, yearsToGrow);
+    const coastNumber = fireNumber / Math.pow(1 + realRate, yearsToGrow);
+    const projectedValue = savings * Math.pow(1 + realRate, yearsToGrow);
     setResult({ coastNumber, projectedValue, alreadyCoasted: savings >= coastNumber });
   };
 
@@ -60,7 +63,7 @@ export default function CoastFIREClient() {
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Withdrawal Rate (%)</label>
               <input type="number" value={withdrawalRate} onChange={(e) => setWithdrawalRate(e.target.value)} placeholder="4" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
-              <p className="text-xs text-gray-500 mt-1">4% rule standard.</p>
+              <p className="text-xs text-gray-500 mt-1">4% rule standard.</p></div><div><label className="block text-sm font-medium text-gray-300 mb-2">Inflation (%)</label><input type="number" value={inflationRate} onChange={(e) => setInflationRate(e.target.value)} placeholder="3" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" /><p className="text-xs text-gray-500 mt-1">Results are in today&apos;s dollars.</p>
             </div>
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate My Coast FIRE Number</button>
@@ -76,7 +79,7 @@ export default function CoastFIREClient() {
                 )}
               </div>
               <div className="bg-slate-800 rounded-xl p-4 border border-slate-600">
-                <p className="text-gray-300 text-xs mb-1">Projected value at retirement (no more contributions)</p>
+                <p className="text-gray-300 text-xs mb-1">Projected value at retirement in today&apos;s dollars (no more contributions)</p>
                 <p className="text-2xl font-bold text-white">${result.projectedValue.toLocaleString("en-US", { maximumFractionDigits: 0 })}</p>
               </div>
             </div>
