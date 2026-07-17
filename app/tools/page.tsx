@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -38,6 +38,13 @@ export default function HubPage() {
         <Link href="/tools/savings-rate" className="block rounded-xl border border-slate-800 bg-slate-900 p-5 hover:border-orange-500 transition-colors"><span className="font-semibold text-white">Savings Rate</span></Link>
         <Link href="/tools/sequence-of-returns" className="block rounded-xl border border-slate-800 bg-slate-900 p-5 hover:border-orange-500 transition-colors"><span className="font-semibold text-white">Sequence of Returns</span></Link>
         <Link href="/tools/time-to-fire" className="block rounded-xl border border-slate-800 bg-slate-900 p-5 hover:border-orange-500 transition-colors"><span className="font-semibold text-white">Time to FIRE</span></Link>
+          <Link href="/fire-by-country-calculator" className="block rounded-xl border border-slate-800 bg-slate-900 p-5 hover:border-orange-500 transition-colors"><span className="font-semibold text-white">FIRE by Country</span></Link>
+          <Link href="/fire-canada-calculator" className="block rounded-xl border border-slate-800 bg-slate-900 p-5 hover:border-orange-500 transition-colors"><span className="font-semibold text-white">FIRE Canada</span></Link>
+          <Link href="/fire-uk-calculator" className="block rounded-xl border border-slate-800 bg-slate-900 p-5 hover:border-orange-500 transition-colors"><span className="font-semibold text-white">FIRE UK</span></Link>
+          <Link href="/global-fire-map" className="block rounded-xl border border-slate-800 bg-slate-900 p-5 hover:border-orange-500 transition-colors"><span className="font-semibold text-white">Global FIRE Map</span></Link>
+          <Link href="/retire-at-40-calculator" className="block rounded-xl border border-slate-800 bg-slate-900 p-5 hover:border-orange-500 transition-colors"><span className="font-semibold text-white">Retire at 40</span></Link>
+          <Link href="/retire-at-45-calculator" className="block rounded-xl border border-slate-800 bg-slate-900 p-5 hover:border-orange-500 transition-colors"><span className="font-semibold text-white">Retire at 45</span></Link>
+          <Link href="/retire-at-50-calculator" className="block rounded-xl border border-slate-800 bg-slate-900 p-5 hover:border-orange-500 transition-colors"><span className="font-semibold text-white">Retire at 50</span></Link>
         </div>
         <p className="mt-12 text-center text-sm text-slate-500">firepathtools.com -- Free financial independence tools</p>
       </div>
