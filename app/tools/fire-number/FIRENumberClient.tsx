@@ -8,7 +8,7 @@ const FIRE_TYPES = [
     color: "text-blue-400",
     border: "border-blue-400/30",
     bg: "bg-blue-900/20",
-    desc: "Frugal lifestyle, under $40k/year",
+    desc: "70% of your expenses, capped at $40k/year",
     multiplier: 1,
   },
   {
@@ -62,6 +62,7 @@ export default function FIRENumberClient() {
 
     const fireTypes = FIRE_TYPES.map((type) => {
       let adjExpenses = expenses * type.multiplier;
+    if (type.key === "lean") adjExpenses = Math.min(expenses * 0.7, 40000);
       if (type.partTime) adjExpenses = Math.max(0, adjExpenses - type.partTime);
 
       const fireAt3 = adjExpenses / 0.03;
