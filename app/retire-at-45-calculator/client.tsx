@@ -82,7 +82,7 @@ export default function RetireAt45Calculator() {
               className="w-full bg-slate-800 rounded-lg px-4 py-3 text-white border border-slate-600 focus:border-orange-500 focus:outline-none" />
           </div>
           <div>
-            <label className="block text-sm text-gray-300 mb-2">Expected Annual Return (%)</label>
+            <label className="block text-sm text-gray-300 mb-2">Expected Annual Return (%, after inflation)</label>
             <input type="number" value={annualReturn} min={0} max={20}
               onChange={e => setAnnualReturn(Number(e.target.value))}
               className="w-full bg-slate-800 rounded-lg px-4 py-3 text-white border border-slate-600 focus:border-orange-500 focus:outline-none" />
