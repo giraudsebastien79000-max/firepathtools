@@ -121,11 +121,11 @@ export default function RetireAt40Calculator() {
             </div>
             <div className={`rounded-xl p-6 ${result.onTrack ? "bg-green-900/40 border border-green-700" : "bg-red-900/40 border border-red-700"}`}>
               {result.onTrack ? (
-                <p className="text-green-400 font-semibold text-lg">You are on track to retire at 40!</p>
+                <><p className="text-green-400 font-semibold text-lg">You are on track to retire at 40!</p><p className="text-gray-400 text-xs mt-2">Results are in today&apos;s dollars.</p></>
               ) : (
                 <div>
                   <p className="text-red-400 font-semibold text-lg mb-2">You need ${Math.abs(result.gap).toLocaleString("en-US", { maximumFractionDigits: 0 })} more</p>
-                  <p className="text-gray-300 text-sm">Save an extra ${result.extraMonthly.toLocaleString("en-US", { maximumFractionDigits: 0 })}/month to reach your goal</p>
+                  <p className="text-gray-300 text-sm">Save an extra ${result.extraMonthly.toLocaleString("en-US", { maximumFractionDigits: 0 })}/month to reach your goal</p><p className="text-gray-400 text-xs mt-2">Results are in today&apos;s dollars.</p>
                 </div>
               )}
             </div>
