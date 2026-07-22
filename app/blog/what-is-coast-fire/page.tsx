@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'What Is Coast FIRE? How to Stop Saving and Let Your Money Work | FirePath Tools',
@@ -35,6 +35,7 @@ export default function Page() {
       <p><strong>Choose regular FIRE if:</strong> you want to stop working entirely before 50, you are willing to live frugally for 10-15 years, financial independence is your primary goal.</p>
       <p><strong>Choose Coast FIRE if:</strong> you want financial security without extreme sacrifice, you are okay working — just not being forced to, you want to enjoy your 30s and 40s, not just survive them.</p>
       <p>Neither is wrong. It just depends on the life you want to live right now.</p>
+      <p>If you are weighing your options, it also helps to see how <a href="/blog/coast-fire-vs-barista-fire" className="text-orange-400 hover:underline">Coast FIRE compares to Barista FIRE</a>, since the two are often confused.</p>
       <h2>The One Thing That Trips People Up</h2>
       <p>The front-loading part is real. You need to save aggressively early — often in your 20s and early 30s — to hit your Coast number while you still have enough years for compound interest to do its job.</p>
       <p>Wait until 45 to start and the math gets much harder. The window is not infinite.</p>

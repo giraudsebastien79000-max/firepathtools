@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'What Is Barista FIRE? Work Less, Retire Earlier | FirePath Tools',
@@ -51,6 +51,8 @@ export default function Page() {
       <h2>Barista FIRE vs Coast FIRE</h2>
 
       <p>These two get confused a lot. They are different things.</p>
+
+      <p>For a full side-by-side breakdown, see our guide on <a href="/blog/coast-fire-vs-barista-fire" className="text-orange-400 hover:underline">Coast FIRE vs Barista FIRE</a>.</p>
 
       <p>Coast FIRE means your portfolio is large enough that you never need to add another dollar — it will grow to your full FIRE number on its own. You still need to cover 100% of your expenses through work or other income.</p>
 
