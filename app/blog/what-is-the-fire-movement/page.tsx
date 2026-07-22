@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'What Is the FIRE Movement? Financial Independence Explained | FirePath Tools',
@@ -21,6 +21,7 @@ export default function Page() {
       <p>It gained serious momentum in the 2010s through blogs, forums, and people publicly documenting how they left their careers in their 30s and 40s. Mr. Money Mustache, Early Retirement Extreme, and dozens of others showed that this was not a theoretical concept. Real people were doing it on ordinary salaries.</p>
 
       <p>Today it is a global movement. People in the US, UK, Australia, Canada, Europe — everywhere — are working toward the same goal using the same basic framework.</p>
+      <p>If you are in the UK, you can <a href="/fire-uk-calculator" className="text-orange-400 hover:underline">calculate your FIRE number with UK-specific assumptions</a>.</p>
 
       <h2>How FIRE Actually Works</h2>
 
