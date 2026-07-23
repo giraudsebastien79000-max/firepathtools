@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 
 const FIRE_TYPES = [
@@ -46,18 +46,17 @@ export default function FIRENumberClient() {
   const [currentSavings, setCurrentSavings] = useState("");
   const [monthlyContribution, setMonthlyContribution] = useState("");
   const [returnRate, setReturnRate] = useState("7");
-  const [inflationRate, setInflationRate] = useState("3");
-  const [currentAge, setCurrentAge] = useState("");
+    const [currentAge, setCurrentAge] = useState("");
   const [result, setResult] = useState(null);
 
   const calculate = () => {
     const expenses = parseFloat(annualExpenses);
+    if (!(expenses > 0)) { setResult(null); return; }
     const savings = parseFloat(currentSavings) || 0;
     const monthly = parseFloat(monthlyContribution) || 0;
     const r = parseFloat(returnRate) / 100;
-    const inf = parseFloat(inflationRate) / 100;
-    const age = parseFloat(currentAge) || 30;
-    const realReturn = (1 + r) / (1 + inf) - 1;
+        const age = parseFloat(currentAge) || 30;
+    const realReturn = r;
     const rMonthly = realReturn / 12;
 
     const fireTypes = FIRE_TYPES.map((type) => {
@@ -174,25 +173,13 @@ export default function FIRENumberClient() {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Annual Return (%)
+                  Annual Return (%, after inflation)
                 </label>
                 <input
                   type="number"
                   value={returnRate}
                   onChange={(e) => setReturnRate(e.target.value)}
                   placeholder="7"
-                  className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Inflation (%)
-                </label>
-                <input
-                  type="number"
-                  value={inflationRate}
-                  onChange={(e) => setInflationRate(e.target.value)}
-                  placeholder="3"
                   className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400"
                 />
               </div>
@@ -310,16 +297,8 @@ export default function FIRENumberClient() {
                   Assumes $15,000/year from part-time work, reducing your needed
                   portfolio.
                 </p>
-                <p className="text-gray-500 pt-1">
-                  Returns are inflation-adjusted using your {inflationRate}%
-                  inflation rate and {returnRate}% nominal return (real return:{" "}
-                  {(
-                    ((1 + parseFloat(returnRate) / 100) /
-                      (1 + parseFloat(inflationRate) / 100) -
-                      1) *
-                    100
-                  ).toFixed(1)}
-                  %).
+                <p className="text-gray-500 pt-1" id="todays-dollars-note">
+                  All results are in today's dollars. Enter your return rate after inflation.
                 </p>
               </div>
             </div>
