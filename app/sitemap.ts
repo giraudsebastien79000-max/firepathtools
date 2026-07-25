@@ -97,6 +97,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly' as const,
       priority: 0.3,
     },
+    {
+      url: baseUrl + '/blog',
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.8,
+    },
+    {
+      url: baseUrl + '/tools',
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.8,
+    },
     ...tools.map((tool) => ({
       url: `${baseUrl}/tools/${tool}`,
       lastModified: new Date(),
