@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 
 export default function NetWorthClient() {
@@ -57,7 +57,7 @@ export default function NetWorthClient() {
             <div className="space-y-4">
               <div className={`rounded-xl p-6 text-center border ${result.netWorth >= 0 ? "bg-slate-800 border-orange-400/30" : "bg-red-900/20 border-red-400/30"}`}>
                 <p className="text-gray-300 text-sm mb-1">Your Net Worth</p>
-                <p className={`text-5xl font-bold ${result.netWorth >= 0 ? "text-orange-400" : "text-red-400"}`}>${result.netWorth.toLocaleString("en-US", { maximumFractionDigits: 0 })}</p>
+                <p className={`text-5xl font-bold ${result.netWorth >= 0 ? "text-orange-400" : "text-red-400"}`}>{result.netWorth.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-slate-800 rounded-xl p-4 border border-slate-600 text-center">
