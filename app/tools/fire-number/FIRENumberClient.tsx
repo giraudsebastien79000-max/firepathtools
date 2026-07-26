@@ -109,7 +109,7 @@ export default function FIRENumberClient() {
           <h1 className="text-4xl font-bold mt-2 mb-3">FIRE Number Calculator</h1>
           <p className="text-gray-300 text-base">
             Find your exact number for Lean, Regular, Fat, and Barista FIRE.
-            See your timeline, inflation-adjusted target, and retirement age.
+            See your timeline, target in today's dollars, and retirement age.
           </p>
         </div>
 
