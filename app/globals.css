@@ -1,4 +1,4 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 body {
@@ -20,4 +20,9 @@ a {
 
 a:hover {
   color: #f97316;
+}
+
+/* Buttons (links with a background) keep their own text color */
+a[class*="bg-"] {
+  color: inherit;
 }
