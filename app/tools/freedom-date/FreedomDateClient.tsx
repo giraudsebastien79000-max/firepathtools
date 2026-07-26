@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState, useRef } from "react";
 
 export default function FreedomDateClient() {
@@ -125,7 +125,7 @@ export default function FreedomDateClient() {
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Annual Return (%)</label>
               <input type="number" value={returnRate} onChange={(e) => setReturnRate(e.target.value)} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
-              <p className="text-xs text-gray-500 mt-1">7% is the historical average.</p>
+              <p className="text-xs text-gray-500 mt-1">7% is the historical average after inflation.</p>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Withdrawal Rate (%)</label>
