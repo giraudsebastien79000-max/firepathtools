@@ -6,7 +6,6 @@ export default function CoastFIREClient() {
   const [currentAge, setCurrentAge] = useState("");
   const [retirementAge, setRetirementAge] = useState("65");
   const [returnRate, setReturnRate] = useState("7");
-  const [inflationRate, setInflationRate] = useState("3");
   const [monthlyExpenses, setMonthlyExpenses] = useState("");
   const [withdrawalRate, setWithdrawalRate] = useState("4");
   const [result, setResult] = useState(null);
@@ -16,8 +15,7 @@ export default function CoastFIREClient() {
     const age = parseFloat(currentAge);
     const retAge = parseFloat(retirementAge);
     const rate = parseFloat(returnRate) / 100;
-    const inf = parseFloat(inflationRate) / 100;
-    const realRate = (1 + rate) / (1 + inf) - 1;
+    const realRate = rate;
     const expenses = parseFloat(monthlyExpenses) * 12;
     const wr = parseFloat(withdrawalRate) / 100;
     const yearsToGrow = retAge - age;
@@ -56,14 +54,14 @@ export default function CoastFIREClient() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Annual Return (%)</label>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Annual Return (%, after inflation)</label>
               <input type="number" value={returnRate} onChange={(e) => setReturnRate(e.target.value)} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
-              <p className="text-xs text-gray-500 mt-1">7% is the historical average.</p>
+              <p className="text-xs text-gray-500 mt-1">7% is the historical average, after inflation.</p>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Withdrawal Rate (%)</label>
               <input type="number" value={withdrawalRate} onChange={(e) => setWithdrawalRate(e.target.value)} placeholder="4" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
-              <p className="text-xs text-gray-500 mt-1">4% rule standard.</p></div><div><label className="block text-sm font-medium text-gray-300 mb-2">Inflation (%)</label><input type="number" value={inflationRate} onChange={(e) => setInflationRate(e.target.value)} placeholder="3" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" /><p className="text-xs text-gray-500 mt-1">Results are in today&apos;s dollars.</p>
+              <p className="text-xs text-gray-500 mt-1">4% rule standard.</p>
             </div>
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate My Coast FIRE Number</button>
