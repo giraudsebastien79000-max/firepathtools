@@ -305,7 +305,12 @@ export default function FIRENumberClient() {
           </div>
         )}
 
-        <p className="text-center text-gray-600 text-xs mt-8">
+        <div className="text-center mt-10">
+        <a href="/fire-live" className="inline-block bg-orange-500 hover:bg-orange-400 font-bold py-3 px-6 rounded-xl transition-colors" style={{ color: "#ffffff" }}>Watch it live</a>
+        <p className="text-gray-500 text-xs mt-2">See your FIRE number animate in real time</p>
+      </div>
+
+      <p className="text-center text-gray-600 text-xs mt-8">
           firepathtools.com -- Free financial independence tools
         </p>
       </div>
