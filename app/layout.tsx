@@ -66,6 +66,7 @@ export default function RootLayout({
               <Link href="/blog" className="text-gray-300 hover:text-orange-400 transition-colors">
                 Blog
               </Link>
+            <Link href="/fire-live" className="hidden sm:inline text-gray-300 hover:text-orange-400 transition-colors">Live</Link>
               <Link
                 href="/global-fire-map"
                 className="hidden sm:inline text-gray-300 hover:text-orange-400 transition-colors"
