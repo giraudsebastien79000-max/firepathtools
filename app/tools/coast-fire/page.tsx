@@ -1,5 +1,6 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import CoastFIREClient from "./CoastFIREClient";
+import CoastFIREContent from "./CoastFIREContent";
 
 export const metadata: Metadata = {
   title: "Coast FIRE Calculator | Free Tool - FirePath Tools",
@@ -7,5 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <CoastFIREClient />;
+  return (
+    <>
+      <CoastFIREClient />
+      <CoastFIREContent />
+    </>
+  );
 }
