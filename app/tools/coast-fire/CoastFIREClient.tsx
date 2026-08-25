@@ -1,11 +1,11 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 
 export default function CoastFIREClient() {
   const [currentSavings, setCurrentSavings] = useState("");
   const [currentAge, setCurrentAge] = useState("");
   const [retirementAge, setRetirementAge] = useState("65");
-  const [returnRate, setReturnRate] = useState("7");
+  const [returnRate, setReturnRate] = useState("5");
   const [monthlyExpenses, setMonthlyExpenses] = useState("");
   const [withdrawalRate, setWithdrawalRate] = useState("4");
   const [result, setResult] = useState(null);
@@ -55,8 +55,8 @@ export default function CoastFIREClient() {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Annual Return (%, after inflation)</label>
-              <input type="number" value={returnRate} onChange={(e) => setReturnRate(e.target.value)} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
-              <p className="text-xs text-gray-500 mt-1">7% is the historical average, after inflation.</p>
+              <input type="number" value={returnRate} onChange={(e) => setReturnRate(e.target.value)} placeholder="5" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <p className="text-xs text-gray-500 mt-1">5% is close to the 5.2% real return of world equities since 1900.</p>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Withdrawal Rate (%)</label>

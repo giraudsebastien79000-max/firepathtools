@@ -41,8 +41,8 @@ export default function CoastFIREContent() {
           </li>
           <li>
             <strong className="text-white">r</strong> — your expected annual return after
-            inflation. This calculator defaults to 7%, the rough long-run real return of a
-            broad stock market index.
+            inflation. This calculator defaults to 5%, close to the 5.2% real return of
+            world equities from 1900 to 2024.
           </li>
           <li>
             <strong className="text-white">n</strong> — the number of years between your
@@ -77,18 +77,18 @@ export default function CoastFIREContent() {
           </p>
           <p>
             <span className="text-gray-400">Real return assumption:</span>{" "}
-            <span className="text-white font-semibold">7%</span>
+            <span className="text-white font-semibold">5%</span>
           </p>
           <p className="pt-2 border-t border-slate-800">
             <span className="text-gray-400">Coast FIRE number:</span>{" "}
             <span className="text-orange-300 font-semibold">
-              $1,000,000 / (1.07)<sup>33</sup> &asymp; $105,000
+              $1,000,000 / (1.05)<sup>33</sup> &asymp; $200,000
             </span>
           </p>
         </div>
         <p>
-          Roughly $105,000 invested today, never touched again, grows to a million by 65. That
-          is the entire idea. Someone who needs a million to retire fully needs about a tenth
+          Roughly $200,000 invested today, never touched again, grows to a million by 65. That
+          is the entire idea. Someone who needs a million to retire fully needs about a fifth
           of it to stop saving for retirement altogether — provided they leave it alone for
           three decades.
         </p>
@@ -114,7 +114,7 @@ export default function CoastFIREContent() {
             your coast number with it.
           </li>
           <li>
-            <strong className="text-white">Returns disappoint.</strong> A 7% real return is a
+            <strong className="text-white">Returns disappoint.</strong> A 5% real return is a
             long-run average, not a promise. A prolonged period of lower returns means
             arriving at 65 short of the target, with no contributions made in between to
             cushion it.
@@ -178,8 +178,8 @@ export default function CoastFIREContent() {
               What return rate should I use?
             </h3>
             <p>
-              7% after inflation is a common planning figure for a stock-heavy portfolio, based
-              on long-run historical averages. More conservative planners use 5% or 6%. Run the
+              5% after inflation is our default. World equities returned 5.2% real from 1900 to
+              2024 (Dimson-Marsh-Staunton). US-only equities returned 6.6%, which is where the familiar 7% figure comes from. Run the
               calculator at several rates — if the answer changes your decision, the plan is
               too fragile.
             </p>
