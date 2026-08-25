@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import Link from 'next/link'
 import './globals.css'
-import Footer from "@/app/components/Footer";
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -78,7 +77,12 @@ export default function RootLayout({
           </div>
         </header>
         {children}
-        <Footer />
+        <footer className="mt-auto py-6 text-center text-sm text-gray-500 border-t border-slate-800">
+          <p>&copy; {new Date().getFullYear()} FirePath Tools. For informational purposes only. Not financial advice.</p>
+          <p className="mt-2">
+            <a href="/disclaimer" className="underline hover:text-gray-300">Disclaimer &amp; Affiliate Disclosure</a>
+          </p>
+        </footer>
       </body>
     </html>
   )
