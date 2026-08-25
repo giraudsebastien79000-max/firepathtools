@@ -43,3 +43,7 @@ next-env.d.ts
 faq-extract.txt
 faq-extract.txt
 audit-report.txt
+
+# Sauvegardes locales des patchs
+*.bak
+*.bak-*
