@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.firepathtools.com'),
   title: {
     default: 'FirePath Tools - Free FIRE and Financial Independence Calculators',
     template: '%s | FirePath Tools',
