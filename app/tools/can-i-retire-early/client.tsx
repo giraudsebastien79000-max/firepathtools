@@ -152,7 +152,7 @@ export default function CanIRetireEarlyClient() {
           <p>The 4% rule is the most common benchmark. It suggests that withdrawing 4% of your portfolio per year gives a high probability of lasting 30+ years. More conservative planners use 3 to 3.5% for longer retirements.</p>
           <h2 className="text-2xl font-bold text-white">FAQ</h2>
           <div className="space-y-4">
-            <div><p className="font-semibold text-white">What return rate should I use?</p><p className="text-gray-300 mt-1">7% is the inflation-adjusted historical average for a diversified US stock portfolio. Use 5 to 6% if you want to be conservative.</p></div>
+            <div><p className="font-semibold text-white">What return rate should I use?</p><p className="text-gray-300 mt-1">Our default is 5% after inflation. World equities returned 5.2% real from 1900 to 2024 (Dimson-Marsh-Staunton). US-only equities returned 6.6%, which is where the familiar 7% figure comes from.</p></div>
             <div><p className="font-semibold text-white">Should I include Social Security or pension?</p><p className="text-gray-300 mt-1">If you expect income from Social Security or a pension, reduce your annual expenses by that amount before entering it in the calculator.</p></div>
             <div><p className="font-semibold text-white">What if I plan to work part-time in retirement?</p><p className="text-gray-300 mt-1">This is Barista FIRE or Coast FIRE territory. Reduce your annual expenses by the part-time income you expect and recalculate.</p></div>
           </div>

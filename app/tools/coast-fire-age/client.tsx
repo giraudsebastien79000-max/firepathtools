@@ -112,7 +112,7 @@ export default function CoastFireAgeClient() {
             <label className="text-gray-300 font-medium block mb-1">Expected Annual Return (%, after inflation)</label>
             <input type="number" value={annualReturn} onChange={e => setAnnualReturn(e.target.value)}
               className="w-full bg-gray-900 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-orange-500" />
-            <p className="text-gray-400 text-xs mt-1">Use a real return. 7% is the common inflation-adjusted default.</p>
+            <p className="text-gray-400 text-xs mt-1">Use a real return. Our default is 5%, close to the 5.2% world average since 1900.</p>
           </div>
           <div>
             <label className="text-gray-300 font-medium block mb-1">Target Retirement Age</label>
@@ -186,7 +186,7 @@ export default function CoastFireAgeClient() {
           <h2 className="text-2xl font-bold text-white">FAQ</h2>
           <div className="space-y-4">
             <div><p className="font-semibold text-white">Why does the Coast FIRE number go up over time?</p><p className="text-gray-300 mt-1">Because compound growth needs time. At 35 with retirement at 65 you have 30 years of growth ahead. At 45 you only have 20, so you need a bigger starting balance to end up at the same place.</p></div>
-            <div><p className="font-semibold text-white">What return rate should I use?</p><p className="text-gray-300 mt-1">Use a real return, meaning after inflation. 7% is the common default. Conservative planners use 5 to 6%. Do not enter a nominal return like 10%, or the result will overstate what you actually have in today&apos;s money.</p></div>
+            <div><p className="font-semibold text-white">What return rate should I use?</p><p className="text-gray-300 mt-1">Use a real return, meaning after inflation. Our default is 5%, close to the 5.2% real return of world equities since 1900. US-only equities returned 6.6%, which is where the familiar 7% figure comes from. Do not enter a nominal return like 10%, or the result will overstate what you actually have in today&apos;s money.</p></div>
             <div><p className="font-semibold text-white">What if it says not reachable?</p><p className="text-gray-300 mt-1">Your contributions are growing your balance more slowly than the Coast FIRE line is rising. You can still reach your FIRE number by retirement, but you would have to keep contributing the whole way rather than coasting.</p></div>
             <div><p className="font-semibold text-white">Does Coast FIRE mean I can stop working?</p><p className="text-gray-300 mt-1">No. It means you can stop saving for retirement, but you still need income for daily expenses. Many people switch to lower-stress jobs at this point.</p></div>
           </div>
