@@ -1,10 +1,10 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 
 export default function CompoundInterestClient() {
   const [principal, setPrincipal] = useState("");
   const [monthly, setMonthly] = useState("");
-  const [rate, setRate] = useState("7");
+  const [rate, setRate] = useState("5");
   const [years, setYears] = useState("20");
   const [result, setResult] = useState(null);
 

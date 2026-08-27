@@ -45,7 +45,7 @@ export default function FIRENumberClient() {
   const [annualExpenses, setAnnualExpenses] = useState("");
   const [currentSavings, setCurrentSavings] = useState("");
   const [monthlyContribution, setMonthlyContribution] = useState("");
-  const [returnRate, setReturnRate] = useState("7");
+  const [returnRate, setReturnRate] = useState("5");
     const [currentAge, setCurrentAge] = useState("");
   const [result, setResult] = useState(null);
 

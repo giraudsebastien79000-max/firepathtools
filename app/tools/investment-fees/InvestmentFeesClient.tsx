@@ -1,11 +1,11 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 
 export default function InvestmentFeesClient() {
   const [principal, setPrincipal] = useState("");
   const [monthly, setMonthly] = useState("");
   const [years, setYears] = useState("30");
-  const [returnRate, setReturnRate] = useState("7");
+  const [returnRate, setReturnRate] = useState("5");
   const [feeRate, setFeeRate] = useState("1");
   const [result, setResult] = useState(null);
 

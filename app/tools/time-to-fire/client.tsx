@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState } from "react"
 
@@ -7,7 +7,7 @@ export default function TimeToFireClient() {
   const [income, setIncome] = useState(70000)
   const [expenses, setExpenses] = useState(40000)
   const [savings, setSavings] = useState(25000)
-  const [returnRate, setReturnRate] = useState(7)
+  const [returnRate, setReturnRate] = useState(5)
   const [result, setResult] = useState<null | { years: number; fireAge: number; fireNumber: number; monthlySavings: number }>(null)
 
   const calculate = () => {

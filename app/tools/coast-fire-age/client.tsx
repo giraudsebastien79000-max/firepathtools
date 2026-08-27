@@ -6,7 +6,7 @@ export default function CoastFireAgeClient() {
   const [currentSavings, setCurrentSavings] = useState("");
   const [monthlyContribution, setMonthlyContribution] = useState("");
   const [fireNumber, setFireNumber] = useState("");
-  const [annualReturn, setAnnualReturn] = useState("7");
+  const [annualReturn, setAnnualReturn] = useState("5");
   const [retirementAge, setRetirementAge] = useState("65");
   const [result, setResult] = useState<null | {
     coastAge: number | null;

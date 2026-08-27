@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 
 export default function CanIRetireEarlyClient() {
@@ -7,7 +7,7 @@ export default function CanIRetireEarlyClient() {
   const [currentSavings, setCurrentSavings] = useState("");
   const [annualSavings, setAnnualSavings] = useState("");
   const [annualExpenses, setAnnualExpenses] = useState("");
-  const [annualReturn, setAnnualReturn] = useState("7");
+  const [annualReturn, setAnnualReturn] = useState("5");
   const [swr, setSwr] = useState("4");
   const [result, setResult] = useState<null | {
     canRetire: boolean;

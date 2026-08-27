@@ -6,7 +6,7 @@ export default function FreedomDateClient() {
   const [currentSavings, setCurrentSavings] = useState("20000");
   const [monthlyContribution, setMonthlyContribution] = useState("1000");
   const [annualExpenses, setAnnualExpenses] = useState("40000");
-  const [returnRate, setReturnRate] = useState("7");
+  const [returnRate, setReturnRate] = useState("5");
   const [withdrawalRate, setWithdrawalRate] = useState("4");
   const [result, setResult] = useState<null | {
     freedomDate: Date;

@@ -1,10 +1,10 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 
 export default function LatteFactorClient() {
   const [daily, setDaily] = useState("");
   const [years, setYears] = useState("30");
-  const [returnRate, setReturnRate] = useState("7");
+  const [returnRate, setReturnRate] = useState("5");
   const [result, setResult] = useState(null);
 
   const calculate = () => {

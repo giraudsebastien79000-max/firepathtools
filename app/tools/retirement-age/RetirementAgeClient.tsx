@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 
 export default function RetirementAgeClient() {
@@ -6,7 +6,7 @@ export default function RetirementAgeClient() {
   const [currentSavings, setCurrentSavings] = useState("");
   const [monthlyContribution, setMonthlyContribution] = useState("");
   const [targetAmount, setTargetAmount] = useState("");
-  const [rate, setRate] = useState("7");
+  const [rate, setRate] = useState("5");
   const [result, setResult] = useState(null);
 
   const calculate = () => {

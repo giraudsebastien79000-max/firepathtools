@@ -1,11 +1,11 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 
 export default function FIREProgressClient() {
   const [current, setCurrent] = useState("");
   const [target, setTarget] = useState("");
   const [monthly, setMonthly] = useState("");
-  const [returnRate, setReturnRate] = useState("7");
+  const [returnRate, setReturnRate] = useState("5");
   const [result, setResult] = useState(null);
 
   const calculate = () => {

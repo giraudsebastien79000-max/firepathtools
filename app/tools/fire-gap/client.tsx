@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 import { useState } from "react"
 import Link from "next/link"
 
@@ -20,7 +20,7 @@ export default function FireGapCalculator() {
   const [currentSavings, setCurrentSavings] = useState(25000)
   const [monthlyIncome, setMonthlyIncome] = useState(5000)
   const [monthlyExpenses, setMonthlyExpenses] = useState(3500)
-  const [annualReturn, setAnnualReturn] = useState(7)
+  const [annualReturn, setAnnualReturn] = useState(5)
   const [result, setResult] = useState<Result | null>(null)
   const [error, setError] = useState("")
 
