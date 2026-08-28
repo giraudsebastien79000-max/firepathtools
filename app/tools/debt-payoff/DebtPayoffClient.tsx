@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 
 export default function DebtPayoffClient() {
@@ -9,8 +9,12 @@ export default function DebtPayoffClient() {
 
   const calculate = () => {
     const b = parseFloat(balance);
-    const r = parseFloat(rate) / 100 / 12;
+    const rAnnual = parseFloat(rate);
     const p = parseFloat(payment);
+    if (!Number.isFinite(b) || !Number.isFinite(rAnnual) || !Number.isFinite(p) || b <= 0 || p <= 0 || rAnnual < 0) {
+      setResult({ invalid: true }); return;
+    }
+    const r = rAnnual / 100 / 12;
     if (p <= b * r) { setResult({ error: true }); return; }
     let months = 0;
     let remaining = b;
@@ -22,6 +26,7 @@ export default function DebtPayoffClient() {
       totalPaid += interest + principal;
       months++;
     }
+    if (remaining > 0) { setResult({ error: true }); return; }
     const totalInterest = totalPaid - b;
     setResult({ months, years: (months / 12).toFixed(1), totalInterest, totalPaid, error: false });
   };
@@ -48,12 +53,17 @@ export default function DebtPayoffClient() {
             <input type="number" value={payment} onChange={(e) => setPayment(e.target.value)} placeholder="e.g. 500" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate Payoff Date</button>
+          {result !== null && result.invalid && (
+            <div className="bg-slate-800 rounded-xl p-4 border border-slate-600 text-center">
+              <p className="text-gray-300">Fill in all three fields with positive numbers to see your payoff date.</p>
+            </div>
+          )}
           {result !== null && result.error && (
             <div className="bg-red-900/30 rounded-xl p-4 border border-red-400/30 text-center">
               <p className="text-red-400">Your payment is too low to cover the interest. Increase your monthly payment.</p>
             </div>
           )}
-          {result !== null && !result.error && (
+          {result !== null && !result.error && !result.invalid && (
             <div className="space-y-4">
               <div className="bg-slate-800 rounded-xl p-6 text-center border border-orange-400/30">
                 <p className="text-gray-300 text-sm mb-1">Debt-Free In</p>
