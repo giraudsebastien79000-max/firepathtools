@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState } from "react"
 import Link from "next/link"
@@ -7,7 +7,7 @@ export default function FireCanadaClient() {
   const [annualExpenses, setAnnualExpenses] = useState("")
   const [currentSavings, setCurrentSavings] = useState("")
   const [monthlyContribution, setMonthlyContribution] = useState("")
-  const [annualReturn, setAnnualReturn] = useState("7")
+  const [annualReturn, setAnnualReturn] = useState("5")
   const [result, setResult] = useState<{ fireNumber: number; yearsToFire: number; monthsExtra: number; gap: number } | null>(null)
 
   function calculate() {
@@ -57,8 +57,8 @@ export default function FireCanadaClient() {
                 <input type="number" value={monthlyContribution} onChange={(e) => setMonthlyContribution(e.target.value)} placeholder="e.g. 2000" className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500" />
               </div>
               <div>
-                <label className="block text-sm font-bold mb-1" style={{color:"#111827"}}>Annual Return: <span className="text-red-600 font-semibold">{annualReturn}%</span></label>
-                <input type="range" min="3" max="12" step="0.5" value={annualReturn} onChange={(e) => setAnnualReturn(e.target.value)} className="w-full accent-red-600" />
+                <label className="block text-sm font-bold mb-1" style={{color:"#111827"}}>Annual Return after inflation: <span className="text-red-600 font-semibold">{annualReturn}%</span></label>
+                <input type="range" min="3" max="8" step="0.5" value={annualReturn} onChange={(e) => setAnnualReturn(e.target.value)} className="w-full accent-red-600" />
               </div>
               <button onClick={calculate} className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">Calculate My FIRE Number</button>
             </div>
@@ -71,12 +71,12 @@ export default function FireCanadaClient() {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-gray-900 rounded-xl p-4 text-center border border-slate-600">
-                    <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide mb-1">Gap to FIRE</p>
-                    <p className="text-2xl font-bold text-gray-900">{result.gap <= 0 ? "Done!" : fmt(result.gap)}</p>
+                    <p className="text-xs text-gray-300 font-semibold uppercase tracking-wide mb-1">Gap to FIRE</p>
+                    <p className="text-2xl font-bold text-white">{result.gap <= 0 ? "Done!" : fmt(result.gap)}</p>
                   </div>
                   <div className="bg-gray-900 rounded-xl p-4 text-center border border-slate-600">
-                    <p className="text-xs text-gray-600 font-semibold uppercase tracking-wide mb-1">Time to FIRE</p>
-                    <p className="text-2xl font-bold text-gray-900">{result.gap <= 0 ? "Now!" : result.yearsToFire === 999 ? "Add contributions" : result.yearsToFire + "y " + result.monthsExtra + "m"}</p>
+                    <p className="text-xs text-gray-300 font-semibold uppercase tracking-wide mb-1">Time to FIRE</p>
+                    <p className="text-2xl font-bold text-white">{result.gap <= 0 ? "Now!" : result.yearsToFire === 999 ? "Add contributions" : result.yearsToFire + "y " + result.monthsExtra + "m"}</p>
                   </div>
                 </div>
               </div>
