@@ -41,17 +41,17 @@ export default function CoastVsBaristaPage() {
           </div>
 
           <h2 className="text-2xl font-bold">What Is Coast FIRE?</h2>
-          <p className="text-gray-300 leading-relaxed">Coast FIRE is reached when your current investment portfolio is large enough that, left alone to compound at a historical rate of return (typically 7% real), it will grow to your full FIRE number by traditional retirement age (usually 60-65) — without you ever adding another dollar.</p>
+          <p className="text-gray-300 leading-relaxed">Coast FIRE is reached when your current investment portfolio is large enough that, left alone to compound at a historical rate of return (typically 5% real), it will grow to your full FIRE number by traditional retirement age (usually 60-65) — without you ever adding another dollar.</p>
           <p className="text-gray-300 leading-relaxed">Once you hit your Coast FIRE number, you have effectively "pre-funded" your retirement. The compounding does the rest of the work. At that point, you only need to earn enough to cover your current living expenses — no more mandatory savings. This unlocks an enormous amount of career flexibility: you can downshift to a lower-paying but more meaningful job, go part-time, take a sabbatical, or move somewhere with a lower cost of living.</p>
 
           <div className="bg-gray-900 rounded-2xl p-6">
             <h3 className="font-semibold text-orange-400 mb-3">Coast FIRE Formula</h3>
             <p className="text-gray-300 text-sm mb-3">Coast FIRE Number = FIRE Number / (1 + r)^n</p>
             <p className="text-gray-300 text-sm">Where r = annual return rate and n = years until traditional retirement age.</p>
-            <p className="text-gray-300 text-sm mt-2">Example: FIRE number of $1,000,000, 30 years to retirement, 7% return → Coast number = $1,000,000 / (1.07)^30 = $131,367</p>
+            <p className="text-gray-300 text-sm mt-2">Example: FIRE number of $1,000,000, 30 years to retirement, 5% return → Coast number = $1,000,000 / (1.05)^30 = $231,377</p>
           </div>
 
-          <p className="text-gray-300 leading-relaxed">The key insight is that Coast FIRE can be reached much earlier than full FIRE because you only need a fraction of your final target. Someone who needs $1,000,000 to fully retire might only need $130,000-$200,000 to coast there — depending on their timeline. This makes Coast FIRE an achievable milestone in your early 30s for many disciplined savers.</p>
+          <p className="text-gray-300 leading-relaxed">The key insight is that Coast FIRE can be reached much earlier than full FIRE because you only need a fraction of your final target. Someone who needs $1,000,000 to fully retire might only need $230,000-$310,000 to coast there — depending on their timeline. This makes Coast FIRE an achievable milestone in your early 30s for many disciplined savers.</p>
 
           <h2 className="text-2xl font-bold">What Is Barista FIRE?</h2>
           <p className="text-gray-300 leading-relaxed">Barista FIRE gets its name from the idea of leaving a high-stress career and taking a part-time job — like a barista at a coffee shop — that provides just enough income and, crucially, employer-sponsored health insurance. The portfolio covers the bulk of living expenses, and the part-time income fills the gap.</p>
