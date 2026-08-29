@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 
 type Row = { year: number; startBalance: number; withdrawal: number; growth: number; endBalance: number };
@@ -6,7 +6,7 @@ type Row = { year: number; startBalance: number; withdrawal: number; growth: num
 export default function DrawdownClient() {
   const [portfolio, setPortfolio] = useState("1000000");
   const [withdrawal, setWithdrawal] = useState("40000");
-  const [returnRate, setReturnRate] = useState("7");
+  const [returnRate, setReturnRate] = useState("8");
   const [inflation, setInflation] = useState("3");
   const [result, setResult] = useState<null | { rows: Row[]; depleted: boolean; depletedYear: number | null; finalBalance: number }>(null);
 
@@ -15,7 +15,7 @@ export default function DrawdownClient() {
     const w = parseFloat(withdrawal);
     const r = parseFloat(returnRate) / 100;
     const inf = parseFloat(inflation) / 100;
-    if (!p || !w || !r) return;
+    if (!Number.isFinite(p) || !Number.isFinite(w) || !Number.isFinite(r) || !Number.isFinite(inf) || p <= 0 || w <= 0 || r < 0 || inf < 0) return;
 
     const rows: Row[] = [];
     let balance = p;
@@ -66,7 +66,7 @@ export default function DrawdownClient() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="text-gray-300 font-medium block mb-1">Expected Return (%)</label>
+              <label className="text-gray-300 font-medium block mb-1">Expected Return (%, before inflation)</label>
               <input type="number" value={returnRate} onChange={e => setReturnRate(e.target.value)}
                 className="w-full bg-gray-900 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-orange-500" />
             </div>
@@ -88,7 +88,7 @@ export default function DrawdownClient() {
               {result.depleted ? (
                 <>
                   <p className="text-red-300 text-xl font-bold">Portfolio depleted in year {result.depletedYear}</p>
-                  <p className="text-gray-300 text-sm mt-1">At this withdrawal rate, your money runs out. Consider reducing withdrawals or increasing returns.</p>
+                  <p className="text-gray-300 text-sm mt-1">At this withdrawal rate, your money runs out. Consider reducing withdrawals, working longer, or starting with a larger balance.</p>
                 </>
               ) : (
                 <>
@@ -135,7 +135,7 @@ export default function DrawdownClient() {
           <p>Inflation increases your cost of living each year. A fixed withdrawal of $40,000 today will need to be $53,000 in 10 years at 3% inflation just to maintain the same purchasing power. This calculator adjusts your withdrawal upward each year to reflect this.</p>
           <h2 className="text-2xl font-bold text-white">FAQ</h2>
           <div className="space-y-4">
-            <div><p className="font-semibold text-white">What return rate should I use?</p><p className="text-gray-300 mt-1">7% is the inflation-adjusted historical average for US equities. If you are already accounting for inflation in your withdrawal, use a nominal return of around 10% instead.</p></div>
+            <div><p className="font-semibold text-white">What return rate should I use?</p><p className="text-gray-300 mt-1">Enter a nominal return, before inflation, because this calculator raises your withdrawal by the inflation rate each year. Our default is 8%: a 5% real return plus 3% inflation. World equities returned 5.2% real since 1900 (Dimson-Marsh-Staunton), which is why we use 5% rather than the usual 7%.</p></div>
             <div><p className="font-semibold text-white">My portfolio depletes — what can I do?</p><p className="text-gray-300 mt-1">Reduce your annual withdrawal, increase your starting balance, or lower your expected inflation rate. Even a 10% reduction in withdrawals can add many years to your portfolio.</p></div>
             <div><p className="font-semibold text-white">How is this different from the 4% rule?</p><p className="text-gray-300 mt-1">The 4% rule is a guideline. This calculator lets you stress-test any combination of withdrawal rate, return, and inflation specific to your situation.</p></div>
           </div>
