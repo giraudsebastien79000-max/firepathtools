@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import GlobalFireMapClient from './client'
 
@@ -26,12 +26,12 @@ const faqItems = [
  {
  question: 'How is the FIRE number per country calculated?',
  answer:
- 'Each country has a comfortable monthly budget for a single person including rent, based on FirePathTools research. The FIRE number is 25x that annual budget (a 4% safe withdrawal rate). Time to FI assumes your savings grow at 7% per year. For example, Portugal at USD 1,800/month gives a FIRE number of USD 540,000.',
+ 'Each country carries a comfortable monthly budget for a single person including rent. These are our own planning estimates, not a priced survey - treat them as a starting point and adjust them to your situation. The FIRE number is 28.6x that annual budget (a 3.5% safe withdrawal rate, more defensible than 4% over a long early retirement). Time to FI assumes your savings grow at 5% per year after inflation. For example, Portugal at USD 1,800/month gives a FIRE number of USD 617,000.',
  },
  {
  question: 'Which country has the lowest FIRE number?',
  answer:
- 'Among the 32 countries mapped, India has the lowest at roughly USD 270,000 (USD 900/month budget), followed by Georgia and Vietnam at around USD 330,000. At the other end, the United States requires roughly USD 1,050,000 at USD 3,500/month.',
+ 'Among the 32 countries mapped, India has the lowest at roughly USD 309,000 (USD 900/month budget), followed by Georgia and Vietnam at around USD 377,000. At the other end, the United States requires roughly USD 1,200,000 at USD 3,500/month.',
  },
  {
  question: 'Are these budgets guaranteed?',
@@ -78,7 +78,7 @@ export default function GlobalFireMapPage() {
  </p>
  <p className="text-lg text-gray-200 leading-relaxed">
  Across the 32 countries on this map, financial independence for a single person costs
- between roughly USD 270,000 (India) and USD 1,050,000 (United States) at a 4%
+ between roughly USD 309,000 (India) and USD 1,200,000 (United States) at a 3.5%
  withdrawal rate. Enter your portfolio below and see where you are already free.
  </p>
  </div>
@@ -97,8 +97,8 @@ export default function GlobalFireMapPage() {
  <p className="text-lg text-gray-300 leading-relaxed mb-4">
  Each country carries a comfortable monthly budget for a single person, rent included,
  in USD - the same planning ranges used in our detailed country guides. The FIRE number
- is 25x the annual budget (a 4% safe withdrawal rate), and your time to FI assumes your
- monthly savings compound at 7% per year.
+ is 28.6x the annual budget (a 3.5% safe withdrawal rate), and your time to FI assumes your
+ monthly savings compound at 5% per year after inflation.
  </p>
  <p className="text-lg text-gray-300 leading-relaxed">
  Budgets are deliberately realistic rather than minimal: the goal is a life you would

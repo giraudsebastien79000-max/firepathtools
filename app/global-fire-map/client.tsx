@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
@@ -50,8 +50,8 @@ const countries: Country[] = [
 
 const codesSet = new Set(countries.map((c) => c.code))
 
-const SWR = 0.04
-const ANNUAL_RETURN = 0.07
+const SWR = 0.035
+const ANNUAL_RETURN = 0.05
 
 function fireNumberFor(cost: number) {
   return (cost * 12) / SWR
@@ -362,7 +362,7 @@ export default function GlobalFireMapClient() {
               <p className="text-gray-200 text-lg leading-relaxed">
                 You are already financially independent at home in {homeCountry.name}
                 {" "}{flagOf(homeCountry.code)}. Moving is a choice, not a requirement - but{" "}
-                {bestMove.name} would still cut your FIRE number by{" "}
+                {bestMove.name} has a threshold lower by{" "}
                 <span className="text-white font-bold">
                   {fmtUSD(fireNumberFor(homeCountry.cost) - fireNumberFor(bestMove.cost))}
                 </span>.
@@ -425,7 +425,7 @@ export default function GlobalFireMapClient() {
                 <p className="text-xl font-bold text-white">{fmtUSD(selected.cost)}</p>
               </div>
               <div className="bg-gray-950 rounded-xl p-4 border border-gray-800">
-                <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">FIRE number (4% SWR)</p>
+                <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">FIRE number (3.5% SWR)</p>
                 <p className="text-xl font-bold text-white">{fmtUSD(fireNumberFor(selected.cost))}</p>
               </div>
               <div className="bg-gray-950 rounded-xl p-4 border border-gray-800">
