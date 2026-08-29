@@ -33,7 +33,7 @@ export default function FireByCountryClient() {
     const usdRate = usdRates[selected.currency] || 1
     const fireNumberUSD = selected.currency === "USD" ? fireNumber : fireNumber * usdRate
     const gap = fireNumberUSD - savings
-    const rate = 0.07 / 12
+    const rate = 0.05 / 12
     let yearsToFire = 0
     let monthsExtra = 0
     if (gap > 0 && monthly > 0) {
@@ -66,7 +66,7 @@ export default function FireByCountryClient() {
                 className={"rounded-xl p-3 text-center border-2 transition-all " + (selected.name === c.name ? "border-orange-500 bg-orange-50" : "border-gray-200 bg-white hover:border-orange-300")}>
                 <div className="text-xs font-bold text-orange-500 mb-1">{c.name.substring(0,2).toUpperCase()}</div>
                 <div className="text-sm font-semibold" style={{color:"#111827"}}>{c.name}</div>
-                <div className="text-xs" style={{color:"#6B7280"}}>{c.symbol}{c.monthlyCost.toLocaleString()}/mo</div>
+                <div className="text-xs" style={{color:"#6B7280"}}>{c.symbol}{c.monthlyCost.toLocaleString("en-US")}/mo</div>
               </button>
             ))}
           </div>
@@ -83,7 +83,7 @@ export default function FireByCountryClient() {
             <div className="space-y-5">
               <div>
                 <label className="block text-sm font-bold mb-1" style={{color:"#111827"}}>Annual Expenses in {selected.name} ({selected.symbol})</label>
-                <p className="text-xs mb-2" style={{color:"#374151"}}>Default: {selected.symbol}{(selected.monthlyCost * 12).toLocaleString()}/yr — adjust to your lifestyle</p>
+                <p className="text-xs mb-2" style={{color:"#374151"}}>Default: {selected.symbol}{(selected.monthlyCost * 12).toLocaleString("en-US")}/yr — adjust to your lifestyle</p>
                 <input type="number" value={customExpenses} onChange={(e) => setCustomExpenses(e.target.value)}
                   placeholder={"e.g. " + (selected.monthlyCost * 12)} className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500" />
               </div>
@@ -119,6 +119,7 @@ export default function FireByCountryClient() {
                     <p className="text-2xl font-bold text-white">{result.gap <= 0 ? "Now!" : result.yearsToFire + "y " + result.monthsExtra + "m"}</p>
                   </div>
                 </div>
+                <p className="text-xs" style={{color:"#6B7280"}}>Time to FIRE assumes a 5% real return, after inflation. Currency conversions use fixed reference rates, not live market rates.</p>
               </div>
             )}
           </div>
@@ -133,9 +134,9 @@ export default function FireByCountryClient() {
               <thead>
                 <tr className="border-b border-gray-200">
                   <th className="text-left py-3 font-semibold" style={{color:"#111827"}}>Country</th>
-                  <th className="text-right py-3 font-semibold" style={{color:"#111827"}}>Monthly Cost</th>
-                  <th className="text-right py-3 font-semibold" style={{color:"#111827"}}>SWR</th>
-                  <th className="text-right py-3 font-semibold" style={{color:"#111827"}}>FIRE Number (USD)</th>
+                  <th className="text-right py-3 pl-4 font-semibold" style={{color:"#111827"}}>Monthly Cost</th>
+                  <th className="text-right py-3 pl-4 font-semibold" style={{color:"#111827"}}>SWR</th>
+                  <th className="text-right py-3 pl-4 font-semibold" style={{color:"#111827"}}>FIRE Number (USD)</th>
                 </tr>
               </thead>
               <tbody>
@@ -147,9 +148,9 @@ export default function FireByCountryClient() {
                   return (
                     <tr key={c.name} className={"border-b border-gray-100 " + (selected.name === c.name ? "bg-orange-50" : "")}>
                       <td className="py-3 font-medium" style={{color:"#111827"}}>{c.flag} {c.name}</td>
-                      <td className="py-3 text-right" style={{color:"#374151"}}>{c.symbol}{c.monthlyCost.toLocaleString()}</td>
-                      <td className="py-3 text-right" style={{color:"#374151"}}>{c.swr}%</td>
-                      <td className="py-3 text-right font-semibold" style={{color:"#111827"}}>{fmt(fireUSD, "$")}</td>
+                      <td className="py-3 pl-4 text-right" style={{color:"#374151"}}>{c.symbol}{c.monthlyCost.toLocaleString("en-US")}</td>
+                      <td className="py-3 pl-4 text-right" style={{color:"#374151"}}>{c.swr}%</td>
+                      <td className="py-3 pl-4 text-right font-semibold" style={{color:"#111827"}}>{fmt(fireUSD, "$")}</td>
                     </tr>
                   )
                 })}
