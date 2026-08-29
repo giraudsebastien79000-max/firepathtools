@@ -4,18 +4,19 @@ import { useState } from "react"
 import Link from "next/link"
 
 const countries = [
-  { name: "Portugal", flag: "🇵🇹", currency: "EUR", symbol: "€", monthlyCost: 1800, swr: 3.5, highlight: "NHR tax regime, warm climate, EU healthcare", color: "green" },
-  { name: "Spain", flag: "🇪🇸", currency: "EUR", symbol: "€", monthlyCost: 2000, swr: 3.5, highlight: "Beckham Law for expats, great weather, high quality of life", color: "red" },
-  { name: "Thailand", flag: "🇹🇭", currency: "THB", symbol: "฿", monthlyCost: 43000, swr: 4.0, highlight: "Very low cost of living, excellent healthcare, warm year-round", color: "blue" },
-  { name: "France", flag: "🇫🇷", currency: "EUR", symbol: "€", monthlyCost: 2500, swr: 3.5, highlight: "World-class healthcare, culture, but higher taxes", color: "indigo" },
-  { name: "Mexico", flag: "🇲🇽", currency: "MXN", symbol: "MX" + String.fromCharCode(36), monthlyCost: 26000, swr: 4.0, highlight: "Low cost, close to US, growing expat communities", color: "orange" },
-  { name: "Italy", flag: "🇮🇹", currency: "EUR", symbol: "€", monthlyCost: 2200, swr: 3.5, highlight: "7% flat tax for foreign retirees in southern regions", color: "green" },
-  { name: "Colombia", flag: "🇨🇴", currency: "COP", symbol: "COP", monthlyCost: 4400000, swr: 4.0, highlight: "Ultra low cost, eternal spring climate in Medellin", color: "yellow" },
+  { name: "Portugal", flag: "🇵🇹", currency: "EUR", symbol: "€", monthlyCost: 1550, swr: 3.5, highlight: "NHR tax regime, warm climate, EU healthcare", color: "green" },
+  { name: "Spain", flag: "🇪🇸", currency: "EUR", symbol: "€", monthlyCost: 1720, swr: 3.5, highlight: "Beckham Law for expats, great weather, high quality of life", color: "red" },
+  { name: "Thailand", flag: "🇹🇭", currency: "THB", symbol: "฿", monthlyCost: 53500, swr: 3.5, highlight: "Very low cost of living, excellent healthcare, warm year-round", color: "blue" },
+  { name: "France", flag: "🇫🇷", currency: "EUR", symbol: "€", monthlyCost: 2150, swr: 3.5, highlight: "World-class healthcare, culture, but higher taxes", color: "indigo" },
+  { name: "Mexico", flag: "🇲🇽", currency: "MXN", symbol: "MX" + String.fromCharCode(36), monthlyCost: 26000, swr: 3.5, highlight: "Low cost, close to US, growing expat communities", color: "orange" },
+  { name: "Italy", flag: "🇮🇹", currency: "EUR", symbol: "€", monthlyCost: 1900, swr: 3.5, highlight: "7% flat tax for foreign retirees in southern regions", color: "green" },
+  { name: "Colombia", flag: "🇨🇴", currency: "COP", symbol: "COP", monthlyCost: 4800000, swr: 3.5, highlight: "Ultra low cost, eternal spring climate in Medellin", color: "yellow" },
   { name: "Japan", flag: "🇯🇵", currency: "JPY", symbol: "¥", monthlyCost: 300000, swr: 3.5, highlight: "Safe, unique culture, excellent public transport", color: "red" },
 ]
 
 const usdRates: Record<string, number> = {
-  EUR: 1.08, THB: 0.028, MXN: 0.058, COP: 0.00025, JPY: 0.0067,
+  // Reference rates, not live. EUR checked 29 Aug 2026; the others are unverified estimates.
+  EUR: 1.16, THB: 0.028, MXN: 0.058, COP: 0.00025, JPY: 0.0067,
 }
 
 export default function FireByCountryClient() {
@@ -162,12 +163,12 @@ export default function FireByCountryClient() {
 
       <section className="py-12 px-4">
         <div className="max-w-3xl mx-auto">
-          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is the FIRE number different by country?","acceptedAnswer":{"@type":"Answer","text":"Your FIRE number depends on your annual spending. Living in Thailand at 43,000 THB per month requires a much smaller portfolio than living in France at 2,500 EUR per month. The safe withdrawal rate also varies - we use 3.5% for higher-cost countries and 4% for lower-cost ones."}},{"@type":"Question","name":"Should I keep my investments in USD?","acceptedAnswer":{"@type":"Answer","text":"Most FIRE expats keep their portfolio in USD or EUR and convert as needed. This protects against local currency devaluation. The FIRE number shown in local currency is for reference - your actual portfolio will likely remain in your home currency."}},{"@type":"Question","name":"What about healthcare abroad?","acceptedAnswer":{"@type":"Answer","text":"EU countries offer public healthcare access for residents. In Thailand, private insurance runs 100-200 USD per month. Always factor in healthcare costs when calculating your budget abroad."}}]}`}} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is the FIRE number different by country?","acceptedAnswer":{"@type":"Answer","text":"Your FIRE number depends on your annual spending. Living in Thailand at 43,000 THB per month requires a much smaller portfolio than living in France at 2,500 EUR per month. The safe withdrawal rate also varies - we use 3.5% everywhere, which is more defensible than 4% over a long early retirement."}},{"@type":"Question","name":"Should I keep my investments in USD?","acceptedAnswer":{"@type":"Answer","text":"Most FIRE expats keep their portfolio in USD or EUR and convert as needed. This protects against local currency devaluation. The FIRE number shown in local currency is for reference - your actual portfolio will likely remain in your home currency."}},{"@type":"Question","name":"What about healthcare abroad?","acceptedAnswer":{"@type":"Answer","text":"EU countries offer public healthcare access for residents. In Thailand, private insurance runs 100-200 USD per month. Always factor in healthcare costs when calculating your budget abroad."}}]}`}} />
           <h2 className="text-2xl font-bold mb-8" style={{color:"#111827"}}>Frequently Asked Questions</h2>
           <div className="space-y-6">
             <div>
               <h3 className="font-semibold mb-2" style={{color:"#111827"}}>Why is the FIRE number different by country?</h3>
-              <p className="text-sm" style={{color:"#374151"}}>Your FIRE number depends on your annual spending. Living in Thailand at 43,000 THB per month requires a much smaller portfolio than living in France at 2,500 EUR per month. The safe withdrawal rate also varies — we use 3.5% for higher-cost countries and 4% for lower-cost ones.</p>
+              <p className="text-sm" style={{color:"#374151"}}>Your FIRE number depends on your annual spending. Living in Thailand at 43,000 THB per month requires a much smaller portfolio than living in France at 2,500 EUR per month. The safe withdrawal rate also varies — we use 3.5% everywhere, which is more defensible than 4% over a long early retirement.</p>
             </div>
             <div>
               <h3 className="font-semibold mb-2" style={{color:"#111827"}}>Should I keep my investments in USD?</h3>
