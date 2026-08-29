@@ -57,8 +57,9 @@ export default function FireCanadaClient() {
                 <input type="number" value={monthlyContribution} onChange={(e) => setMonthlyContribution(e.target.value)} placeholder="e.g. 2000" className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500" />
               </div>
               <div>
-                <label className="block text-sm font-bold mb-1" style={{color:"#111827"}}>Annual Return after inflation: <span className="text-red-600 font-semibold">{annualReturn}%</span></label>
+                <label className="block text-sm font-bold mb-1" style={{color:"#111827"}}>Annual Return after inflation: <span className="font-semibold" style={{color:"#DC2626"}}>{annualReturn}%</span></label>
                 <input type="range" min="3" max="8" step="0.5" value={annualReturn} onChange={(e) => setAnnualReturn(e.target.value)} className="w-full accent-red-600" />
+                <p className="text-xs mt-1" style={{color:"#4B5563"}}>How fast your investments grow while you are still saving. This sets how long it takes, not the target itself.</p>
               </div>
               <button onClick={calculate} className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">Calculate My FIRE Number</button>
             </div>
@@ -67,7 +68,7 @@ export default function FireCanadaClient() {
                 <div className="bg-red-600 rounded-xl p-6 text-center">
                   <p className="text-sm text-red-100 font-medium uppercase tracking-wide mb-1">Your FIRE Number</p>
                   <p className="text-4xl font-bold text-white">{fmt(result.fireNumber)}</p>
-                  <p className="text-sm text-red-100 mt-1">Based on 3.5% Safe Withdrawal Rate</p>
+                  <p className="text-sm text-red-100 mt-1">Your annual expenses divided by 3.5% - the share you could withdraw each year once you stop working</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-gray-900 rounded-xl p-4 text-center border border-slate-600">
