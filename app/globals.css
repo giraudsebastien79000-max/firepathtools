@@ -23,6 +23,6 @@ a:hover {
 }
 
 /* Buttons (links with a background) keep their own text color */
-a[class*="bg-"] {
+a[class*="bg-"]:not([class*="text-"]) {
   color: inherit;
 }
