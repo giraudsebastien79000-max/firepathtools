@@ -15,7 +15,7 @@ export default function RetireAt45Calculator() {
   const [currentAge, setCurrentAge] = useState(28)
   const [currentSavings, setCurrentSavings] = useState(15000)
   const [monthlyContribution, setMonthlyContribution] = useState(1000)
-  const [annualReturn, setAnnualReturn] = useState(7)
+  const [annualReturn, setAnnualReturn] = useState(5)
   const [annualExpenses, setAnnualExpenses] = useState(45000)
   const [calculated, setCalculated] = useState(false)
   const [result, setResult] = useState<Result | null>(null)
@@ -140,21 +140,21 @@ export default function RetireAt45Calculator() {
           <p className="text-gray-300 leading-relaxed">Using the 4% rule, your FIRE number is 25x your annual expenses. Spending $45,000 per year means a target of $1,125,000. Spending $60,000 means $1,500,000. For a 45-year retirement horizon, some FIRE planners use a 3.5% withdrawal rate (28x expenses) for additional safety margin.</p>
 
           <h3 className="text-xl font-semibold">What Savings Rate Do You Need to Retire at 45?</h3>
-          <p className="text-gray-300 leading-relaxed">Starting at age 25 with nothing, targeting $1,000,000 by 45, at 7% annual returns, you need to save roughly $2,100/month. That is approximately a 35-45% savings rate for most earners — demanding but far more achievable than retiring at 40. The key is starting early and staying consistent through market downturns.</p>
+          <p className="text-gray-300 leading-relaxed">Starting at age 25 with nothing, targeting $1,000,000 by 45, at 5% annual returns after inflation, you need to save roughly $2,450/month. That is approximately a 40-50% savings rate for most earners — demanding but far more achievable than retiring at 40. The key is starting early and staying consistent through market downturns.</p>
 
           <div className="bg-gray-900 rounded-2xl p-6 space-y-3">
             <h4 className="font-semibold text-orange-400">Retire at 45: Key Milestones by Age</h4>
             <div className="grid grid-cols-2 gap-2 text-sm">
               <div className="text-gray-300">Age 25</div><div className="text-white">Start investing, maximize 401(k) match</div>
-              <div className="text-gray-300">Age 30</div><div className="text-white">Target $100k-$150k saved</div>
-              <div className="text-gray-300">Age 35</div><div className="text-white">Target $300k-$400k saved</div>
-              <div className="text-gray-300">Age 40</div><div className="text-white">Target $600k-$800k saved</div>
+              <div className="text-gray-300">Age 30</div><div className="text-white">Target $150k-$180k saved</div>
+              <div className="text-gray-300">Age 35</div><div className="text-white">Target $350k-$400k saved</div>
+              <div className="text-gray-300">Age 40</div><div className="text-white">Target $620k-$700k saved</div>
               <div className="text-gray-300">Age 45</div><div className="text-white">FIRE number reached — retire!</div>
             </div>
           </div>
 
           <h3 className="text-xl font-semibold">Retiring at 45 vs Retiring at 40</h3>
-          <p className="text-gray-300 leading-relaxed">The extra 5 years make a significant difference. At 7% annual returns, money roughly doubles every 10 years. Starting at 25, by 45 you have 20 years of compounding versus 15 years for the age-40 target. This means you need roughly 40% less in monthly contributions to reach the same portfolio value — making it accessible to a much wider group of people.</p>
+          <p className="text-gray-300 leading-relaxed">The extra 5 years make a significant difference. At 5% after inflation, money roughly doubles every 14 years. Starting at 25, by 45 you have 20 years of compounding versus 15 years for the age-40 target. This means you need roughly 35% less in monthly contributions to reach the same portfolio value — making it accessible to a much wider group of people.</p>
 
           <h3 className="text-xl font-semibold">Tax Strategy for Early Retirement at 45</h3>
           <p className="text-gray-300 leading-relaxed">At 45, you still face the challenge of accessing tax-advantaged retirement accounts before the standard age of 59½. The Roth conversion ladder (converting traditional IRA funds to Roth, then withdrawing after 5 years) is the most common strategy. Rule 72(t) SEPP (Substantially Equal Periodic Payments) is another option, though less flexible. Having a substantial taxable brokerage account bridges the gap in early years.</p>

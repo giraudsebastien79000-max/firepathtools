@@ -15,7 +15,7 @@ export default function RetireAt50Calculator() {
   const [currentAge, setCurrentAge] = useState(32)
   const [currentSavings, setCurrentSavings] = useState(20000)
   const [monthlyContribution, setMonthlyContribution] = useState(1000)
-  const [annualReturn, setAnnualReturn] = useState(7)
+  const [annualReturn, setAnnualReturn] = useState(5)
   const [annualExpenses, setAnnualExpenses] = useState(50000)
   const [calculated, setCalculated] = useState(false)
   const [result, setResult] = useState<Result | null>(null)
@@ -134,22 +134,22 @@ export default function RetireAt50Calculator() {
 
         <div className="mt-16 space-y-8">
           <h2 className="text-3xl font-bold">How to Retire at 50: The Complete Guide</h2>
-          <p className="text-gray-300 leading-relaxed">Retiring at 50 is the most achievable early retirement target for most people — and still gives you decades of freedom before traditional retirement age. With 25-30 years of working life, compound interest does heavy lifting, and a moderate savings rate of 25-35% can get you there.</p>
+          <p className="text-gray-300 leading-relaxed">Retiring at 50 is the most achievable early retirement target for most people — and still gives you decades of freedom before traditional retirement age. With 25-30 years of working life, compound interest does heavy lifting, and a moderate savings rate of 30-40% can get you there.</p>
 
           <h3 className="text-xl font-semibold">What Is the FIRE Number for Retiring at 50?</h3>
           <p className="text-gray-300 leading-relaxed">Using the 4% rule, you need 25x your annual expenses. Spending $50,000/year means a target of $1,250,000. Spending $70,000/year means $1,750,000. Because a retirement starting at 50 could last 40+ years, many financial planners recommend targeting 3.5% withdrawal rate — meaning 28-30x your annual expenses for extra security.</p>
 
           <h3 className="text-xl font-semibold">What Savings Rate Gets You to 50?</h3>
-          <p className="text-gray-300 leading-relaxed">Starting at 25 with nothing, targeting $1,250,000 by 50, at 7% annual returns, you need to save roughly $1,600/month — about a 25-30% savings rate for median earners. This is ambitious but genuinely achievable without extreme frugality. The key advantage over retiring at 40 or 45 is that you have 25 years of compounding working for you.</p>
+          <p className="text-gray-300 leading-relaxed">Starting at 25 with nothing, targeting $1,250,000 by 50, at 5% annual returns after inflation, you need to save roughly $2,100/month — about a 30-35% savings rate for median earners. This is ambitious but genuinely achievable without extreme frugality. The key advantage over retiring at 40 or 45 is that you have 25 years of compounding working for you.</p>
 
           <div className="bg-gray-900 rounded-2xl p-6 space-y-3">
             <h4 className="font-semibold text-orange-400">Retire at 50: Savings Milestones</h4>
             <div className="grid grid-cols-2 gap-2 text-sm">
               <div className="text-gray-300">Age 25</div><div className="text-white">Start — maximize employer 401(k) match</div>
-              <div className="text-gray-300">Age 30</div><div className="text-white">Target $80k-$120k saved</div>
-              <div className="text-gray-300">Age 35</div><div className="text-white">Target $200k-$300k saved</div>
-              <div className="text-gray-300">Age 40</div><div className="text-white">Target $400k-$600k saved</div>
-              <div className="text-gray-300">Age 45</div><div className="text-white">Target $700k-$950k saved</div>
+              <div className="text-gray-300">Age 30</div><div className="text-white">Target $130k-$150k saved</div>
+              <div className="text-gray-300">Age 35</div><div className="text-white">Target $300k-$350k saved</div>
+              <div className="text-gray-300">Age 40</div><div className="text-white">Target $540k-$600k saved</div>
+              <div className="text-gray-300">Age 45</div><div className="text-white">Target $830k-$900k saved</div>
               <div className="text-gray-300">Age 50</div><div className="text-white">FIRE number reached — retire!</div>
             </div>
           </div>
