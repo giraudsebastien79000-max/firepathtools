@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
 
@@ -58,7 +58,7 @@ export default function FreedomWatchClient() {
   const [spending, setSpending] = useState(40000);
   const [savings, setSavings] = useState(20000);
   const [monthly, setMonthly] = useState(1500);
-  const [ret, setRet] = useState(7);
+  const [ret, setRet] = useState(5);
 
   const [t, setT] = useState(1);
   const [winding, setWinding] = useState(false);
@@ -244,7 +244,7 @@ export default function FreedomWatchClient() {
           <p style={{ marginBottom: 12 }}>
             Every figure is projected at a real return, after inflation, and shown in today's dollars. That keeps the target
             honest, because a number that ignores inflation always looks smaller than it really is. Move the return between
-            5% and 7% to see how much the timeline shifts.
+            We default to 5%, the long-run real return of world equities; try 6% or 7% to see how much the timeline shifts.
           </p>
           <p>
             The age is an estimate, not a promise. Real returns vary year to year, and a rough patch early in retirement can

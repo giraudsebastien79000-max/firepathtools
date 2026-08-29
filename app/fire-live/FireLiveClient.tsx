@@ -54,7 +54,7 @@ export default function FireLiveClient() {
   const [spending, setSpending] = useState(40000);
   const [savings, setSavings] = useState(20000);
   const [monthly, setMonthly] = useState(1500);
-  const [ret, setRet] = useState(7);
+  const [ret, setRet] = useState(5);
 
   const [reveal, setReveal] = useState(1);
   const [playing, setPlaying] = useState(false);
@@ -330,7 +330,7 @@ export default function FireLiveClient() {
           <p className="mb-3">
             The chart above compounds your current savings and monthly contributions at a real return, after inflation,
             so every figure is shown in today's dollars. That matters, because a target that ignores inflation looks
-            smaller than it really is. Slide the return between 5% and 7% to see how sensitive the timeline is.
+            smaller than it really is. We default to 5%, the long-run real return of world equities; try 6% or 7% to see how sensitive the timeline is.
           </p>
           <p>
             The age you see is an estimate, not a guarantee. Real returns vary year to year, and a poor sequence of
