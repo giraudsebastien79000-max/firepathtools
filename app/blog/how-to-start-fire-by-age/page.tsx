@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -145,7 +145,7 @@ export default function HowToStartFireByAge() {
                 </div>
               ))}
             </div>
-            <p className="text-gray-500 text-xs mt-4 text-center">Assumes 7% real returns, 4% withdrawal rate, starting from $0</p>
+            <p className="text-gray-500 text-xs mt-4 text-center">Assumes 5% real returns, 4% withdrawal rate, starting from $0</p>
           </div>
         </div>
       </section>
@@ -184,7 +184,7 @@ export default function HowToStartFireByAge() {
               },
               {
                 title: 'Peak earnings are a weapon — use them',
-                body: 'Your 40s are often your highest-earning decade. A 40-year-old earning $120,000 who saves 40% is investing $48,000/year. At 7% returns, that\'s over $600,000 in just 10 years from contributions and growth alone.',
+                body: 'Your 40s are often your highest-earning decade. A 40-year-old earning $120,000 who saves 40% is investing $48,000/year. At a 5% real return, that\'s over $600,000 in just 10 years from contributions and growth alone.',
               },
               {
                 title: 'Reconsider your biggest expenses',
@@ -211,7 +211,7 @@ export default function HowToStartFireByAge() {
             <div className="grid grid-cols-3 gap-4 text-center mt-4">
               {[
                 { rate: '20% savings', result: 'FI at ~77', color: 'text-gray-300' },
-                { rate: '35% savings', result: 'FI at ~63', color: 'text-yellow-400' },
+                { rate: '35% savings', result: 'FI at ~65', color: 'text-yellow-400' },
                 { rate: '50% savings', result: 'FI at ~57', color: 'text-blue-400' },
               ].map((item, i) => (
                 <div key={i} className="bg-slate-800 rounded-xl p-4">
@@ -220,7 +220,7 @@ export default function HowToStartFireByAge() {
                 </div>
               ))}
             </div>
-            <p className="text-gray-500 text-xs mt-4 text-center">Assumes 7% real returns, 4% withdrawal rate, starting from $0</p>
+            <p className="text-gray-500 text-xs mt-4 text-center">Assumes 5% real returns, 4% withdrawal rate, starting from $0</p>
           </div>
         </div>
       </section>
@@ -258,7 +258,7 @@ export default function HowToStartFireByAge() {
               },
               {
                 title: 'Use catch-up contributions aggressively',
-                body: 'Over-50 catch-up contributions to 401(k) allow an extra $7,500/year. Over 10 years at 7% returns, that\'s an additional $100,000+ in your portfolio purely from the extra contribution room.',
+                body: 'Over-50 catch-up contributions to 401(k) allow an extra $7,500/year. Over 10 years at a 5% real return, that\'s roughly $97,000 more in your portfolio purely from the extra contribution room.',
               },
               {
                 title: 'Factor in Social Security realistically',
@@ -281,8 +281,8 @@ export default function HowToStartFireByAge() {
             <div className="grid grid-cols-3 gap-4 text-center mt-4">
               {[
                 { rate: '20% savings', result: 'FI at ~87', color: 'text-gray-300' },
-                { rate: '35% savings', result: 'FI at ~72', color: 'text-yellow-400' },
-                { rate: '50% savings', result: 'FI at ~65', color: 'text-green-400' },
+                { rate: '35% savings', result: 'FI at ~75', color: 'text-yellow-400' },
+                { rate: '50% savings', result: 'FI at ~67', color: 'text-green-400' },
               ].map((item, i) => (
                 <div key={i} className="bg-slate-800 rounded-xl p-4">
                   <p className="text-gray-300 text-sm mb-2">{item.rate}</p>
@@ -290,7 +290,7 @@ export default function HowToStartFireByAge() {
                 </div>
               ))}
             </div>
-            <p className="text-gray-500 text-xs mt-4 text-center">Assumes 7% real returns, 4% withdrawal rate, starting from $0</p>
+            <p className="text-gray-500 text-xs mt-4 text-center">Assumes 5% real returns, 4% withdrawal rate, starting from $0</p>
           </div>
         </div>
       </section>
