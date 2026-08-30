@@ -93,7 +93,7 @@ export default function HowLongToReachFire() {
           Years to FIRE by savings rate
         </h2>
         <p className="text-gray-300 mb-6 text-base">
-          Assumes a 7% real annual return on investments and starting from $0. Based on
+          Assumes a 5% real annual return on investments and starting from $0. Based on
           the 4% rule (25x annual expenses as your FIRE number).
         </p>
 
@@ -117,7 +117,7 @@ export default function HowLongToReachFire() {
                 { rate: '40%', years: '22 years', note: 'Retire in your mid-40s', highlight: true },
                 { rate: '50%', years: '17 years', note: 'Classic FIRE target', highlight: true },
                 { rate: '60%', years: '12.5 years', note: 'Retire before 40 if you start at 25', highlight: true },
-                { rate: '70%', years: '8.5 years', note: 'Lean FIRE territory', highlight: true },
+                { rate: '70%', years: '8.8 years', note: 'Lean FIRE territory', highlight: true },
                 { rate: '75%', years: '7 years',   note: 'Extreme frugality, extreme freedom', highlight: true },
               ].map((row, i) => (
                 <tr
@@ -187,17 +187,17 @@ export default function HowLongToReachFire() {
       <section className="max-w-3xl mx-auto px-6 pb-12 space-y-5 text-gray-300 leading-relaxed text-lg">
         <h2 className="text-2xl font-bold text-white">What else affects the timeline?</h2>
         <p>
-          The table above uses 7% real returns and a 4% withdrawal rate — the most commonly
-          cited assumptions in the FIRE community. Here's how changing them shifts the picture:
+          The table above uses 5% real returns and a 4% withdrawal rate — the most commonly
+          cited withdrawal rate in the FIRE community, paired with a return assumption deliberately below the 7% most calculators use. Here's how changing them shifts the picture:
         </p>
 
         <div className="space-y-4">
           <div className="border-l-2 border-orange-500 pl-5">
             <p className="text-white font-semibold">Investment returns</p>
             <p className="text-gray-300">
-              At 5% real returns instead of 7%, add roughly 3-5 years to every timeline.
-              At 9%, subtract 2-3 years. The difference between aggressive and conservative
-              return assumptions is real but smaller than most people expect.
+              At 7% real returns instead of 5%, every timeline shortens, but by very different amounts: about six months at a 70% savings rate, about six years at 20%.
+              At 3%, they stretch by two to ten years across that same range. The difference between aggressive and conservative
+              return assumptions matters far more to savers with low savings rates than to aggressive ones.
             </p>
           </div>
           <div className="border-l-2 border-orange-500 pl-5">
