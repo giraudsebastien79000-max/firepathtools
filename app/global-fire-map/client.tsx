@@ -60,9 +60,9 @@ function fireNumberFor(cost: number) {
 function yearsToFI(fire: number, portfolio: number, monthly: number) {
   const gap = fire - portfolio
   if (gap <= 0) return 0
-  if (monthly <= 0) return Infinity
+  if (monthly <= 0) return portfolio > 0 ? Math.log(fire / portfolio) / Math.log(1 + ANNUAL_RETURN / 12) / 12 : Infinity
   const r = ANNUAL_RETURN / 12
-  const months = Math.log(1 + (gap * r) / monthly) / Math.log(1 + r)
+  const months = Math.log((fire * r + monthly) / (portfolio * r + monthly)) / Math.log(1 + r)
   return months / 12
 }
 
