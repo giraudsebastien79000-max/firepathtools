@@ -18,7 +18,7 @@ a {
   color: #fb923c;
 }
 
-a:hover {
+a:hover:not([class*="text-"]) {
   color: #f97316;
 }
 
