@@ -28,7 +28,7 @@ export default function MiddleClassFirePage() {
 
           <div className="bg-gray-900 rounded-2xl p-6 border border-orange-500/30">
             <h2 className="text-xl font-bold mb-3 text-orange-400">The Middle-Class FIRE Reality Check</h2>
-            <p className="text-gray-300 text-sm leading-relaxed">A household earning $80,000/year with a 30% savings rate saves $24,000/year. At 7% annual return, that grows to $1,000,000 in approximately 22 years — enough to retire at 47 if you start at 25. Middle-class FIRE is slower than tech-worker FIRE, but it is absolutely achievable.</p>
+            <p className="text-gray-300 text-sm leading-relaxed">A household earning $80,000/year with a 30% savings rate saves $24,000/year. At a 5% real return, that grows to $1,000,000 in approximately 23 years — enough to retire at 48 if you start at 25. Middle-class FIRE is slower than tech-worker FIRE, but it is absolutely achievable.</p>
           </div>
 
           <h2 className="text-2xl font-bold">What Is Middle-Class FIRE?</h2>
@@ -39,7 +39,7 @@ export default function MiddleClassFirePage() {
           <p className="text-gray-300 leading-relaxed">The math works, but the timeline is longer than what you typically see in FIRE success stories. Here is what it looks like across different income levels and savings rates:</p>
 
           <div className="bg-gray-900 rounded-2xl p-6">
-            <h4 className="font-semibold text-orange-400 mb-4">Years to $1,000,000 at 7% annual return</h4>
+            <h4 className="font-semibold text-orange-400 mb-4">Years to $1,000,000 at 5% real return, starting from zero</h4>
             <div className="space-y-3">
               <div className="grid grid-cols-4 gap-2 text-xs text-gray-500 pb-2 border-b border-slate-600">
                 <div>Income</div>
@@ -49,38 +49,38 @@ export default function MiddleClassFirePage() {
               </div>
               <div className="grid grid-cols-4 gap-2 text-sm">
                 <div className="text-gray-300">$60,000</div>
-                <div className="text-white">31 yrs</div>
-                <div className="text-white">25 yrs</div>
-                <div className="text-white">20 yrs</div>
+                <div className="text-white">33 yrs</div>
+                <div className="text-white">27 yrs</div>
+                <div className="text-white">23 yrs</div>
               </div>
               <div className="grid grid-cols-4 gap-2 text-sm">
                 <div className="text-gray-300">$80,000</div>
-                <div className="text-white">27 yrs</div>
-                <div className="text-white">22 yrs</div>
-                <div className="text-white">18 yrs</div>
+                <div className="text-white">28 yrs</div>
+                <div className="text-white">23 yrs</div>
+                <div className="text-white">19 yrs</div>
               </div>
               <div className="grid grid-cols-4 gap-2 text-sm">
                 <div className="text-gray-300">$100,000</div>
-                <div className="text-white">24 yrs</div>
-                <div className="text-white">19 yrs</div>
+                <div className="text-white">25 yrs</div>
+                <div className="text-white">20 yrs</div>
                 <div className="text-white">16 yrs</div>
               </div>
               <div className="grid grid-cols-4 gap-2 text-sm">
                 <div className="text-gray-300">$120,000</div>
-                <div className="text-white">22 yrs</div>
+                <div className="text-white">23 yrs</div>
                 <div className="text-white">17 yrs</div>
                 <div className="text-white">14 yrs</div>
               </div>
             </div>
           </div>
 
-          <p className="text-gray-300 leading-relaxed">Starting at 25 with a $80,000 household income and a 30% savings rate ($24,000/year), you reach $1,000,000 at approximately age 47. That is 18 years earlier than the traditional retirement age of 65. Not retire-at-35 territory, but genuinely life-changing.</p>
+          <p className="text-gray-300 leading-relaxed">Starting at 25 with a $80,000 household income and a 30% savings rate ($24,000/year), you reach $1,000,000 at approximately age 48. That is 17 years earlier than the traditional retirement age of 65. Not retire-at-35 territory, but genuinely life-changing.</p>
 
           <h2 className="text-2xl font-bold">The Real Obstacles for Middle-Class FIRE</h2>
           <p className="text-gray-300 leading-relaxed">Middle-class families face obstacles that are rarely discussed in FIRE content written by high earners. These are real, not excuses — and they need real solutions.</p>
 
           <h3 className="text-xl font-semibold">1. The Mortgage</h3>
-          <p className="text-gray-300 leading-relaxed">A 30-year mortgage on a median-priced home can consume 25-35% of take-home pay, leaving less room for investing. The FIRE community debates whether to pay off the mortgage early or invest the difference. The math usually favors investing (if your mortgage rate is below 5-6% and you expect 7%+ returns), but the psychological security of a paid-off home is real and valid.</p>
+          <p className="text-gray-300 leading-relaxed">A 30-year mortgage on a median-priced home can consume 25-35% of take-home pay, leaving less room for investing. The FIRE community debates whether to pay off the mortgage early or invest the difference. The math usually favors investing when your mortgage rate sits below your expected return before inflation, which has run roughly 7-8% a year for global equities. Note that the 5% used elsewhere on this site is a real return, after inflation, so it is not the figure to compare a mortgage rate against. The psychological security of a paid-off home is also real and valid.</p>
           <p className="text-gray-300 leading-relaxed">The key insight: the mortgage is not the enemy of FIRE — it is a fixed cost. Once it is in place, you work around it. Many middle-class FIRE practitioners target their FIRE date to roughly coincide with their mortgage payoff, dramatically reducing their retirement income needs at that point.</p>
 
           <h3 className="text-xl font-semibold">2. Children</h3>
@@ -142,12 +142,12 @@ export default function MiddleClassFirePage() {
           <p className="text-gray-300 leading-relaxed">The gap between "I will never be able to retire early" and "I can retire 10-15 years early" is often just a 10-15% increase in savings rate maintained consistently. Use the calculators below to see exactly what your timeline looks like.</p>
 
           <div className="mt-12 space-y-4">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can you reach FIRE on a $70,000 salary?","acceptedAnswer":{"@type":"Answer","text":"Yes, but the timeline is longer. At a 30% savings rate ($21,000/year) and 7% returns, you reach $1,000,000 in approximately 24 years. Starting at 25, that means FIRE at 49. Increasing to a 40% savings rate brings it to approximately 19 years - FIRE at 44. The key is starting early and maintaining the savings rate consistently."}},{"@type":"Question","name":"Is FIRE realistic with a mortgage and kids?","acceptedAnswer":{"@type":"Answer","text":"Yes, but the timeline adjusts. Children add expenses during the accumulation phase and may increase your FIRE number. A realistic target for a middle-class family with two children and a mortgage might be FIRE at 52-58 rather than 45-50. That is still a decade or more before traditional retirement - and a dramatically different quality of life."}},{"@type":"Question","name":"What savings rate do I need for Middle-Class FIRE?","acceptedAnswer":{"@type":"Answer","text":"A 25-35% savings rate is the typical Middle-Class FIRE target. Below 20%, the timeline extends beyond 30 years. Above 40%, you start approaching early-retirement territory (45-50). The exact rate depends on your income, expenses, and target retirement age."}},{"@type":"Question","name":"Should middle-class FIRE savers prioritize paying off the mortgage or investing?","acceptedAnswer":{"@type":"Answer","text":"Generally, if your mortgage rate is below 5-6%, investing in index funds is mathematically superior. If your mortgage rate is above 6-7%, paying it down provides a guaranteed return that competes with historical market returns. Many people split the difference - investing enough to get the full 401(k) match, then paying down the mortgage, then investing the rest."}}]}`}} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can you reach FIRE on a $70,000 salary?","acceptedAnswer":{"@type":"Answer","text":"Yes, but the timeline is longer. At a 30% savings rate ($21,000/year) and a 5% real return, you reach $1,000,000 in approximately 24 years. Starting at 25, that means FIRE at 49. Increasing to a 40% savings rate brings it to approximately 21 years - FIRE at 46. The key is starting early and maintaining the savings rate consistently."}},{"@type":"Question","name":"Is FIRE realistic with a mortgage and kids?","acceptedAnswer":{"@type":"Answer","text":"Yes, but the timeline adjusts. Children add expenses during the accumulation phase and may increase your FIRE number. A realistic target for a middle-class family with two children and a mortgage might be FIRE at 52-58 rather than 45-50. That is still a decade or more before traditional retirement - and a dramatically different quality of life."}},{"@type":"Question","name":"What savings rate do I need for Middle-Class FIRE?","acceptedAnswer":{"@type":"Answer","text":"A 25-35% savings rate is the typical Middle-Class FIRE target. Below 20%, the timeline extends beyond 30 years. Above 40%, you start approaching early-retirement territory (45-50). The exact rate depends on your income, expenses, and target retirement age."}},{"@type":"Question","name":"Should middle-class FIRE savers prioritize paying off the mortgage or investing?","acceptedAnswer":{"@type":"Answer","text":"Generally, if your mortgage rate is below 5-6%, investing in index funds is mathematically superior. If your mortgage rate is above 6-7%, paying it down provides a guaranteed return that competes with historical market returns. Compare your mortgage rate against a nominal expected return of roughly 7-8%, not against the 5% real return used elsewhere on this site. Many people split the difference - investing enough to get the full 401(k) match, then paying down the mortgage, then investing the rest."}}]}`}} />
             <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
             <div className="space-y-4">
               <div className="bg-gray-900 rounded-xl p-6">
                 <h4 className="font-semibold mb-2">Can you reach FIRE on a $70,000 salary?</h4>
-                <p className="text-gray-300 text-sm">Yes, but the timeline is longer. At a 30% savings rate ($21,000/year) and 7% returns, you reach $1,000,000 in approximately 24 years. Starting at 25, that means FIRE at 49. Increasing to a 40% savings rate brings it to approximately 19 years — FIRE at 44. The key is starting early and maintaining the savings rate consistently.</p>
+                <p className="text-gray-300 text-sm">Yes, but the timeline is longer. At a 30% savings rate ($21,000/year) and a 5% real return, you reach $1,000,000 in approximately 24 years. Starting at 25, that means FIRE at 49. Increasing to a 40% savings rate brings it to approximately 21 years — FIRE at 46. The key is starting early and maintaining the savings rate consistently.</p>
               </div>
               <div className="bg-gray-900 rounded-xl p-6">
                 <h4 className="font-semibold mb-2">Is FIRE realistic with a mortgage and kids?</h4>
@@ -159,7 +159,7 @@ export default function MiddleClassFirePage() {
               </div>
               <div className="bg-gray-900 rounded-xl p-6">
                 <h4 className="font-semibold mb-2">Should middle-class FIRE savers prioritize paying off the mortgage or investing?</h4>
-                <p className="text-gray-300 text-sm">Generally, if your mortgage rate is below 5-6%, investing in index funds is mathematically superior. If your mortgage rate is above 6-7%, paying it down provides a guaranteed return that competes with historical market returns. Many people split the difference — investing enough to get the full 401(k) match, then paying down the mortgage, then investing the rest.</p>
+                <p className="text-gray-300 text-sm">Generally, if your mortgage rate is below 5-6%, investing in index funds is mathematically superior. If your mortgage rate is above 6-7%, paying it down provides a guaranteed return that competes with historical market returns. Compare your mortgage rate against a nominal expected return of roughly 7-8%, not against the 5% real return used elsewhere on this site. Many people split the difference — investing enough to get the full 401(k) match, then paying down the mortgage, then investing the rest.</p>
               </div>
             </div>
           </div>
