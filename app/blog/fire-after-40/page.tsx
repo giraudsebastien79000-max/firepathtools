@@ -39,7 +39,7 @@ export default function FireAfter40Page() {
           <p className="text-gray-300 leading-relaxed">Someone who starts aggressively saving at 40 has roughly 15-25 years of compounding ahead of them before traditional retirement age. That is still significant — especially combined with a high savings rate and whatever savings already accumulated.</p>
 
           <div className="bg-gray-900 rounded-2xl p-6">
-            <h4 className="font-semibold text-orange-400 mb-4">Starting at 40 with $50,000 already saved, 7% return</h4>
+            <h4 className="font-semibold text-orange-400 mb-4">Starting at 40 with $50,000 already saved, 5% real return</h4>
             <div className="space-y-3 text-sm">
               <div className="grid grid-cols-3 gap-2 text-gray-500 text-xs pb-2 border-b border-slate-600">
                 <div>Monthly savings</div>
@@ -48,28 +48,28 @@ export default function FireAfter40Page() {
               </div>
               <div className="grid grid-cols-3 gap-2">
                 <div className="text-gray-300">$1,000/month</div>
-                <div className="text-white">23 years</div>
-                <div className="text-white">Age 63</div>
+                <div className="text-white">29 years</div>
+                <div className="text-white">Age 69</div>
               </div>
               <div className="grid grid-cols-3 gap-2">
                 <div className="text-gray-300">$2,000/month</div>
-                <div className="text-white">17 years</div>
-                <div className="text-white">Age 57</div>
+                <div className="text-white">21 years</div>
+                <div className="text-white">Age 61</div>
               </div>
               <div className="grid grid-cols-3 gap-2">
                 <div className="text-gray-300">$3,000/month</div>
-                <div className="text-white">13 years</div>
-                <div className="text-white">Age 53</div>
+                <div className="text-white">16 years</div>
+                <div className="text-white">Age 56</div>
               </div>
               <div className="grid grid-cols-3 gap-2">
                 <div className="text-gray-300">$4,000/month</div>
-                <div className="text-white">11 years</div>
-                <div className="text-white">Age 51</div>
+                <div className="text-white">13 years</div>
+                <div className="text-white">Age 53</div>
               </div>
             </div>
           </div>
 
-          <p className="text-gray-300 leading-relaxed">At $3,000/month in savings starting at 40 — achievable for a dual-income household or a single high earner — FIRE at 53 is realistic. That is still 12 years before traditional retirement age, and an entirely different life than working until 65.</p>
+          <p className="text-gray-300 leading-relaxed">At $3,000/month in savings starting at 40 — achievable for a dual-income household or a single high earner — FIRE at 56 is realistic. That is still 9 years before traditional retirement age, and an entirely different life than working until 65.</p>
 
           <h2 className="text-2xl font-bold">The Advantages of Starting FIRE After 40</h2>
           <p className="text-gray-300 leading-relaxed">Late starters have advantages that early starters do not. Your income is typically higher at 40-50 than at 25-30. Your career is established — you know what you are worth and can often negotiate better. Your lifestyle is already set — you are not as vulnerable to lifestyle inflation as a 25-year-old suddenly earning six figures. And you have clarity about what you actually want from retirement that most 30-year-olds do not yet have.</p>
@@ -103,13 +103,13 @@ export default function FireAfter40Page() {
           <p className="text-gray-300 leading-relaxed">Late starters need a higher savings rate to compensate for lost compounding time. A 40-year-old targeting FIRE at 55 needs roughly a 40-50% savings rate. This is demanding but more achievable at 40 than at 25 — because income is higher, fixed costs like childcare are often lower, and the lifestyle is already established.</p>
 
           <h3 className="text-xl font-semibold">Coast FIRE as a Milestone</h3>
-          <p className="text-gray-300 leading-relaxed">Even for late starters, Coast FIRE is a meaningful milestone. If you are 42 and have $200,000 saved, that money will grow to approximately $760,000 by age 65 at 7% — without any additional contributions. Knowing your existing savings will fund a significant portion of your retirement reduces pressure and opens career options.</p>
+          <p className="text-gray-300 leading-relaxed">Even for late starters, Coast FIRE is a meaningful milestone. If you are 42 and have $200,000 saved, that money will grow to approximately $615,000 by age 65 at 5% after inflation — without any additional contributions. Knowing your existing savings will fund a significant portion of your retirement reduces pressure and opens career options.</p>
 
           <h3 className="text-xl font-semibold">Social Security Optimization</h3>
           <p className="text-gray-300 leading-relaxed">Late starters are closer to Social Security eligibility, which changes the FIRE calculation significantly. Someone retiring at 58 only needs to self-fund 4 years before claiming at 62 (reduced benefit) or 9 years before claiming at 67 (full benefit). Social Security can dramatically reduce the portfolio size needed — especially for people who worked full careers before discovering FIRE.</p>
 
           <div className="mt-12 space-y-4">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is it too late to retire early if I start at 45?","acceptedAnswer":{"@type":"Answer","text":"No. Starting at 45 with aggressive saving ($3,000-$4,000/month) can still get you to financial independence by 58-62 - years before the traditional retirement age of 65. The timeline shifts but the goal is still achievable, especially with the Rule of 55 and catch-up contributions available after 50."}},{"@type":"Question","name":"How much do I need to save per month starting at 40?","acceptedAnswer":{"@type":"Answer","text":"It depends on your target retirement age and FIRE number. A general guideline: to reach $1,000,000 by age 55 starting from zero at 40, you need approximately $3,500/month at 7% returns. Use our FIRE Gap Calculator to get a personalized number based on your actual savings and target."}},{"@type":"Question","name":"What is the Rule of 55 and how does it help late starters?","acceptedAnswer":{"@type":"Answer","text":"The Rule of 55 allows you to withdraw from your current employer's 401(k) without the 10% early withdrawal penalty if you leave your job in or after the year you turn 55. This makes 55 a highly tax-efficient FIRE target for late starters - you can access your largest retirement account years before the standard 59.5 age."}},{"@type":"Question","name":"Should I prioritize paying off my mortgage or investing if I start FIRE at 40?","acceptedAnswer":{"@type":"Answer","text":"For late starters, time is scarce and every dollar of compounding matters. If your mortgage rate is below 5-6%, investing typically wins mathematically. However, many late starters target a FIRE date that aligns with mortgage payoff - at that point, your monthly expenses drop significantly, reducing your FIRE number and making the math work even better."}}]}`}} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is it too late to retire early if I start at 45?","acceptedAnswer":{"@type":"Answer","text":"No. Starting at 45 with aggressive saving ($3,000-$4,000/month) can still get you to financial independence by 58-62 - years before the traditional retirement age of 65. The timeline shifts but the goal is still achievable, especially with the Rule of 55 and catch-up contributions available after 50."}},{"@type":"Question","name":"How much do I need to save per month starting at 40?","acceptedAnswer":{"@type":"Answer","text":"It depends on your target retirement age and FIRE number. A general guideline: to reach $1,000,000 by age 55 starting from zero at 40, you need approximately $3,750/month at 5% real returns. Use our FIRE Gap Calculator to get a personalized number based on your actual savings and target."}},{"@type":"Question","name":"What is the Rule of 55 and how does it help late starters?","acceptedAnswer":{"@type":"Answer","text":"The Rule of 55 allows you to withdraw from your current employer's 401(k) without the 10% early withdrawal penalty if you leave your job in or after the year you turn 55. This makes 55 a highly tax-efficient FIRE target for late starters - you can access your largest retirement account years before the standard 59.5 age."}},{"@type":"Question","name":"Should I prioritize paying off my mortgage or investing if I start FIRE at 40?","acceptedAnswer":{"@type":"Answer","text":"For late starters, time is scarce and every dollar of compounding matters. If your mortgage rate is below 5-6%, investing typically wins mathematically. However, many late starters target a FIRE date that aligns with mortgage payoff - at that point, your monthly expenses drop significantly, reducing your FIRE number and making the math work even better."}}]}`}} />
             <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
             <div className="space-y-4">
               <div className="bg-gray-900 rounded-xl p-6">
@@ -118,7 +118,7 @@ export default function FireAfter40Page() {
               </div>
               <div className="bg-gray-900 rounded-xl p-6">
                 <h4 className="font-semibold mb-2">How much do I need to save per month starting at 40?</h4>
-                <p className="text-gray-300 text-sm">It depends on your target retirement age and FIRE number. A general guideline: to reach $1,000,000 by age 55 starting from zero at 40, you need approximately $3,500/month at 7% returns. Use our FIRE Gap Calculator to get a personalized number based on your actual savings and target.</p>
+                <p className="text-gray-300 text-sm">It depends on your target retirement age and FIRE number. A general guideline: to reach $1,000,000 by age 55 starting from zero at 40, you need approximately $3,750/month at 5% real returns. Use our FIRE Gap Calculator to get a personalized number based on your actual savings and target.</p>
               </div>
               <div className="bg-gray-900 rounded-xl p-6">
                 <h4 className="font-semibold mb-2">What is the Rule of 55 and how does it help late starters?</h4>
