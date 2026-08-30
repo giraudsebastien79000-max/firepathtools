@@ -15,7 +15,7 @@ export default function FireUKCalculator() {
   const [age, setAge] = useState(30)
   const [savings, setSavings] = useState(20000)
   const [monthlyContribution, setMonthlyContribution] = useState(800)
-  const [annualReturn, setAnnualReturn] = useState(7)
+  const [annualReturn, setAnnualReturn] = useState(5)
   const [annualExpenses, setAnnualExpenses] = useState(25000)
   const [result, setResult] = useState<Result | null>(null)
   const [error, setError] = useState("")
@@ -91,8 +91,9 @@ export default function FireUKCalculator() {
                 className="w-full bg-slate-800 rounded-lg px-4 py-3 text-white border border-slate-600 focus:border-orange-500 focus:outline-none" />
             </div>
             <div>
-              <label className="block text-sm text-gray-300 mb-2">Expected Annual Return (%)</label>
-              <input type="number" value={annualReturn} min={0} max={20}
+              <label className="block text-sm text-gray-300 mb-2">Expected Annual Return (%, after inflation)</label>
+              <p className="text-xs text-gray-400 mb-2">Default 5%. Global equities returned 5.2% a year above inflation from 1900 to 2024 (Dimson-Marsh-Staunton, 35 markets).</p>
+              <input type="number" value={annualReturn} min={0} max={8}
                 onChange={e => setAnnualReturn(Number(e.target.value))}
                 className="w-full bg-slate-800 rounded-lg px-4 py-3 text-white border border-slate-600 focus:border-orange-500 focus:outline-none" />
             </div>
@@ -119,6 +120,7 @@ export default function FireUKCalculator() {
         {result && (
           <div className="mt-8 bg-gray-900 rounded-2xl p-8 space-y-4">
             <h2 className="text-2xl font-bold mb-6">Your Results</h2>
+            <p className="text-sm text-gray-400 mb-6">Two different rates are at work here. The return rate is what your portfolio earns while you are still investing. The 3.5% withdrawal rate is what you take out each year once you stop. Both are after inflation, and ISA withdrawals are assumed tax-free.</p>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-slate-800 rounded-xl p-4">
                 <p className="text-gray-300 text-sm">FIRE Number</p>
@@ -155,7 +157,7 @@ export default function FireUKCalculator() {
           <p className="text-gray-300 leading-relaxed">The 4% rule is based on US market data going back to 1926. UK market returns have historically been slightly lower and more volatile. A 3.5% safe withdrawal rate (SWR) is commonly used by UK FIRE practitioners to account for this, as well as the longer retirement horizons that come with retiring in your 30s, 40s, or 50s. At 3.5%, your FIRE number is approximately 28.6x your annual expenses.</p>
 
           <h3 className="text-xl font-semibold">How Much Do You Need to Retire Early in the UK?</h3>
-          <p className="text-gray-300 leading-relaxed">At a 3.5% withdrawal rate, the formula is simple: FIRE Number = Annual Expenses × 28.6. If you spend £25,000 per year, your target is £715,000. If you spend £30,000, you need £857,000. If you spend £40,000, your target is £1,143,000. Use the calculator above to get your personalised number based on your current age, savings, and contributions.</p>
+          <p className="text-gray-300 leading-relaxed">At a 3.5% withdrawal rate, the formula is simple: FIRE Number = Annual Expenses × 28.6. If you spend £25,000 per year, your target is £714,000. If you spend £30,000, you need £857,000. If you spend £40,000, your target is £1,143,000. Use the calculator above to get your personalised number based on your current age, savings, and contributions.</p>
 
           <div className="bg-gray-900 rounded-2xl p-6 space-y-3">
             <h4 className="font-semibold text-orange-400">UK FIRE Numbers by Annual Spending</h4>
@@ -169,13 +171,13 @@ export default function FireUKCalculator() {
           </div>
 
           <h3 className="text-xl font-semibold">ISAs and SIPPs: The UK Tax Advantage</h3>
-          <p className="text-gray-300 leading-relaxed">UK investors have access to two powerful tax-efficient wrappers that US investors do not. The Stocks and Shares ISA allows you to invest up to £20,000 per year with all growth and withdrawals completely tax-free — with no minimum access age. The Self-Invested Personal Pension (SIPP) offers tax relief on contributions (up to 45% for higher rate taxpayers) but locks funds until age 57 (rising from 55 in 2028). Most UK FIRE strategies combine both: ISA for the bridge between early retirement and pension access age, SIPP for long-term tax-free growth.</p>
+          <p className="text-gray-300 leading-relaxed">UK investors have access to two powerful tax-efficient wrappers that US investors do not. The Stocks and Shares ISA allows you to invest up to £20,000 per year with all growth and withdrawals completely tax-free — with no minimum access age. The Self-Invested Personal Pension (SIPP) offers tax relief on contributions (up to 45% for higher rate taxpayers) but locks funds until age 55, rising to 57 in April 2028. Most UK FIRE strategies combine both: ISA for the bridge between early retirement and pension access age, SIPP for long-term tax-free growth.</p>
 
           <h3 className="text-xl font-semibold">The State Pension as a FIRE Bonus</h3>
-          <p className="text-gray-300 leading-relaxed">The full new State Pension is currently £11,502 per year (2024/25). For UK FIRE practitioners, this is often treated as a bonus rather than a core planning assumption — since it only kicks in at 66 (rising to 67 by 2028). If you retire at 45 and receive State Pension at 67, that is 22 years of full portfolio withdrawal followed by a significant income reduction from your drawdown needs. Many FIRE plans model a reduced withdrawal rate after State Pension age begins.</p>
+          <p className="text-gray-300 leading-relaxed">The full new State Pension is currently £12,548 per year (2026/27). For UK FIRE practitioners, this is often treated as a bonus rather than a core planning assumption — since it only kicks in at 67 for anyone born on or after 6 March 1961, the transition from 66 having started in April 2026. If you retire at 45 and receive State Pension at 67, that is 22 years of full portfolio withdrawal followed by a significant income reduction from your drawdown needs. Many FIRE plans model a reduced withdrawal rate after State Pension age begins.</p>
 
           <div className="mt-12 space-y-6">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the FIRE movement in the UK?","acceptedAnswer":{"@type":"Answer","text":"FIRE stands for Financial Independence, Retire Early. In the UK, it typically involves saving 40-60% of your income, investing in low-cost index funds inside ISAs and SIPPs, and building a portfolio large enough to live off indefinitely. The UK has an active FIRE community on Reddit (r/FIREUK) and multiple dedicated blogs and podcasts."}},{"@type":"Question","name":"How much money do I need to retire early in the UK?","acceptedAnswer":{"@type":"Answer","text":"Using a 3.5% withdrawal rate, you need approximately 28.6x your annual expenses. For \u00A325,000/year spending, that is around \u00A3714,000. For \u00A335,000/year, around \u00A31,000,000. Use the calculator above to get your personalised number."}},{"@type":"Question","name":"Should I use a 4% or 3.5% withdrawal rate in the UK?","acceptedAnswer":{"@type":"Answer","text":"Most UK FIRE practitioners use 3.5% as a more conservative baseline, given that UK market returns have historically been slightly lower than US returns, and early retirement means a longer drawdown period. If you plan to include State Pension income later, or have other income sources, 4% may be appropriate for your situation."}},{"@type":"Question","name":"What is the best investment account for FIRE in the UK?","acceptedAnswer":{"@type":"Answer","text":"The Stocks and Shares ISA is the first choice for most UK FIRE investors - tax-free growth and withdrawals with no minimum age. Once your ISA allowance is used (\u00A320,000/year), a SIPP gives additional tax relief on contributions. Global index funds like Vanguard LifeStrategy or FTSE All-World trackers are the most commonly recommended investments."}},{"@type":"Question","name":"Does the State Pension count towards my FIRE number?","acceptedAnswer":{"@type":"Answer","text":"It can reduce how much you need. If you retire at 50 and will receive \u00A311,502/year State Pension from age 67, you only need your portfolio to cover the gap of 17 years at full spending, then a reduced amount after. Many FIRE calculators ignore State Pension for conservatism, but it is a meaningful benefit for UK early retirees."}}]}`}} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the FIRE movement in the UK?","acceptedAnswer":{"@type":"Answer","text":"FIRE stands for Financial Independence, Retire Early. In the UK, it typically involves saving 40-60% of your income, investing in low-cost index funds inside ISAs and SIPPs, and building a portfolio large enough to live off indefinitely. The UK has an active FIRE community on Reddit (r/FIREUK) and multiple dedicated blogs and podcasts."}},{"@type":"Question","name":"How much money do I need to retire early in the UK?","acceptedAnswer":{"@type":"Answer","text":"Using a 3.5% withdrawal rate, you need approximately 28.6x your annual expenses. For \u00A325,000/year spending, that is around \u00A3714,000. For \u00A335,000/year, around \u00A31,000,000. Use the calculator above to get your personalised number."}},{"@type":"Question","name":"Should I use a 4% or 3.5% withdrawal rate in the UK?","acceptedAnswer":{"@type":"Answer","text":"Most UK FIRE practitioners use 3.5% as a more conservative baseline, given that UK market returns have historically been slightly lower than US returns, and early retirement means a longer drawdown period. If you plan to include State Pension income later, or have other income sources, 4% may be appropriate for your situation."}},{"@type":"Question","name":"What is the best investment account for FIRE in the UK?","acceptedAnswer":{"@type":"Answer","text":"The Stocks and Shares ISA is the first choice for most UK FIRE investors - tax-free growth and withdrawals with no minimum age. Once your ISA allowance is used (\u00A320,000/year), a SIPP gives additional tax relief on contributions. Global index funds like Vanguard LifeStrategy or FTSE All-World trackers are the most commonly recommended investments."}},{"@type":"Question","name":"Does the State Pension count towards my FIRE number?","acceptedAnswer":{"@type":"Answer","text":"It can reduce how much you need. If you retire at 50 and will receive \u00A312,548/year State Pension from age 67, you only need your portfolio to cover the gap of 17 years at full spending, then a reduced amount after. Many FIRE calculators ignore State Pension for conservatism, but it is a meaningful benefit for UK early retirees."}}]}`}} />
             <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
             <div className="space-y-4">
               <div className="bg-gray-900 rounded-xl p-6">
@@ -196,7 +198,7 @@ export default function FireUKCalculator() {
               </div>
               <div className="bg-gray-900 rounded-xl p-6">
                 <h4 className="font-semibold mb-2">Does the State Pension count towards my FIRE number?</h4>
-                <p className="text-gray-300 text-sm">It can reduce how much you need. If you retire at 50 and will receive £11,502/year State Pension from age 67, you only need your portfolio to cover the gap of 17 years at full spending, then a reduced amount after. Many FIRE calculators ignore State Pension for conservatism, but it is a meaningful benefit for UK early retirees.</p>
+                <p className="text-gray-300 text-sm">It can reduce how much you need. If you retire at 50 and will receive £12,548/year State Pension from age 67, you only need your portfolio to cover the gap of 17 years at full spending, then a reduced amount after. Many FIRE calculators ignore State Pension for conservatism, but it is a meaningful benefit for UK early retirees.</p>
               </div>
             </div>
           </div>
