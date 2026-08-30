@@ -35,9 +35,9 @@ export default function WhatDelaysFirePage() {
           <p className="text-gray-300 leading-relaxed">Your savings rate is the most powerful variable in the entire FIRE equation. Not your income. Not your investment returns. Your savings rate determines both how fast your portfolio grows and — because lower expenses mean a lower FIRE number — how much you actually need to accumulate.</p>
 
           <div className="bg-gray-900 rounded-2xl p-6">
-            <h4 className="font-semibold text-orange-400 mb-3">Savings Rate vs Years to FIRE (starting from zero, 7% return)</h4>
+            <h4 className="font-semibold text-orange-400 mb-3">Savings Rate vs Years to FIRE (starting from zero, 5% real return)</h4>
             <div className="grid grid-cols-2 gap-2 text-sm">
-              <div className="text-gray-300">10% savings rate</div><div className="text-white">~43 years</div>
+              <div className="text-gray-300">10% savings rate</div><div className="text-white">~51 years</div>
               <div className="text-gray-300">20% savings rate</div><div className="text-white">~37 years</div>
               <div className="text-gray-300">30% savings rate</div><div className="text-white">~28 years</div>
               <div className="text-gray-300">40% savings rate</div><div className="text-white">~22 years</div>
@@ -57,30 +57,30 @@ export default function WhatDelaysFirePage() {
             <h4 className="font-semibold text-orange-400 mb-3">The Cost of a 10-Year Delay</h4>
             <div className="space-y-3 text-sm">
               <div className="grid grid-cols-2 gap-2">
-                <div className="text-gray-300">Start at 25, invest $500/month at 7%</div>
-                <div className="text-white">Portfolio at 65: ~$1,310,000</div>
+                <div className="text-gray-300">Start at 25, invest $500/month at 5% real</div>
+                <div className="text-white">Portfolio at 65: ~$763,000</div>
               </div>
               <div className="grid grid-cols-2 gap-2">
-                <div className="text-gray-300">Start at 35, invest $500/month at 7%</div>
-                <div className="text-white">Portfolio at 65: ~$567,000</div>
+                <div className="text-gray-300">Start at 35, invest $500/month at 5% real</div>
+                <div className="text-white">Portfolio at 65: ~$416,000</div>
               </div>
-              <div className="text-gray-300 mt-2">The 10-year delay costs $743,000 — even though you only missed $60,000 in contributions.</div>
+              <div className="text-gray-300 mt-2">The 10-year delay costs $347,000 — even though you only missed $60,000 in contributions.</div>
             </div>
           </div>
 
           <p className="text-gray-300 leading-relaxed">This is why the FIRE community consistently emphasizes starting immediately over starting optimally. An imperfect portfolio started today beats a perfect portfolio started in three years by a margin that cannot be recovered.</p>
 
           <h2 className="text-2xl font-bold">3. High Investment Fees</h2>
-          <p className="text-gray-300 leading-relaxed">Investment fees are the silent killer of FIRE timelines. A 1% annual fee sounds trivial — it is not. On a $500,000 portfolio growing at 7%, the difference between a 0.05% expense ratio (Vanguard index fund) and a 1% fee (many actively managed funds) is approximately $180,000 over 20 years. You are paying $180,000 for underperformance.</p>
+          <p className="text-gray-300 leading-relaxed">Investment fees are the silent killer of FIRE timelines. A 1% annual fee sounds trivial — it is not. On a $500,000 portfolio growing at 5% real, the difference between a 0.05% expense ratio (Vanguard index fund) and a 1% fee (many actively managed funds) is approximately $218,000 over 20 years. You are paying $218,000 for underperformance.</p>
           <p className="text-gray-300 leading-relaxed">The research is consistent: the vast majority of actively managed funds underperform low-cost index funds over 15+ year periods, after fees. The FIRE community's near-universal preference for index funds — VTSAX, VTI, FSKAX — is not ideology. It is arithmetic.</p>
 
           <div className="bg-gray-900 rounded-2xl p-6">
-            <h4 className="font-semibold text-orange-400 mb-3">Fee Impact on a $500k Portfolio Over 20 Years (7% gross return)</h4>
+            <h4 className="font-semibold text-orange-400 mb-3">Fee Impact on a $500k Portfolio Over 20 Years (5% real gross return)</h4>
             <div className="grid grid-cols-2 gap-2 text-sm">
-              <div className="text-gray-300">0.05% expense ratio</div><div className="text-white">~$1,930,000</div>
-              <div className="text-gray-300">0.5% expense ratio</div><div className="text-white">~$1,745,000</div>
-              <div className="text-gray-300">1.0% expense ratio</div><div className="text-white">~$1,575,000</div>
-              <div className="text-gray-300">Cost of 1% vs 0.05%</div><div className="text-red-400">~$355,000 lost</div>
+              <div className="text-gray-300">0.05% expense ratio</div><div className="text-white">~$1,314,000</div>
+              <div className="text-gray-300">0.5% expense ratio</div><div className="text-white">~$1,206,000</div>
+              <div className="text-gray-300">1.0% expense ratio</div><div className="text-white">~$1,096,000</div>
+              <div className="text-gray-300">Cost of 1% vs 0.05%</div><div className="text-red-400">~$218,000 lost</div>
             </div>
           </div>
 
@@ -114,7 +114,7 @@ export default function WhatDelaysFirePage() {
           <p className="text-gray-300 leading-relaxed">Use the FIRE Gap Calculator to see exactly where you stand right now — your gap in dollars, your timeline in years, and which lever closes the gap fastest given your specific situation. Most people are surprised by how much a $300/month change in expenses or savings moves the needle.</p>
 
           <div className="mt-12 space-y-4">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the number one reason people don't reach FIRE?","acceptedAnswer":{"@type":"Answer","text":"A savings rate that is too low - typically because expenses rise with income (lifestyle inflation). People earning $150,000/year with a 10% savings rate will take longer to reach FIRE than someone earning $60,000 with a 40% savings rate. Income matters less than the gap between income and spending."}},{"@type":"Question","name":"How much does starting 5 years late cost in FIRE terms?","acceptedAnswer":{"@type":"Answer","text":"It depends on your savings amount, but a 5-year delay in starting typically costs 5-8 additional years on your FIRE timeline - not just 5 - due to lost compounding. $500/month invested from age 25 instead of 30 can mean $200,000-$300,000 more at retirement age."}},{"@type":"Question","name":"Do investment fees really matter that much?","acceptedAnswer":{"@type":"Answer","text":"Yes - more than most people realize. A 1% annual fee on a growing portfolio can cost hundreds of thousands of dollars over a 20-30 year FIRE timeline. Switching from a 1% fee fund to a 0.05% index fund is one of the highest-return actions you can take with no additional savings required."}},{"@type":"Question","name":"Can lifestyle inflation be avoided?","acceptedAnswer":{"@type":"Answer","text":"Partially. The goal is not to freeze your lifestyle forever, but to ensure your savings rate rises faster than your spending. A practical rule: when you get a raise, save at least half of it before increasing spending. Over time, this keeps the savings rate trending up rather than flat."}}]}`}} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the number one reason people don't reach FIRE?","acceptedAnswer":{"@type":"Answer","text":"A savings rate that is too low - typically because expenses rise with income (lifestyle inflation). People earning $150,000/year with a 10% savings rate will take longer to reach FIRE than someone earning $60,000 with a 40% savings rate. Income matters less than the gap between income and spending."}},{"@type":"Question","name":"How much does starting 5 years late cost in FIRE terms?","acceptedAnswer":{"@type":"Answer","text":"It depends on your savings amount, but a 5-year delay in starting typically costs 5-8 additional years on your FIRE timeline - not just 5 - due to lost compounding. $500/month invested from age 25 instead of 30 can mean roughly $195,000 more at retirement age."}},{"@type":"Question","name":"Do investment fees really matter that much?","acceptedAnswer":{"@type":"Answer","text":"Yes - more than most people realize. A 1% annual fee on a growing portfolio can cost hundreds of thousands of dollars over a 20-30 year FIRE timeline. Switching from a 1% fee fund to a 0.05% index fund is one of the highest-return actions you can take with no additional savings required."}},{"@type":"Question","name":"Can lifestyle inflation be avoided?","acceptedAnswer":{"@type":"Answer","text":"Partially. The goal is not to freeze your lifestyle forever, but to ensure your savings rate rises faster than your spending. A practical rule: when you get a raise, save at least half of it before increasing spending. Over time, this keeps the savings rate trending up rather than flat."}}]}`}} />
             <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
             <div className="space-y-4">
               <div className="bg-gray-900 rounded-xl p-6">
@@ -123,7 +123,7 @@ export default function WhatDelaysFirePage() {
               </div>
               <div className="bg-gray-900 rounded-xl p-6">
                 <h4 className="font-semibold mb-2">How much does starting 5 years late cost in FIRE terms?</h4>
-                <p className="text-gray-300 text-sm">It depends on your savings amount, but a 5-year delay in starting typically costs 5-8 additional years on your FIRE timeline — not just 5 — due to lost compounding. $500/month invested from age 25 instead of 30 can mean $200,000-$300,000 more at retirement age.</p>
+                <p className="text-gray-300 text-sm">It depends on your savings amount, but a 5-year delay in starting typically costs 5-8 additional years on your FIRE timeline — not just 5 — due to lost compounding. $500/month invested from age 25 instead of 30 can mean roughly $195,000 more at retirement age.</p>
               </div>
               <div className="bg-gray-900 rounded-xl p-6">
                 <h4 className="font-semibold mb-2">Do investment fees really matter that much?</h4>
