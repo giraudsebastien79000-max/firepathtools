@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'What Is Lean FIRE? How to Retire Early on Less | FirePath Tools',
@@ -20,7 +20,7 @@ export default function Page() {
       <h2>A Real Example</h2>
       <p>Sarah is 32. She lives on $28,000 per year — rent in a cheap city, no car, cooks at home, no expensive hobbies. She has $180,000 invested and saves $18,000 a year.</p>
       <p>Her Lean FIRE number: $28,000 x 25 = $700,000.</p>
-      <p>At a 7% average return, she hits $700,000 in roughly 14 years — retiring at 46. A traditional retirement saver spending $60,000 a year might need to work until 60 or beyond.</p>
+      <p>At a 5% real return after inflation, she hits $700,000 in roughly 14 years — retiring at 46. A traditional retirement saver spending $60,000 a year might need to work until 60 or beyond.</p>
       <h2>The Real Risks of Lean FIRE</h2>
       <p><strong>Sequence of returns risk hits harder.</strong> With a small portfolio and low spending, one bad market decade early in retirement can force you back to work. There is no fat to absorb the shock.</p>
       <p><strong>Healthcare is the wildcard.</strong> In the US especially, health insurance costs can consume a huge portion of a lean budget. Many Lean FIRE practitioners plan around ACA subsidies by keeping taxable income deliberately low.</p>

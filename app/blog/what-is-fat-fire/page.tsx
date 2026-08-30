@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'What Is Fat FIRE? The Complete Guide to Retiring Early in Style | FirePath Tools',
@@ -39,7 +39,7 @@ export default function Page() {
       <h2>How to Actually Reach Fat FIRE</h2>
       <p>Fat FIRE is harder to reach than Lean FIRE. But the path is more straightforward than people think. It comes down to three things.</p>
       <p><strong>High income matters more than frugality.</strong> You cannot cut your way to $3 million. Fat FIRE almost always involves a high-earning career -- tech, medicine, law, finance, entrepreneurship -- combined with consistent investing over 15 to 25 years. That said, income alone is not enough. There are plenty of people earning $250k a year who are nowhere near Fat FIRE because they inflate their lifestyle with every raise.</p>
-      <p><strong>Savings rate still matters.</strong> The people who actually reach Fat FIRE typically save 40 to 60% of their income during their accumulation years. At a high income, that often means living on $80,000 to $100,000 per year while investing the rest. Not exactly deprivation. A 50% savings rate can get you to Fat FIRE in 15 to 17 years regardless of your starting point.</p>
+      <p><strong>Savings rate still matters.</strong> The people who actually reach Fat FIRE typically save 40 to 60% of their income during their accumulation years. At a high income, that often means living on $80,000 to $100,000 per year while investing the rest. Not exactly deprivation. A 50% savings rate can get you to Fat FIRE in 15 to 17 years regardless of your starting point, assuming a 5% real return after inflation.</p>
       <p><strong>Invest simply and consistently.</strong> Most Fat FIRE achievers are not doing anything complicated. Index funds. Tax-advantaged accounts maxed out. Brokerage account for the overflow. Consistent contributions through market cycles. The boring stuff works. The people chasing crypto moonshots to speed up their timeline usually just slow it down.</p>
 
       <h2>Is Fat FIRE Realistic?</h2>
