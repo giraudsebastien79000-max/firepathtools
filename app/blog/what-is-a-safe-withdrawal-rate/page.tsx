@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'What Is a Safe Withdrawal Rate? The Key to Making Your Money Last | FirePath Tools',
@@ -103,6 +103,12 @@ export default function Page() {
       <p>Others argue that with spending flexibility and other income sources, 4% remains a solid target for most people.</p>
 
       <p>The honest answer: no one knows the future. The safe withdrawal rate is a tool for planning, not a promise.</p>
+
+      <h2>What This Site Uses</h2>
+
+      <p>Our US-focused calculators and articles use 4%, in line with the Trinity Study and the 30-year horizon it tested. Our country pages use 3.5%, because retiring abroad usually means a longer horizon, a different tax regime and currency risk that the US-based research never covered.</p>
+
+      <p>Separately, and independently of the withdrawal rate, every growth projection on this site assumes a 5% real return after inflation rather than the 7% most calculators use. The withdrawal rate is what you take out once you stop working. The return rate is what your portfolio earns while you are still building it. They are different numbers and both matter.</p>
 
       <h2>Practical Strategies to Make Your Money Last</h2>
 
