@@ -17,6 +17,7 @@ export default function ToolsLayout({ children }: { children: React.ReactNode })
             <Link
               href="/tools"
               className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+                style={{ color: "#ffffff" }}
             >
               See all calculators
             </Link>
