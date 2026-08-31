@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "What Reddit Says About Coast FIRE | Real Community Insights",
@@ -54,7 +54,7 @@ export default function WhatRedditSaysAboutCoastFire() {
           <h2 className="text-2xl font-bold text-white mb-4">The biggest Coast FIRE debates on Reddit</h2>
 
           <h3 className="text-xl font-semibold text-white mb-3">1. What return rate should you use?</h3>
-          <p className="text-gray-300 mb-4">This is the most argued topic. The split is roughly 7% inflation-adjusted versus 5-6% conservative. The consensus leans toward 6-7% for planning, with the caveat that you should stress-test at lower rates.</p>
+          <p className="text-gray-300 mb-4">This is the most argued topic. The split is roughly 7% inflation-adjusted versus 5-6% conservative. The consensus leans toward 6-7% for planning, with the caveat that you should stress-test at lower rates. Our own calculators use 5% real, which sits at the conservative end of that debate.</p>
 
           <h3 className="text-xl font-semibold text-white mb-3">2. Does Coast FIRE work if markets crash?</h3>
           <p className="text-gray-300 mb-4">Sequence of returns risk comes up constantly. If you hit Coast FIRE at 35 and markets crash 40%, you might need to keep contributing a few more years. Redditors suggest building in a 10-20% buffer above your theoretical Coast number.</p>
@@ -95,7 +95,7 @@ export default function WhatRedditSaysAboutCoastFire() {
 
         <section id="calculator" className="mb-10">
           <h2 className="text-2xl font-bold text-white mb-4">Find your Coast FIRE age</h2>
-          <p className="text-gray-300 mb-4">Plug in your current savings, your FIRE number, a 6-7% return, and your target retirement age. The calculator tells you the age at which you hit Coast FIRE and how far you are from it today.</p>
+          <p className="text-gray-300 mb-4">Plug in your current savings, your FIRE number, a 5% real return, and your target retirement age. The calculator tells you the age at which you hit Coast FIRE and how far you are from it today.</p>
           <a href="/tools/coast-fire-age" style={{display:"inline-block",backgroundColor:"#f97316",color:"#ffffff",fontWeight:"bold",padding:"12px 24px",borderRadius:"12px",textDecoration:"none"}}>
             Use the Coast FIRE Age Calculator
           </a>

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -145,7 +145,7 @@ export default function OneNumberThatMatters() {
           Same income, different outcomes
         </h2>
         <p className="text-gray-300 mb-6 text-base">
-          Two people earning $70,000/year. Same investment returns (7% real). Completely
+          Two people earning $70,000/year. Same investment returns (5% real). Completely
           different timelines — determined entirely by savings rate.
         </p>
 

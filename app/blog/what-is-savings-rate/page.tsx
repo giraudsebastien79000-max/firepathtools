@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'What Is a Savings Rate and Why It Matters | FirePath Tools',
@@ -15,20 +15,20 @@ export default function Page() {
       <p>Someone earning $100,000 and saving 10% will take longer to reach financial independence than someone earning $60,000 and saving 40%. The gap between what you earn and what you spend is what builds wealth. Not the top line — the gap.</p>
       <h2>The Real Numbers</h2>
       <ul>
-        <li>Save 10% → roughly 43 years</li>
+        <li>Save 10% → roughly 51 years</li>
         <li>Save 20% → roughly 37 years</li>
         <li>Save 30% → roughly 28 years</li>
         <li>Save 40% → roughly 22 years</li>
         <li>Save 50% → roughly 17 years</li>
         <li>Save 60% → roughly 12 years</li>
-        <li>Save 70% → roughly 8 years</li>
+        <li>Save 70% → roughly 9 years</li>
       </ul>
-      <p>Look at the jump between 10% and 50%. That is 26 years of your life.</p>
+      <p>Look at the jump between 10% and 50%. That is 34 years of your life.</p>
       <h2>A Real Example</h2>
       <p>Maria is 31. She earns $55,000 a year after tax.</p>
       <p><strong>Scenario A — 15% savings rate:</strong> She saves $687/month. Financial independence around age 74.</p>
-      <p><strong>Scenario B — 35% savings rate:</strong> She saves $1,603/month. Financial independence around age 55.</p>
-      <p>Same salary. Same person. 19 years difference. The only thing that changed was the gap.</p>
+      <p><strong>Scenario B — 35% savings rate:</strong> She saves $1,603/month. Financial independence around age 56.</p>
+      <p>Same salary. Same person. 18 years difference. The only thing that changed was the gap.</p>
       <h2>How to Calculate Yours</h2>
       <p>Savings Rate = (Amount Saved divided by Take-Home Income) x 100</p>
       <p>If you take home $3,500/month and save $700: 700 divided by 3,500 = 0.20 — 20% savings rate.</p>
@@ -55,7 +55,7 @@ export default function Page() {
       <p><a href="/tools/savings-rate">Use the FirePath Savings Rate Calculator</a></p>
       <hr />
       <p><em>Written by the FirePath Team. Not financial advisors — just regular people who got tired of working without a clear finish line.</em></p>
-      <p><small>All projections assume a 7% average annual return and are for illustrative purposes only. Consult a financial advisor for personalized advice.</small></p>
+      <p><small>All projections assume a 5% real annual return, after inflation, and are for illustrative purposes only. Consult a financial advisor for personalized advice.</small></p>
     </article>
   )
 }

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'What Is an Index Fund? The Investment Behind Most FIRE Portfolios | FirePath Tools',
@@ -34,12 +34,12 @@ export default function Page() {
           </tr>
         </thead>
         <tbody>
-          <tr><td>$10,000</td><td>7%</td><td>0.10% (index)</td><td>$74,500</td></tr>
-          <tr><td>$10,000</td><td>7%</td><td>1.50% (active)</td><td>$54,300</td></tr>
+          <tr><td>$10,000</td><td>5% real</td><td>0.10% (index)</td><td>$42,000</td></tr>
+          <tr><td>$10,000</td><td>5% real</td><td>1.50% (active)</td><td>$28,100</td></tr>
         </tbody>
       </table>
 
-      <p>Same money. Same market return. The fee difference costs you $20,000 on a $10,000 investment over 30 years. On a $100,000 investment that is $200,000 gone to fees.</p>
+      <p>Same money. Same market return. The fee difference costs you $13,900 on a $10,000 investment over 30 years. On a $100,000 investment that is $139,000 gone to fees.</p>
 
       <h2>Do Active Funds Beat Index Funds?</h2>
 
