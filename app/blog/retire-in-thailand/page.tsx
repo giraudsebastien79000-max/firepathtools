@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ const faqItems = [
  {
  question: 'How much money do you need to retire in Thailand?',
  answer:
- 'The retirement visa requires THB 800,000 (~USD 22,000) in a Thai bank or THB 65,000/month (~USD 1,800) in income. A realistic comfortable budget is USD 1,200-2,500/month depending on location. At a 4% withdrawal rate, that translates to a portfolio of roughly USD 360,000-750,000.',
+ 'The retirement visa requires THB 800,000 (~USD 22,000) in a Thai bank or THB 65,000/month (~USD 1,800) in income. A realistic comfortable budget is USD 1,200-2,500/month depending on location. At a 3.5% withdrawal rate, that translates to a portfolio of roughly USD 411,000-857,000. On country pages we use 3.5% rather than the 4% rule, because retiring abroad usually means a longer horizon, a different tax regime and currency risk that the US-based research never tested.',
  },
  {
  question: 'What is the Thailand retirement visa requirement in 2026?',
@@ -87,8 +87,8 @@ export default function RetireInThailand() {
  <p className="text-lg text-gray-200 leading-relaxed">
  To retire in Thailand in 2026, the standard retirement visa (age 50+) requires THB
  800,000 (~USD 22,000) in a Thai bank or THB 65,000/month (~USD 1,800) in income. A
- comfortable budget is USD 1,200-2,500/month, which at a 4% withdrawal rate means a
- portfolio of roughly USD 360,000-750,000.
+ comfortable budget is USD 1,200-2,500/month, which at a 3.5% withdrawal rate means a
+ portfolio of roughly USD 411,000-857,000.
  </p>
  </div>
 

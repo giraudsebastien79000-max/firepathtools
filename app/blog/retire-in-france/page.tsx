@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "How much money do you need to retire in France?",
-    a: "For the long-stay visitor visa, consulates benchmark your income against the French minimum wage - EUR 1,478/month net since June 1, 2026 - per person, with couples typically expected to show about 1.5x combined. For a comfortable lifestyle, budget EUR 1,800-2,500/month outside Paris. At a 4% withdrawal rate, that means a portfolio of roughly USD 650,000-700,000.",
+    a: "For the long-stay visitor visa, consulates benchmark your income against the French minimum wage - EUR 1,478/month net since June 1, 2026 - per person, with couples typically expected to show about 1.5x combined. For a comfortable lifestyle, budget EUR 1,800-2,500/month outside Paris. At a 3.5% withdrawal rate, that means a portfolio of roughly USD 716,000-994,000. On country pages we use 3.5% rather than the 4% rule, because retiring abroad usually means a longer horizon, a different tax regime and currency risk that the US-based research never tested.",
   },
   {
     q: "Did the France visa income requirement change in 2026?",

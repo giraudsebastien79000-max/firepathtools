@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "How much money do you need to retire in Spain?",
-    a: "For the non-lucrative visa, Spain requires passive income of EUR 2,400/month (EUR 28,800/year) for a single applicant in 2026, plus EUR 600/month per dependent. For a comfortable lifestyle, budget EUR 1,600-2,800/month depending on the city. At a 4% withdrawal rate, that means a portfolio of roughly USD 600,000.",
+    a: "For the non-lucrative visa, Spain requires passive income of EUR 2,400/month (EUR 28,800/year) for a single applicant in 2026, plus EUR 600/month per dependent. For a comfortable lifestyle, budget EUR 1,600-2,800/month depending on the city. At a 3.5% withdrawal rate, that means a portfolio of roughly USD 636,000-1,114,000. On country pages we use 3.5% rather than the 4% rule, because retiring abroad usually means a longer horizon, a different tax regime and currency risk that the US-based research never tested.",
   },
   {
     q: "Is the Spain visa income requirement going up in 2026?",

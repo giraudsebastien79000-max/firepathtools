@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ const faqItems = [
  {
  question: 'How much money do you need to retire in Portugal?',
  answer:
- 'The legal minimum is EUR920/month in passive income for the D7 visa, but a realistic comfortable budget is EUR1,300-EUR2,600/month depending on region. At a 4% withdrawal rate, that translates to a portfolio of roughly EUR390,000-EUR780,000.',
+ 'The legal minimum is EUR920/month in passive income for the D7 visa, but a realistic comfortable budget is EUR1,300-EUR2,600/month depending on region. At a 3.5% withdrawal rate, that translates to a portfolio of roughly EUR446,000-EUR891,000. On country pages we use 3.5% rather than the 4% rule, because retiring abroad usually means a longer horizon, a different tax regime and currency risk that the US-based research never tested.',
  },
  {
  question: 'What is the D7 visa income requirement in 2026?',
@@ -87,8 +87,8 @@ export default function RetireInPortugal() {
  <p className="text-lg text-gray-200 leading-relaxed">
  To retire in Portugal in 2026, you need at least EUR920/month in proven passive
  income for the D7 visa. A realistic comfortable budget is EUR1,300-EUR2,600/month
- depending on region, which at a 4% withdrawal rate means a portfolio of roughly
- EUR390,000-EUR780,000.
+ depending on region, which at a 3.5% withdrawal rate means a portfolio of roughly
+ EUR446,000-EUR891,000.
  </p>
  </div>
 
