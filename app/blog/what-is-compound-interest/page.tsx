@@ -18,7 +18,7 @@ export default function Page() {
 
       <p>Simple interest only earns on your original amount. Compound interest earns on everything — your original deposit plus every penny of interest already earned.</p>
 
-      <p>Here is what that looks like on $10,000 at 7% over 30 years:</p>
+      <p>Here is what that looks like on $10,000 at 5% real over 30 years:</p>
 
       <table>
         <thead>
@@ -29,9 +29,9 @@ export default function Page() {
           </tr>
         </thead>
         <tbody>
-          <tr><td>10</td><td>$17,000</td><td>$19,672</td></tr>
-          <tr><td>20</td><td>$24,000</td><td>$38,697</td></tr>
-          <tr><td>30</td><td>$31,000</td><td>$76,123</td></tr>
+          <tr><td>10</td><td>$15,000</td><td>$16,289</td></tr>
+          <tr><td>20</td><td>$20,000</td><td>$26,533</td></tr>
+          <tr><td>30</td><td>$25,000</td><td>$43,219</td></tr>
         </tbody>
       </table>
 
@@ -49,21 +49,21 @@ export default function Page() {
 
       <p>Want to know how long it takes to double your money? Divide 72 by your annual return rate.</p>
 
-      <p>At 7% annual return: 72 ÷ 7 = approximately 10 years to double.</p>
+      <p>At a 5% real return: 72 ÷ 5 = approximately 14 years to double.</p>
 
-      <p>That means $10,000 invested today becomes $20,000 in 10 years, $40,000 in 20 years, and $80,000 in 30 years — without adding a single extra dollar.</p>
+      <p>That means $10,000 invested today becomes $20,000 in about 14 years and $40,000 in about 29 years — without adding a single extra dollar.</p>
 
       <h2>Why Starting Early Beats Investing More</h2>
 
       <p>This is the part that changes everything.</p>
 
-      <p>Maya starts investing $300 per month at age 25. She stops completely at 35 — only 10 years of contributions. Total invested: $36,000.</p>
+      <p>Maya starts investing $300 per month at age 25. She stops completely at 40 — only 15 years of contributions. Total invested: $54,000.</p>
 
-      <p>Jake starts investing $300 per month at age 35 and continues until 65 — a full 30 years. Total invested: $108,000.</p>
+      <p>Jake starts investing $300 per month at age 40 and continues until 65 — a full 25 years. Total invested: $90,000.</p>
 
-      <p>At 65, assuming 7% annual return: Maya has approximately $567,000. Jake has approximately $340,000.</p>
+      <p>At 65, assuming a 5% real return: Maya has approximately $279,000. Jake has approximately $179,000.</p>
 
-      <p>Maya invested three times less money and still ends up with significantly more. That is compound interest. That is why time is your most valuable asset.</p>
+      <p>Maya invested $36,000 less and still ends up with $100,000 more. That is compound interest. That is why time is your most valuable asset.</p>
 
       <h2>Compound Interest and the FIRE Movement</h2>
 
@@ -109,7 +109,7 @@ export default function Page() {
       <hr />
 
       <p><em>Written by the FirePath Team. Not financial advisors — just regular people who got tired of working without a plan.</em></p>
-      <p><small>All calculations use a 7% annual return as a historical approximation of broad market index fund returns. Past performance does not guarantee future results.</small></p>
+      <p><small>All calculations use a 5% real annual return, after inflation, in line with the long-run global equity record. Past performance does not guarantee future results.</small></p>
     </article>
   )
 }
