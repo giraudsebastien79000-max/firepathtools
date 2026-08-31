@@ -43,13 +43,8 @@ export default function AboutPage() {
         </p>
         <p>
           That is the whole basis on which you should trust anything here: not credentials,
-          but shown work. Every calculator assumption is documented on our{" "}
-          <Link
-            href="/methodology"
-            className="text-orange-400 underline underline-offset-2 hover:text-orange-300"
-          >
-            Methodology page
-          </Link>
+          but shown work. {" "}
+          
           .
         </p>
 
