@@ -58,7 +58,7 @@ export default function Page() {
       <p>Plug in your numbers and see how close you are.</p>
       <p><a href="/tools/fire-number">Use the FirePath FIRE Number Calculator</a></p>
       <hr />
-      <p><em>Written by the FirePath Team. Not financial advisors -- just regular people figuring out how to make work optional.</em></p>
+      <p><em>Written by <a href="/about">Sebastian Cole</a>, a pen name. I build these calculators and publish the assumptions behind every number so you can check them yourself.</em></p>
       <p><small>All projections assume consistent average returns and are for illustrative purposes only. Actual investment returns vary. Consult a financial advisor for personalized advice.</small></p>
     </article>
   )
