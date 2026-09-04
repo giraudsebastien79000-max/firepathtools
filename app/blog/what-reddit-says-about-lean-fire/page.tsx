@@ -24,10 +24,7 @@ export default function WhatRedditSaysAboutLeanFire() {
           <h2 className="text-2xl font-bold text-white mb-4">What Reddit thinks Lean FIRE actually means</h2>
           <p className="text-gray-300 mb-4">The most common definition on r/leanfire is retiring on less than $40,000 per year in expenses, usually with a portfolio under $1 million. But the community is quick to point out that the dollar amount is less important than the ratio: spending well below the median and having a portfolio that covers it at a 3.5-4% withdrawal rate.</p>
           <p className="text-gray-300 mb-4">The unofficial threshold that comes up most often is $25,000-$40,000 per year for a single person in a low cost of living area. Anything above $40,000 starts getting labeled regular FIRE or even Chubby FIRE by the community.</p>
-          <div className="bg-gray-900 border-l-4 border-orange-500 rounded-r-xl p-4 my-5">
-            <p className="text-gray-300 italic text-sm">"lean fire is not about being poor. its about having figured out that most spending above a certain level doesnt actually make you happier"</p>
-            <p className="text-gray-400 text-xs mt-2">paraphrased from r/leanfire</p>
-          </div>
+          <p className="text-gray-300 mb-4">The framing that recurs most often is that Lean FIRE is not about being poor, but about recognising that spending above a certain level stops adding much.</p>
           <p className="text-gray-300">This distinction matters on Reddit. Lean FIRE is not about deprivation — it is about optimization. The most upvoted posts consistently frame it as a conscious lifestyle choice, not a financial constraint.</p>
         </section>
 
