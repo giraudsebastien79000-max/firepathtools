@@ -105,7 +105,7 @@ export default function Page() {
 
       <hr />
 
-      <p><em>Written by the FirePath Team. Not financial advisors — just regular people who got tired of working without a plan.</em></p>
+      <p><em>Written by <a href="/about">Sebastian Cole</a>, a pen name. I build these calculators and publish the assumptions behind every number so you can check them yourself.</em></p>
       <p><small>FIRE projections are based on historical market data and the Trinity Study (1998). Results vary based on market conditions, spending, and individual circumstances.</small></p>
     </article>
   )
