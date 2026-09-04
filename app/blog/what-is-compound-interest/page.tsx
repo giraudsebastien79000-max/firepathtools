@@ -108,7 +108,7 @@ export default function Page() {
 
       <hr />
 
-      <p><em>Written by the FirePath Team. Not financial advisors — just regular people who got tired of working without a plan.</em></p>
+      <p><em>Written by <a href="/about">Sebastian Cole</a>, a pen name. I build these calculators and publish the assumptions behind every number so you can check them yourself.</em></p>
       <p><small>All calculations use a 5% real annual return, after inflation, in line with the long-run global equity record. Past performance does not guarantee future results.</small></p>
     </article>
   )
