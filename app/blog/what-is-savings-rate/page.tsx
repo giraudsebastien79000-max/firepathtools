@@ -33,9 +33,8 @@ export default function Page() {
       <p>Savings Rate = (Amount Saved divided by Take-Home Income) x 100</p>
       <p>If you take home $3,500/month and save $700: 700 divided by 3,500 = 0.20 — 20% savings rate.</p>
       <h2>The Honest Truth About Savings Rates</h2>
-      <p>I used to think I was doing fine because I was not going into debt. Turns out, breaking even is not building anything. I was working full-time and my financial situation at 40 looked almost identical to what it was at 32.</p>
-      <p>When I actually calculated my savings rate — really calculated it, not just guessed — it was 7%. Seven percent. I thought it was closer to 20.</p>
-      <p>I could not believe it. I genuinely thought I had been doing well — turns out I had not even scratched the surface.</p>
+      <p>Not going into debt feels like doing fine. But breaking even is not building anything — and someone can work full-time for eight years while their financial position barely moves.</p>
+      <p>The gap between the rate people assume they have and the rate they actually have is usually large. A household guessing 20% often finds 7% once the calculation is done properly. That gap is the whole reason this number is worth measuring rather than estimating.</p>
       <h2>What Is a Good Savings Rate?</h2>
       <ul>
         <li><strong>10-15%</strong> — traditional advice. You will retire around the standard age.</li>
