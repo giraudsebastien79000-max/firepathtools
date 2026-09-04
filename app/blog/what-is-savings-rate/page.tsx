@@ -54,7 +54,7 @@ export default function Page() {
       <p>Honestly, plug in what you earn and what you save — it takes two minutes and the result might surprise you.</p>
       <p><a href="/tools/savings-rate">Use the FirePath Savings Rate Calculator</a></p>
       <hr />
-      <p><em>Written by the FirePath Team. Not financial advisors — just regular people who got tired of working without a clear finish line.</em></p>
+      <p><em>Written by <a href="/about">Sebastian Cole</a>, a pen name. I build these calculators and publish the assumptions behind every number so you can check them yourself.</em></p>
       <p><small>All projections assume a 5% real annual return, after inflation, and are for illustrative purposes only. Consult a financial advisor for personalized advice.</small></p>
     </article>
   )
