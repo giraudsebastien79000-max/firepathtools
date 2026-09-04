@@ -24,10 +24,7 @@ export default function WhatRedditSaysAboutCoastFire() {
           <h2 className="text-2xl font-bold text-white mb-4">What Reddit thinks Coast FIRE actually means</h2>
           <p className="text-gray-300 mb-4">The most upvoted definition on r/financialindependence describes Coast FIRE as the point where your invested assets will grow to your FIRE number on their own without any additional contributions by the time you want to retire.</p>
           <p className="text-gray-300 mb-4">But Reddit users are quick to add nuance. A recurring comment in top threads is that Coast FIRE is not retirement. It just means you no longer need to save aggressively. You still need income to cover living expenses.</p>
-          <div className="bg-gray-900 border-l-4 border-orange-500 rounded-r-xl p-4 my-5">
-            <p className="text-gray-300 italic text-sm">"coast fire freed me mentally more than anything. knowing my retirement is already funded even if i never save another dollar again is wild"</p>
-            <p className="text-gray-400 text-xs mt-2">paraphrased from r/coastFIRE</p>
-          </div>
+          <p className="text-gray-300 mb-4">The freedom described most often is mental rather than financial: knowing retirement is already funded, even without further contributions, changes how the remaining working years feel.</p>
           <p className="text-gray-300">This psychological shift from aggressive saving to just covering expenses is what Reddit users describe most often as the real value of hitting Coast FIRE.</p>
         </section>
 
@@ -65,10 +62,7 @@ export default function WhatRedditSaysAboutCoastFire() {
           <h3 className="text-xl font-semibold text-white mb-3">4. Is Coast FIRE just an excuse to slow down?</h3>
           <p className="text-gray-300 mb-4">Critics argue that declaring Coast FIRE at 35 with a $200k portfolio and a $1.5M FIRE number is premature optimism. Defenders counter that the mental freedom alone is worth it, and that most people who hit Coast FIRE do not actually slow down.</p>
 
-          <div className="bg-gray-900 border-l-4 border-orange-500 rounded-r-xl p-4 my-5">
-            <p className="text-gray-300 italic text-sm">"the coast fire number is math. the hard part is actually believing it and not checking your portfolio every day waiting for something to go wrong"</p>
-            <p className="text-gray-400 text-xs mt-2">paraphrased from r/financialindependence</p>
-          </div>
+          <p className="text-gray-300 mb-4">A theme running through these debates is that the calculation is the easy part. Trusting it — and resisting the urge to check the portfolio daily — is what people describe as difficult.</p>
         </section>
 
         <section id="warnings" className="mb-10">
