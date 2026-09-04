@@ -70,7 +70,7 @@ export default function FireNumberBillionaires() {
       <p><a href="/tools/fire-number">Calculate your personal FIRE number here</a> — it takes 30 seconds.</p>
 
       <hr />
-      <p><em>Written by the FirePath Team. Not financial advisors — just regular people figuring out how to make work optional.</em></p>
+      <p><em>Written by <a href="/about">Sebastian Cole</a>, a pen name. I build these calculators and publish the assumptions behind every number so you can check them yourself.</em></p>
       <p><small>All figures are estimates based on publicly available data for illustrative purposes only.</small></p>
     </article>
   );
