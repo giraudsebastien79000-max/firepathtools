@@ -20,7 +20,7 @@ export default function Page() {
       <p>For years, I spent without thinking about tomorrow. Until I saw people around me still grinding in their 60s and 70s with no way out. That is when it hit me.</p>
       <p><a href="/tools/fire-number">Calculate your FIRE number</a></p>
       <hr />
-      <p><em>Written by the FirePath Team. Not financial advisors - just regular people who got tired of working without a plan.</em></p>
+      <p><em>Written by <a href="/about">Sebastian Cole</a>, a pen name. I build these calculators and publish the assumptions behind every number so you can check them yourself.</em></p>
       <p><small>The 4% Rule originates from the Trinity Study (1998). It is a guideline, not a guarantee.</small></p>
     </article>
   )
