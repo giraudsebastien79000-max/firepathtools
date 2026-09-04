@@ -17,7 +17,7 @@ export default function Page() {
       <h2>A Real Example</h2>
       <p>Marcus is 33. Annual expenses: $44,000/year. FIRE number: $1,100,000. Current savings: $32,800.</p>
       <h2>The Real Value of Knowing Your Number</h2>
-      <p>For years, I spent without thinking about tomorrow. Until I saw people around me still grinding in their 60s and 70s with no way out. That is when it hit me.</p>
+      <p>A FIRE number turns an open-ended worry into a fixed target. Without one, saving more is always vaguely better and never clearly enough. With one, every decision — a raise, a move, a cut in spending — can be measured against how much closer it brings the date.</p>
       <p><a href="/tools/fire-number">Calculate your FIRE number</a></p>
       <hr />
       <p><em>Written by <a href="/about">Sebastian Cole</a>, a pen name. I build these calculators and publish the assumptions behind every number so you can check them yourself.</em></p>
