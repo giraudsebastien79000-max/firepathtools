@@ -100,7 +100,7 @@ export default function Page() {
 
       <hr />
 
-      <p><em>Written by the FirePath Team. Not financial advisors — just regular people who got tired of working without a plan.</em></p>
+      <p><em>Written by <a href="/about">Sebastian Cole</a>, a pen name. I build these calculators and publish the assumptions behind every number so you can check them yourself.</em></p>
       <p><small>The 25x rule is based on the Trinity Study (1998). It is a planning guideline, not a guarantee of future results.</small></p>
     </article>
   )
