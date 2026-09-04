@@ -24,7 +24,6 @@ export default function Page() {
       <h2>What Happens After You Hit Coast FIRE</h2>
       <p>Once you reach your Coast number, your relationship with work changes completely. You are no longer working to build wealth — you are working to live. That is a fundamentally different position.</p>
       <p>Some people stay in their current job but negotiate fewer hours. Some switch to lower-stress work they actually enjoy. Some start a business they had been putting off for years.</p>
-      <p>I know people who hit their Coast number in their mid-30s and kept working full-time — not because they had to, but because the pressure was gone. Turns out most of the stress at work was not the work itself. It was the feeling of being trapped.</p>
       <p>Coast FIRE removes the trap. What you do after that is up to you.</p>
       <h2>How to Calculate Your Coast FIRE Number</h2>
       <p>You need three things: your target retirement number (annual expenses x 25), your expected annual return (typically 5%), and years until your target retirement age.</p>
