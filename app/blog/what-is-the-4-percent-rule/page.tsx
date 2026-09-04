@@ -35,7 +35,7 @@ export default function Page() {
       <h2>The Part Nobody Talks About</h2>
       <p>Most people who reach their FIRE number do not actually stop working completely. They shift — fewer hours, different work, things they actually want to do.</p>
       <p>Most people do not actually want to stop working — they just want the possibility to choose.</p>
-      <p>I spent years working without knowing what the finish line looked like. When I finally ran the numbers, I realized I was not as far as I thought — but I was also moving in no particular direction. Knowing the target changed how I thought about every financial decision after that.</p>
+      <p>Working without knowing what the finish line looks like is the default. Running the numbers often reveals two things at once: the target is further than assumed, and there was no particular direction before. Knowing the number changes how every financial decision after that gets weighed.</p>
       <p>That is when someday stops being a dream and becomes a deadline you are actually looking forward to.</p>
       <h2>FAQ</h2>
       <p><strong>Is the 4% Rule still valid in 2026?</strong> Mostly yes. Some researchers suggest 3.5% to 3.8% is more conservative. For most people doing rough planning, 4% remains a solid starting point.</p>
