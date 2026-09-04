@@ -46,7 +46,7 @@ export default function Page() {
       <p>Honestly, just plug in what you spend and see where you stand. That is it.</p>
       <p><a href="/tools/fire-number">Use the FirePath FIRE Number Calculator</a></p>
       <hr />
-      <p><em>Written by the FirePath Team. Not financial advisors — just regular people who got tired of working without knowing the finish line.</em></p>
+      <p><em>Written by <a href="/about">Sebastian Cole</a>, a pen name. I build these calculators and publish the assumptions behind every number so you can check them yourself.</em></p>
       <p><small>The 4% Rule originates from the Trinity Study (Cooley, Hubbard and Walz, 1998). It is a guideline, not a guarantee. Consult a financial advisor for personalized advice.</small></p>
     </article>
   )
