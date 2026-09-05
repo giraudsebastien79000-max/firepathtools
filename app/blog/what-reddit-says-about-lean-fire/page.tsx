@@ -2,7 +2,7 @@
 
 export const metadata: Metadata = {
   title: "What Reddit Says About Lean FIRE | Real Community Insights",
-  description: "We analyzed hundreds of Reddit threads about Lean FIRE. Here is what r/leanfire and r/financialindependence actually think — the debates, the numbers, and the warnings.",
+  description: "The debates, the lifestyle realities, and the warnings that come up again and again on r/leanfire and r/financialindependence — collected from reading these communities closely.",
 };
 
 export default function WhatRedditSaysAboutLeanFire() {
@@ -13,7 +13,7 @@ export default function WhatRedditSaysAboutLeanFire() {
         <div className="mb-8">
           <span className="text-orange-400 text-sm font-medium uppercase tracking-wide">Community Insights</span>
           <h1 className="text-4xl font-bold text-white mt-2 mb-4">What Reddit Says About Lean FIRE</h1>
-          <p className="text-gray-300 text-lg">We dug through hundreds of threads on r/leanfire, r/financialindependence, and r/Fire to find out what real people think about Lean FIRE — the number debates, the lifestyle realities, and the warnings nobody talks about.</p>
+          <p className="text-gray-300 text-lg">The debates, the lifestyle realities, and the warnings that come up again and again on r/leanfire, r/financialindependence, and r/Fire — collected from reading these communities closely.</p>
         </div>
 
         <div className="bg-slate-800 border border-slate-700 rounded-2xl p-5 mb-8">
