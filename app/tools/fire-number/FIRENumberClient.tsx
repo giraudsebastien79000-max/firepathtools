@@ -74,7 +74,7 @@ export default function FIRENumberClient() {
         balance = balance * (1 + rMonthly) + monthly;
         monthsTo4++;
       }
-      const reachable = monthsTo4 < 1200;
+      const reachable = monthsTo4 < 1200 && age + monthsTo4 / 12 <= 100;
       const yearsTo4 = reachable ? (monthsTo4 / 12).toFixed(1) : null;
       const retirementAge = reachable ? (age + monthsTo4 / 12).toFixed(1) : null;
       const progress = Math.min(100, (savings / fireAt4) * 100);
