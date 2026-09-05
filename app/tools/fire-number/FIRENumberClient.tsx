@@ -74,8 +74,9 @@ export default function FIRENumberClient() {
         balance = balance * (1 + rMonthly) + monthly;
         monthsTo4++;
       }
-      const yearsTo4 = (monthsTo4 / 12).toFixed(1);
-      const retirementAge = (age + monthsTo4 / 12).toFixed(1);
+      const reachable = monthsTo4 < 1200;
+      const yearsTo4 = reachable ? (monthsTo4 / 12).toFixed(1) : null;
+      const retirementAge = reachable ? (age + monthsTo4 / 12).toFixed(1) : null;
       const progress = Math.min(100, (savings / fireAt4) * 100);
 
       return {
@@ -86,6 +87,7 @@ export default function FIRENumberClient() {
         fireAt4,
         yearsTo4,
         retirementAge,
+        reachable,
         progress: progress.toFixed(1),
         reached: savings >= fireAt4,
       };
@@ -216,11 +218,11 @@ export default function FIRENumberClient() {
                     <span className="text-green-400 text-xs font-bold bg-green-900/30 px-3 py-1 rounded-full">
                       REACHED
                     </span>
-                  ) : (
+                  ) : type.reachable ? (
                     <span className={`text-xs font-bold px-3 py-1 rounded-full bg-slate-800 ${type.color}`}>
                       Age {type.retirementAge}
                     </span>
-                  )}
+                  ) : null}
                 </div>
 
                 <div className="grid grid-cols-3 gap-3 mb-4">
@@ -244,33 +246,37 @@ export default function FIRENumberClient() {
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <div className="flex justify-between text-xs">
-                    <span className="text-gray-300">Progress toward 4% target</span>
-                    <span className={`font-bold ${type.color}`}>
-                      {type.progress}%
-                    </span>
-                  </div>
-                  <div className="w-full bg-slate-800 rounded-full h-2">
-                    <div
-                      className={`h-2 rounded-full transition-all ${
-                        type.key === "lean"
-                          ? "bg-blue-400"
-                          : type.key === "regular"
-                          ? "bg-orange-400"
-                          : type.key === "fat"
-                          ? "bg-yellow-400"
-                          : "bg-green-400"
-                      }`}
-                      style={{ width: type.progress + "%" }}
-                    ></div>
-                  </div>
-                </div>
+                {type.reachable && (
+                  <>
+                    <div className="space-y-2">
+                      <div className="flex justify-between text-xs">
+                        <span className="text-gray-300">Progress toward 4% target</span>
+                        <span className={`font-bold ${type.color}`}>
+                          {type.progress}%
+                        </span>
+                      </div>
+                      <div className="w-full bg-slate-800 rounded-full h-2">
+                        <div
+                          className={`h-2 rounded-full transition-all ${
+                            type.key === "lean"
+                              ? "bg-blue-400"
+                              : type.key === "regular"
+                              ? "bg-orange-400"
+                              : type.key === "fat"
+                              ? "bg-yellow-400"
+                              : "bg-green-400"
+                          }`}
+                          style={{ width: type.progress + "%" }}
+                        ></div>
+                      </div>
+                    </div>
 
-                {!type.reached && (
-                  <p className="text-gray-500 text-xs mt-3 text-right">
-                    {type.yearsTo4} years away
-                  </p>
+                    {!type.reached && (
+                      <p className="text-gray-500 text-xs mt-3 text-right">
+                        {type.yearsTo4} years away
+                      </p>
+                    )}
+                  </>
                 )}
               </div>
             ))}
