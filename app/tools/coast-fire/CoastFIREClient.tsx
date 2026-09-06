@@ -15,9 +15,23 @@ export default function CoastFIREClient() {
     const age = parseFloat(currentAge);
     const retAge = parseFloat(retirementAge);
     const rate = parseFloat(returnRate) / 100;
-    const realRate = rate;
     const expenses = parseFloat(monthlyExpenses) * 12;
     const wr = parseFloat(withdrawalRate) / 100;
+
+    if (
+      !(savings >= 0) ||
+      !(age > 0) ||
+      !(retAge > 0) ||
+      !(expenses > 0) ||
+      !(wr > 0) ||
+      !(rate > -1) ||
+      retAge <= age
+    ) {
+      setResult(null);
+      return;
+    }
+
+    const realRate = rate;
     const yearsToGrow = retAge - age;
     const fireNumber = expenses / wr;
     const coastNumber = fireNumber / Math.pow(1 + realRate, yearsToGrow);
