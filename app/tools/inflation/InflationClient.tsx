@@ -6,15 +6,22 @@ export default function InflationClient() {
   const [years, setYears] = useState("20");
   const [inflationRate, setInflationRate] = useState("3");
   const [result, setResult] = useState(null);
+  const [error, setError] = useState("");
 
   const calculate = () => {
     const a = parseFloat(amount);
     const y = parseFloat(years);
     const r = parseFloat(inflationRate) / 100;
+    if (!(a > 0) || !(y > 0) || !(r >= 0)) {
+      setError("Enter an amount, a number of years and an inflation rate to see the impact.");
+      setResult(null);
+      return;
+    }
+    setError("");
     const futureValue = a * Math.pow(1 + r, y);
     const purchasingPower = a / Math.pow(1 + r, y);
     const loss = a - purchasingPower;
-    setResult({ futureValue, purchasingPower, loss, lossPct: (loss / a * 100).toFixed(1) });
+    setResult({ amount: a, futureValue, purchasingPower, loss, lossPct: (loss / a * 100).toFixed(1) });
   };
 
   return (
@@ -28,20 +35,23 @@ export default function InflationClient() {
         <div className="bg-gray-900 rounded-2xl p-8 space-y-6 border border-gray-800">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Amount Today ($)</label>
-            <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="e.g. 100000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={amount} onChange={(e) => { setAmount(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 100000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Years</label>
-              <input type="number" value={years} onChange={(e) => setYears(e.target.value)} placeholder="20" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={years} onChange={(e) => { setYears(e.target.value); setResult(null); setError(""); }} placeholder="20" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Inflation Rate (%)</label>
-              <input type="number" value={inflationRate} onChange={(e) => setInflationRate(e.target.value)} placeholder="3" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={inflationRate} onChange={(e) => { setInflationRate(e.target.value); setResult(null); setError(""); }} placeholder="3" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
               <p className="text-xs text-gray-500 mt-1">US avg: ~3% historically.</p>
             </div>
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate Inflation Impact</button>
+          {error && (
+            <p className="text-orange-400 text-sm text-center">{error}</p>
+          )}
           {result !== null && (
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
@@ -57,7 +67,7 @@ export default function InflationClient() {
                 </div>
               </div>
               <div className="bg-slate-800 rounded-xl p-5 border border-slate-600 text-center">
-                <p className="text-gray-300 text-xs mb-2">Your ${parseFloat(amount).toLocaleString("en-US", { maximumFractionDigits: 0 })} today will only buy...</p>
+                <p className="text-gray-300 text-xs mb-2">Your ${result.amount.toLocaleString("en-US", { maximumFractionDigits: 0 })} today will only buy...</p>
                 <p className="text-4xl font-bold text-white">${result.purchasingPower.toLocaleString("en-US", { maximumFractionDigits: 0 })}</p>
                 <p className="text-gray-500 text-xs mt-2">worth of goods in {years} years if kept as cash.</p>
               </div>
