@@ -6,12 +6,19 @@ export default function LatteFactorClient() {
   const [years, setYears] = useState("30");
   const [returnRate, setReturnRate] = useState("5");
   const [result, setResult] = useState(null);
+  const [error, setError] = useState("");
 
   const calculate = () => {
     const d = parseFloat(daily);
     const y = parseFloat(years);
     const r = parseFloat(returnRate) / 100 / 12;
     const n = y * 12;
+    if (!(d > 0) || !(y > 0) || !(r >= 0)) {
+      setError("Enter a daily expense, a number of years and a return to see the true cost.");
+      setResult(null);
+      return;
+    }
+    setError("");
     const monthly = d * 30;
     const invested = r !== 0 ? monthly * ((Math.pow(1 + r, n) - 1) / r) : monthly * n;
     const totalSpent = monthly * n;
@@ -38,7 +45,7 @@ export default function LatteFactorClient() {
             <label className="block text-sm font-medium text-gray-300 mb-3">Quick examples</label>
             <div className="grid grid-cols-2 gap-2">
               {examples.map((ex) => (
-                <button key={ex.label} onClick={() => setDaily(String(ex.amount))} className="bg-slate-800 hover:bg-gray-700 border border-slate-600 rounded-xl px-3 py-2 text-sm text-gray-300 text-left transition-colors">
+                <button key={ex.label} onClick={() => { setDaily(String(ex.amount)); setResult(null); setError(""); }} className="bg-slate-800 hover:bg-gray-700 border border-slate-600 rounded-xl px-3 py-2 text-sm text-gray-300 text-left transition-colors">
                   {ex.label} <span className="text-orange-400 font-bold">${ex.amount}/day</span>
                 </button>
               ))}
@@ -46,19 +53,22 @@ export default function LatteFactorClient() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Daily Expense Amount ($)</label>
-            <input type="number" value={daily} onChange={(e) => setDaily(e.target.value)} placeholder="e.g. 5" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={daily} onChange={(e) => { setDaily(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 5" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Years</label>
-              <input type="number" value={years} onChange={(e) => setYears(e.target.value)} placeholder="30" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={years} onChange={(e) => { setYears(e.target.value); setResult(null); setError(""); }} placeholder="30" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Annual Return (%)</label>
-              <input type="number" value={returnRate} onChange={(e) => setReturnRate(e.target.value)} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={returnRate} onChange={(e) => { setReturnRate(e.target.value); setResult(null); setError(""); }} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate True Cost</button>
+          {error && (
+            <p className="text-orange-400 text-sm text-center">{error}</p>
+          )}
           {result !== null && (
             <div className="space-y-4">
               <div className="bg-slate-800 rounded-xl p-6 text-center border border-orange-400/30">
