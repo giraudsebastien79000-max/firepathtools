@@ -5,10 +5,17 @@ export default function FourPercentRuleClient() {
   const [portfolio, setPortfolio] = useState("");
   const [customRate, setCustomRate] = useState("4");
   const [result, setResult] = useState(null);
+  const [error, setError] = useState("");
 
   const calculate = () => {
     const p = parseFloat(portfolio);
     const r = parseFloat(customRate) / 100;
+    if (!(p > 0) || !(r > 0)) {
+      setError("Enter your portfolio value and a withdrawal rate to see your safe withdrawal.");
+      setResult(null);
+      return;
+    }
+    setError("");
     const annual = p * r;
     const monthly = annual / 12;
     const at3 = p * 0.03;
@@ -28,14 +35,17 @@ export default function FourPercentRuleClient() {
         <div className="bg-gray-900 rounded-2xl p-8 space-y-6 border border-gray-800">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Portfolio Value ($)</label>
-            <input type="number" value={portfolio} onChange={(e) => setPortfolio(e.target.value)} placeholder="e.g. 1000000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={portfolio} onChange={(e) => { setPortfolio(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 1000000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Withdrawal Rate (%)</label>
-            <input type="number" value={customRate} onChange={(e) => setCustomRate(e.target.value)} placeholder="4" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={customRate} onChange={(e) => { setCustomRate(e.target.value); setResult(null); setError(""); }} placeholder="4" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             <p className="text-xs text-gray-500 mt-1">The Trinity Study found 4% safe over 30 years. Many FIRE followers use 3-3.5% for longer horizons.</p>
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate Safe Withdrawal</button>
+          {error && (
+            <p className="text-orange-400 text-sm text-center">{error}</p>
+          )}
           {result !== null && (
             <div className="space-y-4">
               <div className="bg-slate-800 rounded-xl p-6 text-center border border-orange-400/30">
