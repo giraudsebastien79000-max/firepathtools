@@ -9,6 +9,7 @@ export default function RothVsTraditionalClient() {
   const [taxRetirement, setTaxRetirement] = useState("");
   const [returnRate, setReturnRate] = useState("5");
   const [result, setResult] = useState(null);
+  const [error, setError] = useState("");
 
   const calculate = () => {
     const c = parseFloat(contribution);
@@ -16,15 +17,30 @@ export default function RothVsTraditionalClient() {
     const r = parseFloat(returnRate) / 100;
     const tNow = parseFloat(taxNow) / 100;
     const tRet = parseFloat(taxRetirement) / 100;
+
+    if (!(c > 0) || !(years > 0) || !(r >= 0) || !(tNow >= 0) || !(tRet >= 0)) {
+      setError("Enter your contribution, both ages, both tax rates and an expected return.");
+      setResult(null);
+      return;
+    }
+    if (tNow >= 1 || tRet >= 1) {
+      setError("Enter tax rates as percentages between 0 and 99.");
+      setResult(null);
+      return;
+    }
+    setError("");
+
     const growth = r > 0 ? (Math.pow(1 + r, years) - 1) / r : years;
     const rothValue = c * growth;
     const rothAfterTax = rothValue;
     const tradContrib = c / (1 - tNow);
     const tradValue = tradContrib * growth;
     const tradAfterTax = tradValue * (1 - tRet);
-    const winner = rothAfterTax > tradAfterTax ? "Roth IRA" : "Traditional IRA";
+    const diffRaw = rothAfterTax - tradAfterTax;
+    const tie = Math.abs(diffRaw) < 1;
+    const winner = tie ? null : (diffRaw > 0 ? "Roth IRA" : "Traditional IRA");
     const diff = Math.abs(rothAfterTax - tradAfterTax);
-    setResult({ rothValue, rothAfterTax, tradValue, tradAfterTax, winner, diff, years });
+    setResult({ rothValue, rothAfterTax, tradValue, tradAfterTax, winner, tie, diff, years });
   };
 
   return (
@@ -38,40 +54,43 @@ export default function RothVsTraditionalClient() {
         <div className="bg-gray-900 rounded-2xl p-8 space-y-6 border border-gray-800">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Annual Contribution ($)</label>
-            <input type="number" value={contribution} onChange={(e) => setContribution(e.target.value)} placeholder="7000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={contribution} onChange={(e) => { setContribution(e.target.value); setResult(null); setError(""); }} placeholder="7000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             <p className="text-xs text-gray-500 mt-1">2024 IRA limit: $7,000 ($8,000 if age 50+).</p>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Current Age</label>
-              <input type="number" value={currentAge} onChange={(e) => setCurrentAge(e.target.value)} placeholder="e.g. 35" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={currentAge} onChange={(e) => { setCurrentAge(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 35" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Retirement Age</label>
-              <input type="number" value={retirementAge} onChange={(e) => setRetirementAge(e.target.value)} placeholder="65" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={retirementAge} onChange={(e) => { setRetirementAge(e.target.value); setResult(null); setError(""); }} placeholder="65" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Tax Rate Now (%)</label>
-              <input type="number" value={taxNow} onChange={(e) => setTaxNow(e.target.value)} placeholder="e.g. 22" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={taxNow} onChange={(e) => { setTaxNow(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 22" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Tax Rate in Retirement (%)</label>
-              <input type="number" value={taxRetirement} onChange={(e) => setTaxRetirement(e.target.value)} placeholder="e.g. 15" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={taxRetirement} onChange={(e) => { setTaxRetirement(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 15" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Expected Annual Return (%)</label>
-            <input type="number" value={returnRate} onChange={(e) => setReturnRate(e.target.value)} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={returnRate} onChange={(e) => { setReturnRate(e.target.value); setResult(null); setError(""); }} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Compare Accounts</button>
+          {error && (
+            <p className="text-orange-400 text-sm mt-4 text-center">{error}</p>
+          )}
           {result !== null && (
             <div className="space-y-4">
               <div className="bg-slate-800 rounded-xl p-4 border border-orange-400/30 text-center">
-                <p className="text-gray-300 text-sm mb-1">Winner for your situation</p>
-                <p className="text-3xl font-bold text-orange-400">{result.winner}</p>
-                <p className="text-gray-300 text-sm mt-1">by ${result.diff.toLocaleString("en-US", { maximumFractionDigits: 0 })} after tax over {result.years} years</p>
+                <p className="text-gray-300 text-sm mb-1">{result.tie ? "Result for your situation" : "Winner for your situation"}</p>
+                <p className="text-3xl font-bold text-orange-400">{result.tie ? "Mathematically equivalent" : result.winner}</p>
+                <p className="text-gray-300 text-sm mt-1">{result.tie ? "With the same tax rate now and in retirement, both accounts leave you the same amount after tax." : `by $${result.diff.toLocaleString("en-US", { maximumFractionDigits: 0 })} after tax over ${result.years} years`}</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-slate-800 rounded-xl p-4 border border-slate-600 text-center">
