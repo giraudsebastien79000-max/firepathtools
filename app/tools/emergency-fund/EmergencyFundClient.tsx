@@ -6,11 +6,18 @@ export default function EmergencyFundClient() {
   const [months, setMonths] = useState("6");
   const [current, setCurrent] = useState("");
   const [result, setResult] = useState(null);
+  const [error, setError] = useState("");
 
   const calculate = () => {
     const m = parseFloat(monthly);
     const mo = parseFloat(months);
     const cur = parseFloat(current) || 0;
+    if (!(m > 0) || !(mo > 0)) {
+      setError("Enter your monthly expenses to see your emergency fund target.");
+      setResult(null);
+      return;
+    }
+    setError("");
     const target = m * mo;
     const gap = Math.max(0, target - cur);
     const pct = Math.min(100, (cur / target) * 100);
@@ -28,11 +35,11 @@ export default function EmergencyFundClient() {
         <div className="bg-gray-900 rounded-2xl p-8 space-y-6 border border-gray-800">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Monthly Expenses ($)</label>
-            <input type="number" value={monthly} onChange={(e) => setMonthly(e.target.value)} placeholder="e.g. 3000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={monthly} onChange={(e) => { setMonthly(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 3000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Months of Coverage</label>
-            <select value={months} onChange={(e) => setMonths(e.target.value)} className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-400">
+            <select value={months} onChange={(e) => { setMonths(e.target.value); setResult(null); setError(""); }} className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-400">
               <option value="3">3 months (minimum)</option>
               <option value="6">6 months (recommended)</option>
               <option value="9">9 months (conservative)</option>
@@ -42,9 +49,12 @@ export default function EmergencyFundClient() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Current Emergency Savings ($)</label>
-            <input type="number" value={current} onChange={(e) => setCurrent(e.target.value)} placeholder="e.g. 5000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={current} onChange={(e) => { setCurrent(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 5000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate My Emergency Fund</button>
+          {error && (
+            <p className="text-orange-400 text-sm text-center">{error}</p>
+          )}
           {result !== null && (
             <div className="space-y-4">
               <div className={`rounded-xl p-6 text-center border ${result.funded ? "bg-green-900/30 border-green-400/30" : "bg-slate-800 border-orange-400/30"}`}>
