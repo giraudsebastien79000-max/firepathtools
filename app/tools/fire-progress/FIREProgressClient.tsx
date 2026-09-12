@@ -7,6 +7,7 @@ export default function FIREProgressClient() {
   const [monthly, setMonthly] = useState("");
   const [returnRate, setReturnRate] = useState("5");
   const [result, setResult] = useState(null);
+  const [error, setError] = useState("");
 
   const calculate = () => {
     const cur = parseFloat(current);
@@ -14,12 +15,28 @@ export default function FIREProgressClient() {
     const m = parseFloat(monthly);
     const r = parseFloat(returnRate) / 100 / 12;
     const pct = (cur / tgt) * 100;
+
+    if (!(cur >= 0) || !(tgt > 0) || !(m >= 0) || !(r >= 0)) {
+      setError("Enter your current portfolio, your FIRE number, a monthly contribution and an expected return.");
+      setResult(null);
+      return;
+    }
+    setError("");
+
     let months = 0;
     let balance = cur;
     while (balance < tgt && months < 1200) {
       balance = balance * (1 + r) + m;
       months++;
     }
+
+    const unreachable = months >= 1200 && balance < tgt;
+    if (unreachable) {
+      setError("With these numbers you never reach your FIRE number. Increase your monthly contribution or lower your target.");
+      setResult(null);
+      return;
+    }
+
     const years = (months / 12).toFixed(1);
     const milestone25 = tgt * 0.25;
     const milestone50 = tgt * 0.50;
@@ -48,23 +65,26 @@ export default function FIREProgressClient() {
         <div className="bg-gray-900 rounded-2xl p-8 space-y-6 border border-gray-800">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Current Portfolio ($)</label>
-            <input type="number" value={current} onChange={(e) => setCurrent(e.target.value)} placeholder="e.g. 150000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={current} onChange={(e) => { setCurrent(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 150000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">FIRE Number ($)</label>
-            <input type="number" value={target} onChange={(e) => setTarget(e.target.value)} placeholder="e.g. 1000000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={target} onChange={(e) => { setTarget(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 1000000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Monthly Contribution ($)</label>
-              <input type="number" value={monthly} onChange={(e) => setMonthly(e.target.value)} placeholder="e.g. 2000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={monthly} onChange={(e) => { setMonthly(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 2000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Annual Return (%)</label>
-              <input type="number" value={returnRate} onChange={(e) => setReturnRate(e.target.value)} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={returnRate} onChange={(e) => { setReturnRate(e.target.value); setResult(null); setError(""); }} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Track My FIRE Progress</button>
+          {error && (
+            <p className="text-orange-400 text-sm mt-4 text-center">{error}</p>
+          )}
           {result !== null && (
             <div className="space-y-4">
               <div className={`rounded-xl p-6 text-center border ${result.done ? "bg-green-900/30 border-green-400/30" : "bg-slate-800 border-orange-400/30"}`}>
