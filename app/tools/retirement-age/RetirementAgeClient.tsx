@@ -8,6 +8,7 @@ export default function RetirementAgeClient() {
   const [targetAmount, setTargetAmount] = useState("");
   const [rate, setRate] = useState("5");
   const [result, setResult] = useState(null);
+  const [error, setError] = useState("");
 
   const calculate = () => {
     const age = parseFloat(currentAge);
@@ -15,6 +16,12 @@ export default function RetirementAgeClient() {
     const monthly = parseFloat(monthlyContribution) || 0;
     const target = parseFloat(targetAmount);
     const r = parseFloat(rate) / 100 / 12;
+    if (!(age > 0) || !(target > 0) || !(r > 0)) {
+      setError("Enter your current age, target FIRE number and expected return to see your retirement age.");
+      setResult(null);
+      return;
+    }
+    setError("");
     let months = 0;
     let balance = savings;
     while (balance < target && months < 1200) {
@@ -39,26 +46,29 @@ export default function RetirementAgeClient() {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Current Age</label>
-              <input type="number" value={currentAge} onChange={(e) => setCurrentAge(e.target.value)} placeholder="e.g. 30" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={currentAge} onChange={(e) => { setCurrentAge(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 30" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Current Savings ($)</label>
-              <input type="number" value={currentSavings} onChange={(e) => setCurrentSavings(e.target.value)} placeholder="e.g. 50000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={currentSavings} onChange={(e) => { setCurrentSavings(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 50000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Monthly Contribution ($)</label>
-            <input type="number" value={monthlyContribution} onChange={(e) => setMonthlyContribution(e.target.value)} placeholder="e.g. 1000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={monthlyContribution} onChange={(e) => { setMonthlyContribution(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 1000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Target FIRE Number ($)</label>
-            <input type="number" value={targetAmount} onChange={(e) => setTargetAmount(e.target.value)} placeholder="e.g. 1000000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={targetAmount} onChange={(e) => { setTargetAmount(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 1000000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Expected Annual Return (%)</label>
-            <input type="number" value={rate} onChange={(e) => setRate(e.target.value)} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={rate} onChange={(e) => { setRate(e.target.value); setResult(null); setError(""); }} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate My Retirement Age</button>
+          {error && (
+            <p className="text-orange-400 text-sm text-center">{error}</p>
+          )}
           {result !== null && (
             <div className="space-y-4">
               <div className="bg-slate-800 rounded-xl p-6 text-center border border-orange-400/30">
