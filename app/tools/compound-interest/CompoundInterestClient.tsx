@@ -7,12 +7,19 @@ export default function CompoundInterestClient() {
   const [rate, setRate] = useState("5");
   const [years, setYears] = useState("20");
   const [result, setResult] = useState(null);
+  const [error, setError] = useState("");
 
   const calculate = () => {
     const p = parseFloat(principal) || 0;
     const m = parseFloat(monthly) || 0;
     const r = parseFloat(rate) / 100 / 12;
     const n = parseFloat(years) * 12;
+    if (!(p > 0 || m > 0) || !(r >= 0) || !(n > 0)) {
+      setError("Enter an initial investment or a monthly contribution, plus a return and a number of years.");
+      setResult(null);
+      return;
+    }
+    setError("");
     const futureValue = r !== 0 ? p * Math.pow(1 + r, n) + m * ((Math.pow(1 + r, n) - 1) / r) : p + m * n;
     const totalContributions = p + m * n;
     const totalInterest = futureValue - totalContributions;
@@ -30,24 +37,27 @@ export default function CompoundInterestClient() {
         <div className="bg-gray-900 rounded-2xl p-8 space-y-6 border border-gray-800">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Initial Investment ($)</label>
-            <input type="number" value={principal} onChange={(e) => setPrincipal(e.target.value)} placeholder="e.g. 10000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={principal} onChange={(e) => { setPrincipal(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 10000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Monthly Contribution ($)</label>
-            <input type="number" value={monthly} onChange={(e) => setMonthly(e.target.value)} placeholder="e.g. 500" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={monthly} onChange={(e) => { setMonthly(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 500" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Annual Return (%)</label>
-              <input type="number" value={rate} onChange={(e) => setRate(e.target.value)} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={rate} onChange={(e) => { setRate(e.target.value); setResult(null); setError(""); }} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
               <p className="text-xs text-gray-500 mt-1">5% real, close to the world average since 1900.</p>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Years</label>
-              <input type="number" value={years} onChange={(e) => setYears(e.target.value)} placeholder="20" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={years} onChange={(e) => { setYears(e.target.value); setResult(null); setError(""); }} placeholder="20" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate Growth</button>
+          {error && (
+            <p className="text-orange-400 text-sm text-center">{error}</p>
+          )}
           {result !== null && (
             <div className="space-y-4">
               <div className="bg-slate-800 rounded-xl p-6 text-center border border-orange-400/30">
