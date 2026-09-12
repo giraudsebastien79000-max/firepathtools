@@ -8,19 +8,30 @@ export default function InvestmentFeesClient() {
   const [returnRate, setReturnRate] = useState("5");
   const [feeRate, setFeeRate] = useState("1");
   const [result, setResult] = useState(null);
+  const [error, setError] = useState("");
 
   const calculate = () => {
     const p = parseFloat(principal) || 0;
     const m = parseFloat(monthly) || 0;
     const y = parseFloat(years);
-    const r = parseFloat(returnRate) / 100 / 12;
-    const f = (parseFloat(returnRate) - parseFloat(feeRate)) / 100 / 12;
+    const rr = parseFloat(returnRate);
+    const fr = parseFloat(feeRate);
+
+    if (!(p > 0 || m > 0) || !(y > 0) || !(rr >= 0) || !(fr >= 0)) {
+      setError("Enter an initial investment or a monthly contribution, plus years, return and fee.");
+      setResult(null);
+      return;
+    }
+    setError("");
+
+    const r = rr / 100 / 12;
+    const f = (rr - fr) / 100 / 12;
     const n = y * 12;
     const withoutFees = r !== 0 ? p * Math.pow(1+r,n) + m * ((Math.pow(1+r,n)-1)/r) : p + m * n;
     const withFees = f !== 0 ? p * Math.pow(1+f,n) + m * ((Math.pow(1+f,n)-1)/f) : p + m * n;
     const feeCost = withoutFees - withFees;
     const feePct = (feeCost / withoutFees) * 100;
-    setResult({ withoutFees, withFees, feeCost, feePct });
+    setResult({ withoutFees, withFees, feeCost, feePct, feeRate: fr });
   };
 
   return (
@@ -34,28 +45,31 @@ export default function InvestmentFeesClient() {
         <div className="bg-gray-900 rounded-2xl p-8 space-y-6 border border-gray-800">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Initial Investment ($)</label>
-            <input type="number" value={principal} onChange={(e) => setPrincipal(e.target.value)} placeholder="e.g. 50000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={principal} onChange={(e) => { setPrincipal(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 50000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Monthly Contribution ($)</label>
-            <input type="number" value={monthly} onChange={(e) => setMonthly(e.target.value)} placeholder="e.g. 500" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={monthly} onChange={(e) => { setMonthly(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 500" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div className="grid grid-cols-3 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Years</label>
-              <input type="number" value={years} onChange={(e) => setYears(e.target.value)} placeholder="30" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={years} onChange={(e) => { setYears(e.target.value); setResult(null); setError(""); }} placeholder="30" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Return (%)</label>
-              <input type="number" value={returnRate} onChange={(e) => setReturnRate(e.target.value)} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={returnRate} onChange={(e) => { setReturnRate(e.target.value); setResult(null); setError(""); }} placeholder="7" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Fee (%)</label>
-              <input type="number" value={feeRate} onChange={(e) => setFeeRate(e.target.value)} placeholder="1" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={feeRate} onChange={(e) => { setFeeRate(e.target.value); setResult(null); setError(""); }} placeholder="1" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
               <p className="text-xs text-gray-500 mt-1">Avg mutual fund: 1%</p>
             </div>
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate Fee Impact</button>
+          {error && (
+            <p className="text-orange-400 text-sm mt-4 text-center">{error}</p>
+          )}
           {result !== null && (
             <div className="space-y-4">
               <div className="bg-red-900/20 rounded-xl p-6 text-center border border-red-400/30">
@@ -69,7 +83,7 @@ export default function InvestmentFeesClient() {
                   <p className="text-xl font-bold text-green-400">${result.withoutFees.toLocaleString("en-US", { maximumFractionDigits: 0 })}</p>
                 </div>
                 <div className="bg-slate-800 rounded-xl p-4 border border-slate-600 text-center">
-                  <p className="text-gray-300 text-xs mb-1">With {feeRate}% Fee</p>
+                  <p className="text-gray-300 text-xs mb-1">With {result.feeRate}% Fee</p>
                   <p className="text-xl font-bold text-white">${result.withFees.toLocaleString("en-US", { maximumFractionDigits: 0 })}</p>
                 </div>
               </div>
