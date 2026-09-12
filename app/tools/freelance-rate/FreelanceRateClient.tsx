@@ -7,12 +7,19 @@ export default function FreelanceRateClient() {
   const [hours, setHours] = useState("40");
   const [buffer, setBuffer] = useState("30");
   const [result, setResult] = useState(null);
+  const [error, setError] = useState("");
 
   const calculate = () => {
     const s = parseFloat(salary);
     const w = parseFloat(weeks);
     const h = parseFloat(hours);
     const b = parseFloat(buffer) / 100;
+    if (!(s > 0) || !(w > 0) || !(h > 0) || !(b >= 0)) {
+      setError("Enter your target income, billable weeks, billable hours and expenses buffer to see your rate.");
+      setResult(null);
+      return;
+    }
+    setError("");
     const billableHours = w * h;
     const baseRate = s / billableHours;
     const finalRate = baseRate * (1 + b);
@@ -32,25 +39,28 @@ export default function FreelanceRateClient() {
         <div className="bg-gray-900 rounded-2xl p-8 space-y-6 border border-gray-800">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Target Annual Income ($)</label>
-            <input type="number" value={salary} onChange={(e) => setSalary(e.target.value)} placeholder="e.g. 80000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={salary} onChange={(e) => { setSalary(e.target.value); setResult(null); setError(""); }} placeholder="e.g. 80000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Billable Weeks/Year</label>
-              <input type="number" value={weeks} onChange={(e) => setWeeks(e.target.value)} placeholder="48" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={weeks} onChange={(e) => { setWeeks(e.target.value); setResult(null); setError(""); }} placeholder="48" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
               <p className="text-xs text-gray-500 mt-1">48 weeks = 4 weeks off.</p>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Billable Hours/Week</label>
-              <input type="number" value={hours} onChange={(e) => setHours(e.target.value)} placeholder="40" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+              <input type="number" value={hours} onChange={(e) => { setHours(e.target.value); setResult(null); setError(""); }} placeholder="40" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             </div>
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Business Expenses Buffer (%)</label>
-            <input type="number" value={buffer} onChange={(e) => setBuffer(e.target.value)} placeholder="30" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={buffer} onChange={(e) => { setBuffer(e.target.value); setResult(null); setError(""); }} placeholder="30" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
             <p className="text-xs text-gray-500 mt-1">Covers taxes, tools, insurance, downtime. 30% is a safe minimum.</p>
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Calculate My Rate</button>
+          {error && (
+            <p className="text-orange-400 text-sm text-center">{error}</p>
+          )}
           {result !== null && (
             <div className="space-y-4">
               <div className="bg-slate-800 rounded-xl p-6 text-center border border-orange-400/30">
