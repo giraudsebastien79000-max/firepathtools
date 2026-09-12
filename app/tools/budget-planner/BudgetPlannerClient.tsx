@@ -10,9 +10,16 @@ export default function BudgetPlannerClient() {
   const [wantsAlt, setWantsAlt] = useState(0);
   const [savingsAlt, setSavingsAlt] = useState(0);
   const [done, setDone] = useState(false);
+  const [error, setError] = useState("");
 
   const calculate = () => {
     const i = parseFloat(income);
+    if (!(i > 0)) {
+      setError("Enter your monthly take-home income to see your budget.");
+      setDone(false);
+      return;
+    }
+    setError("");
     setNeeds(i * 0.50);
     setWants(i * 0.30);
     setSavings(i * 0.20);
@@ -33,9 +40,12 @@ export default function BudgetPlannerClient() {
         <div className="bg-gray-900 rounded-2xl p-8 space-y-6 border border-gray-800">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">Monthly Take-Home Income ($)</label>
-            <input type="number" value={income} onChange={(e) => setIncome(e.target.value)} placeholder="e.g. 5000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
+            <input type="number" value={income} onChange={(e) => { setIncome(e.target.value); setDone(false); setError(""); }} placeholder="e.g. 5000" className="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-400" />
           </div>
           <button onClick={calculate} className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl text-lg transition-colors">Build My Budget</button>
+          {error && (
+            <p className="text-orange-400 text-sm text-center">{error}</p>
+          )}
           {done && (
             <div className="space-y-4">
               <div className="bg-slate-800 rounded-xl p-5 border border-orange-400/30">
