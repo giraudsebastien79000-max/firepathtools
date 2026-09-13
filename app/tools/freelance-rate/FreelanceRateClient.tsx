@@ -20,12 +20,17 @@ export default function FreelanceRateClient() {
       return;
     }
     setError("");
+    if (b >= 1) {
+      setError("Enter your expenses buffer as a percentage below 100.");
+      setResult(null);
+      return;
+    }
     const billableHours = w * h;
     const baseRate = s / billableHours;
-    const finalRate = baseRate * (1 + b);
+    const finalRate = baseRate / (1 - b);
     const daily = finalRate * 8;
-    const monthly = (s * (1 + b)) / 12;
-    setResult({ baseRate, finalRate, daily, monthly, billableHours });
+    const monthly = (finalRate * billableHours) / 12;
+    setResult({ baseRate, finalRate, daily, monthly, billableHours, buffer: b * 100 });
   };
 
   return (
@@ -66,7 +71,7 @@ export default function FreelanceRateClient() {
               <div className="bg-slate-800 rounded-xl p-6 text-center border border-orange-400/30">
                 <p className="text-gray-300 text-sm mb-1">Minimum Hourly Rate</p>
                 <p className="text-6xl font-bold text-orange-400">${result.finalRate.toFixed(0)}<span className="text-2xl text-gray-300">/hr</span></p>
-                <p className="text-gray-500 text-xs mt-2">Base rate ${result.baseRate.toFixed(0)}/hr + {buffer}% buffer</p>
+                <p className="text-gray-500 text-xs mt-2">Base ${result.baseRate.toFixed(0)}/hr before {result.buffer.toFixed(0)}% expenses</p>
               </div>
               <div className="grid grid-cols-3 gap-3">
                 <div className="bg-slate-800 rounded-xl p-4 border border-slate-600 text-center">
