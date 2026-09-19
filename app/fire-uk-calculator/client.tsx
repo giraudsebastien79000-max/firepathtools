@@ -8,6 +8,7 @@ type Result = {
   fireAge: number
   monthlyNeeded: number
   onTrack: boolean
+  early: boolean
   projected: number
 }
 
@@ -24,8 +25,9 @@ export default function FireUKCalculator() {
 
   function calculate() {
     setError("")
-    if (annualExpenses <= 0 || annualReturn < 0) {
-      setError("Please enter valid values.")
+    if (!(annualExpenses > 0) || !(annualReturn >= 0) || !(age > 0) || !(savings >= 0) || !(monthlyContribution >= 0)) {
+      setError("Enter your age, savings, monthly contribution, expected return and annual expenses.")
+      setResult(null)
       return
     }
     const fireNumber = annualExpenses / SWR
@@ -50,6 +52,7 @@ export default function FireUKCalculator() {
       fireAge,
       monthlyNeeded,
       onTrack: portfolio >= fireNumber,
+      early: portfolio >= fireNumber && fireAge < 67,
       projected: portfolio,
     })
   }
@@ -75,32 +78,32 @@ export default function FireUKCalculator() {
             <div>
               <label className="block text-sm text-gray-300 mb-2">Current Age</label>
               <input type="number" value={age} min={18} max={70}
-                onChange={e => setAge(Number(e.target.value))}
+                onChange={e => { setAge(Number(e.target.value)); setResult(null); setError("") }}
                 className="w-full bg-slate-800 rounded-lg px-4 py-3 text-white border border-slate-600 focus:border-orange-500 focus:outline-none" />
             </div>
             <div>
               <label className="block text-sm text-gray-300 mb-2">Current Savings (£)</label>
               <input type="number" value={savings} min={0}
-                onChange={e => setSavings(Number(e.target.value))}
+                onChange={e => { setSavings(Number(e.target.value)); setResult(null); setError("") }}
                 className="w-full bg-slate-800 rounded-lg px-4 py-3 text-white border border-slate-600 focus:border-orange-500 focus:outline-none" />
             </div>
             <div>
               <label className="block text-sm text-gray-300 mb-2">Monthly Contributions (£)</label>
               <input type="number" value={monthlyContribution} min={0}
-                onChange={e => setMonthlyContribution(Number(e.target.value))}
+                onChange={e => { setMonthlyContribution(Number(e.target.value)); setResult(null); setError("") }}
                 className="w-full bg-slate-800 rounded-lg px-4 py-3 text-white border border-slate-600 focus:border-orange-500 focus:outline-none" />
             </div>
             <div>
               <label className="block text-sm text-gray-300 mb-2">Expected Annual Return (%, after inflation)</label>
               <p className="text-xs text-gray-400 mb-2">Default 5%. Global equities returned 5.2% a year above inflation from 1900 to 2024 (Dimson-Marsh-Staunton, 35 markets).</p>
               <input type="number" value={annualReturn} min={0} max={8}
-                onChange={e => setAnnualReturn(Number(e.target.value))}
+                onChange={e => { setAnnualReturn(Number(e.target.value)); setResult(null); setError("") }}
                 className="w-full bg-slate-800 rounded-lg px-4 py-3 text-white border border-slate-600 focus:border-orange-500 focus:outline-none" />
             </div>
             <div className="sm:col-span-2">
               <label className="block text-sm text-gray-300 mb-2">Annual Expenses in Retirement (£)</label>
               <input type="number" value={annualExpenses} min={0}
-                onChange={e => setAnnualExpenses(Number(e.target.value))}
+                onChange={e => { setAnnualExpenses(Number(e.target.value)); setResult(null); setError("") }}
                 className="w-full bg-slate-800 rounded-lg px-4 py-3 text-white border border-slate-600 focus:border-orange-500 focus:outline-none" />
             </div>
           </div>
@@ -139,9 +142,11 @@ export default function FireUKCalculator() {
                 <p className="text-2xl font-bold text-blue-400">3.5%</p>
               </div>
             </div>
-            <div className={`rounded-xl p-6 ${result.onTrack ? "bg-green-900/40 border border-green-700" : "bg-orange-900/40 border border-orange-700"}`}>
-              {result.onTrack ? (
-                <p className="text-green-400 font-semibold text-lg">You are on track to reach FIRE!</p>
+            <div className={`rounded-xl p-6 ${result.early ? "bg-green-900/40 border border-green-700" : "bg-orange-900/40 border border-orange-700"}`}>
+              {result.early ? (
+                <p className="text-green-400 font-semibold text-lg">You are on track to retire early, before the State Pension age of 67.</p>
+              ) : result.onTrack ? (
+                <p className="text-orange-400 font-semibold text-lg">You reach your FIRE number at {result.fireAge}, after the State Pension age of 67. That is retirement, not early retirement.</p>
               ) : (
                 <p className="text-orange-400 font-semibold text-lg">Keep going — you will reach FIRE in {result.yearsToFire} years at your current savings rate.</p>
               )}
