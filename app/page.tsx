@@ -6,6 +6,10 @@ const tools = [
   { href: "/tools/coast-fire", title: "Coast FIRE Calculator", desc: "Can you stop saving and coast to retirement?", tag: "FIRE" },
   { href: "/tools/fire-progress", title: "FIRE Progress Tracker", desc: "Track exactly where you are on your FIRE journey.", tag: "FIRE" },
   { href: "/tools/four-percent-rule", title: "4% Rule Calculator", desc: "How much can your portfolio safely generate?", tag: "FIRE" },
+  { href: "/fire-by-country-calculator", title: "FIRE by Country Calculator", desc: "Compare what financial independence costs around the world.", tag: "Country" },
+  { href: "/global-fire-map", title: "Global FIRE Map", desc: "See where your money buys the earliest exit.", tag: "Country" },
+  { href: "/fire-uk-calculator", title: "UK FIRE Calculator", desc: "Run your FIRE number in pounds, with UK rules.", tag: "Country" },
+  { href: "/fire-canada-calculator", title: "Canada FIRE Calculator", desc: "Plan financial independence with Canadian numbers.", tag: "Country" },
   { href: "/tools/savings-rate", title: "Savings Rate Calculator", desc: "Your most powerful lever for financial independence.", tag: "Savings" },
   { href: "/tools/compound-interest", title: "Compound Interest Calculator", desc: "See how your money grows over time.", tag: "Investing" },
   { href: "/tools/investment-fees", title: "Investment Fee Calculator", desc: "See how fees silently destroy your wealth.", tag: "Investing" },
@@ -20,6 +24,14 @@ const tools = [
   { href: "/tools/freelance-rate", title: "Freelance Hourly Rate Calculator", desc: "The minimum rate you need to charge to hit your goals.", tag: "Freelance" },
   { href: "/tools/safe-withdrawal-rate", title: "Safe Withdrawal Rate Calculator", desc: "Find your ideal withdrawal rate for early retirement.", tag: "FIRE" },
   { href: "/tools/fire-gap", title: "FIRE Gap Calculator", desc: "How far are you from financial independence? Find out in seconds.", tag: "FIRE" },
+  { href: "/tools/coast-fire-age", title: "Coast FIRE Age Calculator", desc: "At what age can you stop saving and just coast?", tag: "FIRE" },
+  { href: "/tools/freedom-date", title: "Freedom Date Calculator", desc: "Get the exact date you can walk away from work.", tag: "FIRE" },
+  { href: "/tools/can-i-retire-early", title: "Can I Retire Early Calculator", desc: "Check whether your numbers already add up.", tag: "Retirement" },
+  { href: "/tools/drawdown-calculator", title: "Drawdown Calculator", desc: "How long your portfolio lasts once you start spending it.", tag: "Retirement" },
+  { href: "/retire-at-40-calculator", title: "Retire at 40 Calculator", desc: "What it takes to stop working two decades early.", tag: "Retirement" },
+  { href: "/retire-at-45-calculator", title: "Retire at 45 Calculator", desc: "Run the numbers on leaving work at 45.", tag: "Retirement" },
+  { href: "/retire-at-50-calculator", title: "Retire at 50 Calculator", desc: "What an exit at 50 actually costs you.", tag: "Retirement" },
+  { href: "/tools/sequence-of-returns", title: "Sequence of Returns Calculator", desc: "See how a bad first decade changes everything.", tag: "Investing" },
 ];
 
 const tagColors: Record<string, string> = {
@@ -31,6 +43,7 @@ const tagColors: Record<string, string> = {
   Debt: "bg-red-500/20 text-red-400",
   Budgeting: "bg-teal-500/20 text-teal-400",
   Freelance: "bg-pink-500/20 text-pink-400",
+  Country: "bg-cyan-500/20 text-cyan-400",
 };
 
 export default function Home() {
